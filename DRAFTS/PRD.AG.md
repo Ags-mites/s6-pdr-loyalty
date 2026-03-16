@@ -7,4 +7,5 @@ En un mercado donde la tecnología es el eje central, surge una nueva modalidad 
 En este contexto, la visión del presente proyecto es la de transformar el descuento de una simple reducción de precio a una herramienta inteligente de fidelización, con el objetivo de garantizar que cada rebaja o descuento que se aplique este justificado en función de la lealtad del cliente o como parte de una estrategia de marketing especial, sin poner el riesgo la rentabilidad del negocio.
 ### Objetivos principales:
 + **Automatización** Eliminar la intervención manual en el calculo de precios.
-+ Garantizar la Rentabilidad: 
++ **Garantizar la Rentabilidad**: Asegurar que por ningún concepto se vendan productos por debajo del margen operativo mediante limites de seguridad automáticos.
++ **Fidelización**: Recompensar a los clientes basados en su 
