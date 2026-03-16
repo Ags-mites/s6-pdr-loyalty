@@ -1,7 +1,7 @@
 # PRD
 
 ## Visión
-Solución que permite a los comercios electronicos optimizar y automatizar sus estrategias de descuentos mediante decisiones basadas en datos como temporada, fidelidad del cliente y tipo de producto
+En LOYALTY buscamos crear la mejor calculadora de descuentos dinámicos para e-commerce, ayudando a comercios de cualquier tamaño a tomar decisiones promocionales inteligentes basadas en temporada, fidelidad del cliente y tipo de producto, para construir relaciones más justas, sostenibles y duraderas con sus clientes.
 
 ## Objetivos
 Automatizar la toma de decisiones promocionales
