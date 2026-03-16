@@ -10,14 +10,29 @@ En LOYALTY buscamos crear la mejor calculadora de descuentos dinámicos para e-c
 4. Desde el lanzamiento del MVP, lograr que 95% de las simulaciones de precio muestren claramente el detalle del descuento (temporada, fidelidad y tipo de producto) antes de confirmar el precio final.
 
 ## Alcance del MVP
-- IN
-    1. Aplicación de descuentos según Temporada, Nivel de fidelidad del cliente, tipo de producto
-    2. Formulario donde el usuario pueda ingresar: Precio base del producto, Categoría, Tipo de cliente, Temporada
-    3. Mostrar precio final
-    4. Tabla donde se pueda modificar fácilmente: 
-                                                - % de descuento por temporada
-                                                - % por fidelidad
-                                                - % por tipo de producto
+- IN 
+   1. Lógica de descuentos que combine:
+       - Temporada
+       - Nivel de fidelidad del cliente
+       - Tipo de producto
+    2. Pantalla única de simulación con los campos:
+       - Precio base del producto
+       - Tipo de producto
+       - Nivel de fidelidad del cliente
+       - Temporada
+    3. Cálculo y visualización inmediata del resultado:
+       - Precio base
+       - % y monto descontado por cada variable
+       - Precio final
+    4. Tabla de configuración editable para definir reglas de descuento:
+       - % por temporada
+       - % por fidelidad
+       - % por tipo de producto
+    5. Validaciones mínimas de negocio:
+       - Campos obligatorios
+       - Descuentos permitidos entre 0% y 100%
+       - El precio final no puede ser negativo
+    6. Guardado de configuración con confirmación visible al usuario.
 
 - OUT
     1. Registro/login real.
