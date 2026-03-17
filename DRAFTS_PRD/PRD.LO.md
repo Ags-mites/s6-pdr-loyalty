@@ -69,13 +69,29 @@ Los perfiles de usuario son:
         otorgar descuentos.     descuentos dinámica                 a la solicitud del mismo.
 
 
-6. Supuestos y limitaciones:
+# 6. Alcance del proyecto:
 
-7. Riesgos y dependencias:
+#   6.1. Desarrollar un sitio web funcional, tanto en diseño como en infraestructura, que permita el inicio de sesión de los usuarios de LOYALTY.
 
-8. Métricas de éxito y criterios de lanzamiento:
+#   6.2. Fcilitar al administrador la gestión de descuentos relacionados con el rol y fecha de disponibilidad.
 
-9. Cronograma y plan de lanzamiento:
+#   6.3. Garantizar el soporte del sitio web a cargo del equipo desarrollador.
 
-10. Revisión y aprobación de las partes interesadas:
+# 7. Partes interesadas:
+    
+    - Negocio: LOYALTY
+
+    - Desarrollo:
+
+        Matías Regaló --> QA
+        Agustín Mites --> DEV
+        Luis Ospino   --> DEV
+
+
+# 8. Selección de herramientas:
+
+    - Java Script, JAVA, HTML, CSS, SQL
+    - Entornos de desarrollo: Visual Studio Code, IntelliJ IDEA.
+    - Procesador: Procesador a 1 GHz o más rápido o sistema en un chip (SoC) RAM: 1 GB para 32 bits o 2 GB para 64 bits Espacio en disco duro: 16 GB para SO de 32 bits; 32 GB para SO de 64 bits Tarjeta gráfica: Compatible con DirectX 9 o posterior con controlador WDDM 1.0 Conexión a Internet: Para realizar las actualizaciones y descargar y aprovechar algunas características se requiere conexión a Internet. Windows 10 Pro en modo S, Windows 10 Pro Education en modo S, Windows 10 Education en modo S y Windows 10 Enterprise en modo S requieren una conexión a Internet durante la configuración inicial del dispositivo (OOBE) así como una cuenta de Microsoft (MSA) o una cuenta de Azure Activity Directory (AAD). El cambio fuera de Windows 10 en modo S también requiere conexión a Internet.
+
 
