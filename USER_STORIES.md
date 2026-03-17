@@ -9,9 +9,21 @@ Quiero poder completar una pantalla unica de simulacion con los campos precio ba
 Para simular promociones combinadas.
 
 3. Como usario de LOYALTY
+Quiero que el sistema pueda calcular el descuento total según las reglas configuradas
+Para conocer el precio final real del producto.
+
+4. Como usario de LOYALTY
+Quiero poder Visualizar el porcentaje y el monto descontado por temporada, tipo de producto y nivel de fidelidad
+Para tener claridad del cálculo de descuento
+
+5. Como usario de LOYALTY
+Quiero poder Visualizar el precio final, luego de aplicar los descuentos
+Para asegurar que se haya calculado correctamente el descuento
+
+6. Como usario de LOYALTY
 Quiero poder Visualizar de forma inmediata el resultado de la operacion, mostrando el precio base, el %, el monto descontado por la temporada, tipo de producto, nivel de fidelidad del cliente y el precio final
 Para tener una claridad del cálculo del descuento.
 
-4. Como usuario de LOYALTY
+7. Como usuario de LOYALTY
 Quiero poder editar en configuracion, el porcentaje de descuento aplicable a cada temporada, a cada nivel de fidelidad del cliente y a cada tipo de producto
 Para ajustar las reglas de promociones según las estratégias.
