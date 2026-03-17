@@ -25,5 +25,13 @@ Quiero poder Visualizar de forma inmediata el resultado de la operacion, mostran
 Para tener una claridad del cálculo del descuento.
 
 7. Como usuario de LOYALTY
-Quiero poder editar en configuracion, el porcentaje de descuento aplicable a cada temporada, a cada nivel de fidelidad del cliente y a cada tipo de producto
-Para ajustar las reglas de promociones según las estratégias.
+Quiero poder editar en configuracion, el porcentaje de descuento aplicable a cada temporada.
+Para estar acorde a la demanda del momento.
+
+8. Como usuario de LOYALTY
+Quiero poder editar en configuracion, el porcentaje de descuento según el nivel de fidelidad del cliente.
+Para incentivar la recompra de los clientes recurrentes y nuevos.
+
+9. Como usuario de LOYALTY
+Quiero poder editar en configuracion, el porcentaje de descuento según el tipo de producto.
+Para optimizar la rotación de inventario y la rentabilidad.
