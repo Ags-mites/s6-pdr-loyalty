@@ -27,7 +27,7 @@ Como usario quiero poder Visualizar de forma inmediata el resultado de la operac
 
 Como usuario quiero poder editar en configuracion el porcentaje de descuento aplicable a cada temporada, a cada nivel de fidelidad del cliente y a cada tipo de producto
 
-    5. Validaciones mínimas de negocio:
+5. Validaciones mínimas de negocio:
        - Campos obligatorios
        - Descuentos permitidos entre 0% y 100%
        - El precio final no puede ser negativo
@@ -37,3 +37,7 @@ Como usuario quiero que en caso de no completar con todos los campos obligatorio
 Como usuario quiero que en caso de completar la configuracion con porcentajes menores a 0 o mayores a 100 no me deje guardar la configuracion
 
 Como usuario quiero que el precio final, luego de aplicar los descuentos nunca sea menor a 0
+
+6. Guardado de configuración con confirmación visible al usuario.
+
+como usuario quiero poder visualizar un Pop-Up de confirmación para el guardado de la configuración.
