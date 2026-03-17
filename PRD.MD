@@ -31,12 +31,7 @@ Para tiendas de e-commerce B2C en fase de escalamiento que necesitan optimizar s
        - % por temporada
        - % por fidelidad
        - % por tipo de producto
-    5. Validaciones mínimas de negocio:
-       - Campos obligatorios
-       - Descuentos permitidos entre 0% y 100%
-       - El precio final no puede ser negativo ni mayor al precio base
-    6. Guardado de configuración con confirmación visible al usuario.
-
+    
 - OUT
    1. No incluye cuentas reales de usuario: registro, inicio de sesión y gestión avanzada de permisos o roles.
    2. No incluye historial completo de operaciones ni auditoría detallada de compras.
