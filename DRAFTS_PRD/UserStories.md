@@ -12,7 +12,8 @@ Para Máximizar las conversiones mientras protege los márgenes de ganancias pro
        - Nivel de fidelidad del cliente
        - Temporada
 
-Como usuario Quiero poder completar una pantalla unica de simuacion con los campos precio base del producto, tipo de producto, nivel de fidelidad del cliente y temporada
+Como usuario Quiero poder completar una pantalla unica de simulacion con los campos precio base del producto, tipo de producto, nivel de fidelidad del cliente y temporada
+Para simular promociones combinadas.
 
 3. Cálculo y visualización inmediata del resultado:
        - Precio base
