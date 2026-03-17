@@ -35,5 +35,7 @@ En LOYALTY buscamos crear la mejor calculadora de descuentos dinámicos para e-c
     6. Guardado de configuración con confirmación visible al usuario.
 
 - OUT
-    1. Registro/login real.
-    2. Historial completo de compras.
+   1. No incluye cuentas reales de usuario: registro, inicio de sesión y gestión avanzada de permisos o roles.
+   2. No incluye historial completo de operaciones ni auditoría detallada de compras.
+   3. No incluye análisis avanzado del negocio, como tableros de indicadores o reportes personalizados.
+   4. No incluye sugerencias automáticas para definir qué productos conviene poner en descuento, ni modelos predictivos.
