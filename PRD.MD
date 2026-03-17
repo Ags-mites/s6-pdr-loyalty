@@ -34,7 +34,7 @@ Para tiendas de e-commerce B2C en fase de escalamiento que necesitan optimizar s
     5. Validaciones mínimas de negocio:
        - Campos obligatorios
        - Descuentos permitidos entre 0% y 100%
-       - El precio final no puede ser negativo
+       - El precio final no puede ser negativo ni mayor al precio base
     6. Guardado de configuración con confirmación visible al usuario.
 
 - OUT
