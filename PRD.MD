@@ -44,3 +44,22 @@ Para tiendas de e-commerce B2C en fase de escalamiento que necesitan optimizar s
    2. No incluye historial completo de operaciones ni auditoría detallada de compras.
    3. No incluye análisis avanzado del negocio, como tableros de indicadores o reportes personalizados.
    4. No incluye sugerencias automáticas para definir qué productos conviene poner en descuento, ni modelos predictivos.
+
+## Riesgos de negocio y técnicos
+
+### Riesgos de negocio
+1. Reglas de descuento ambiguas
+   - Impacto: decisiones promocionales inconsistentes, menor conversión y pérdida de confianza por parte del comercio cliente.
+   - Mitigación QA: prueba de aceptación temprana de criterios de negocio con usuarios objetivo y validación de criterios de aceptación antes del despliegue.
+
+2. Cambios frecuentes en descuentos dinámicos sin evaluación de impacto.
+   - Impacto: retrabajo continuo y defectos de regresión.
+   - Mitigación QA: control formal de cambios, prueba de sistema de extremo a extremo y regresión focalizada por riesgo en cada ajuste de reglas.
+
+3. Desglose del descuento poco claro para el usuario final.
+   - Impacto: abandono del flujo de compra, aumento de reclamos y percepción de falta de transparencia.
+   - Mitigación QA: prueba de sistema funcional de UX y prueba de aceptación con usuarios para validar claridad del desglose, descuento aplicado y precio final.
+
+4. Rendimiento por debajo del objetivo definido
+   - Impacto: Pérdida de credibilidad en el producto
+   - Mitigación QA: Validar que el producto cumpla al 100% con los criterios de aceptación
