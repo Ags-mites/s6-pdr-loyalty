@@ -8,8 +8,6 @@
 Las empresas y su exito son el reflejo en gran parte de las estratégias de marketing y la forma en que se administre, es por eso que en la actualidad la implementación de estratégias online, juegan un papel determinante en la sobrevivencia y éxito de las empresas.
 Es por lo anterior que, en el contexto actual, es de vital importancia para las empresas, no solo que busquen diferenciarse por lo innovador o por el buen servicio o producto, si no que se debe distinguir por sus estratégias de marketing y es allí donde el tema de Descuentos Dinámicos entra en juego.
 
-LOYALTY es una tienda virtual que ofrece diferentes variedades de Café para la venta en línea, al por mayor y al detal. La tienda desea implementar una estratégia de marketing para el periodo entre octubre y diciembre; debido a que en esas fechas se produce el mayor porcentaje de cosechas en Colombia.
-
 LOYALTY no consta de una estratégia de negocio para aumentar su clientela o la fidelidad de esto mismos.
 
 Para ello ha contratado al equipo de desarrollo de Sofka, los cuáles llevarán a cabo el desarrollo de este proyecto desde el levantamiento de requisitos y la calidad de este mismo. Cómo resultado se espera un MVP funcional que aporte a la estrategia de marketing de LAYOLTY para aumentar y fidelizar los clientes con la implementación de una calculadora de descuentos dinámicos en temporada de alta demanda de ventas y cosechas.
@@ -44,11 +42,15 @@ Los perfiles de usuario son:
 #   2.1.4. OBJ-004:
     Desarrollar un módulo que le permita al cliente, administrar el aplicativo LOYALTY (Calculadora de descuentos dinámica) para agregar, quitar y/o modificar porcentajes y tipos de descuentos, incluso periodos de disponibilidad.
 
-3. Características y funcionalidad:
+# 3. Cliente:
 
-4. Flujo de usuario y diseño:
+    LOYALTY es una tienda virtual que ofrece diferentes variedades de Café para la venta en línea, al por mayor y al detal. La tienda desea implementar una estratégia de marketing para el periodo entre octubre y diciembre; debido a que en esas fechas se produce el mayor porcentaje de cosechas en Colombia.
 
-5. Requisitos técnicos y del sistema:
+# 4. Aplicativo:
+
+    El usuarios o compradores de LOYALTY podrán acceder a la plataforma según su rol, usando sus datos personales. Una vez dentro, tendrán la opción de validar que descuentos hay disponibles por productos para ellos y solicitarlos. Además se contará con un perfil que administre las diferentes ofertas
+
+# 5. Jerarquía de Macroprocesos:
 
 6. Supuestos y limitaciones:
 
