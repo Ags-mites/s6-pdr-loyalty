@@ -7,6 +7,11 @@
 ## Visión y objetivos
 ### **Visión:** 
 Para tiendas de e-commerce B2C en fase de escalamiento que necesitan optimizar sus estrategias promocionales sin comprometer su rentabilidad, LOYALTY es una plataforma de descuentos dinámicos que permite tomar decisiones promocionales inteligentes basadas en la temporada, la fidelidad del cliente y el tipo de producto. A diferencia de las herramientas básicas de descuentos que ofrecen las plataformas de e-commerce, nuestro producto determina el descuento mínimo viable para maximizar las conversiones mientras protege los margenes de ganancias proyectando relaciones más justas, sostenibles y duraderas con los clientes.
+
+### Contexto del proyecto:
+En la actualidad, las tiendas de comercio electrónico B2C, dependen de descuentos generales y estáticos que se administran manualmente, ocasionando un comportamiento perjudicial en el cliente, quien solo comprará cuando haya rebajas, por lo tanto la marca perderá valor.  
+Este modelo de promociones ataca directamente el margen operativo bruto, al dar el mismo descuento a un comprador recurrente que a uno que solo busca ofertas de una sola vez; como tal, los comercios subsidian ventas innecesariamente, lo que aumenta el costo de adquisición del cliente y reduce el valor del cliente en el tiempo.  
+Porque con los costos actuales de pauta publicitaria, la rentabilidad ha pasado de una estrategia de crecimiento a cualquier costo a una de retención eficiente, como consecuencia, los comercios necesitan una herramienta que proteja sus márgenes inmediatos, haciendo de LOYALTY una solución crítica.
 ### Objetivos:
 1. Mejorar la experiencia de configuración para que los ecommerce clientes puedan crear promociones completas en menos de 3 minutos.
 2. Incrementar las compras de productos en promoción, comparado con el nivel inicial.
