@@ -3,7 +3,8 @@
        - Nivel de fidelidad del cliente
        - Tipo de producto
 
-Como usuario Quiero poder realizar descuentos combinando Temporada, Nivel de fidelidad del cliente Y tipo de producto para 
+Como usuario Quiero poder realizar descuentos combinando Temporada, Nivel de fidelidad del cliente Y tipo de producto
+Para Máximizar las conversiones mientras protege los márgenes de ganancias proyectando relaciones más justas, sostenibles y duraderas con los clientes.
 
 2. Pantalla única de simulación con los campos:
        - Precio base del producto
