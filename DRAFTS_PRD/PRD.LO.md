@@ -1,9 +1,12 @@
-******** Documentos de Requisitos del Producto ********
+******** Documento de Requisitos del Producto ********
 
 Producto: 🛒 E-commerce: Calculadora de Descuentos Dinámicos (LOYALTY)
 Desafío: Aplicar descuentos basados en temporada, fidelidad del cliente y tipo de producto. 
 
 1. Introducción y propósito:
+
+Las empresas y su exito son el reflejo en gran parte de las estratégias de marketing y la forma en que se administre, es por eso que en la actualidad la implementación de estratégias online, juegan un papel determinante en la sobrevivencia y éxito de las empresas.
+Es por lo anterior que, en el contexto actual, es de vital importancia para las empresas, no solo que busquen diferenciarse por lo innovador o por el buen servicio o producto, si no que se debe distinguir por sus estratégias de marketing y es allí donde el tema de Descuentos Dinámicos entra en juego.
 
 LOYALTY es una tienda virtual que ofrece diferentes variedades de Café para la venta en línea, al por mayor y al detal. La tienda desea implementar una estratégia de marketing para el periodo entre octubre y diciembre; debido a que en esas fechas se produce el mayor porcentaje de cosechas en Colombia.
 
