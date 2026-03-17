@@ -3,7 +3,7 @@
 # Producto: 🛒 E-commerce: Calculadora de Descuentos Dinámicos (LOYALTY)
 # Desafío: Aplicar descuentos basados en temporada, fidelidad del cliente y tipo de producto. 
 
-# 1. Introducción y propósito:
+## 1. Introducción y propósito:
 
 Las empresas y su exito son el reflejo en gran parte de las estratégias de marketing y la forma en que se administre, es por eso que en la actualidad la implementación de estratégias online, juegan un papel determinante en la sobrevivencia y éxito de las empresas.
 Es por lo anterior que, en el contexto actual, es de vital importancia para las empresas, no solo que busquen diferenciarse por lo innovador o por el buen servicio o producto, si no que se debe distinguir por sus estratégias de marketing y es allí donde el tema de Descuentos Dinámicos entra en juego.
@@ -12,7 +12,7 @@ LOYALTY no consta de una estratégia de negocio para aumentar su clientela o la 
 
 Para ello ha contratado al equipo de desarrollo de Sofka, los cuáles llevarán a cabo el desarrollo de este proyecto desde el levantamiento de requisitos y la calidad de este mismo. Cómo resultado se espera un MVP funcional que aporte a la estrategia de marketing de LAYOLTY para aumentar y fidelizar los clientes con la implementación de una calculadora de descuentos dinámicos en temporada de alta demanda de ventas y cosechas.
 
-# 2. Público objetivo y perfiles de usuario:
+## 2. Público objetivo y perfiles de usuario:
 
 El público objetivo es a toda persona que sea mayor de edad y tenga la capacidad de navegar o hacer una compra por internet.
 
@@ -24,33 +24,37 @@ Los perfiles de usuario son:
 
 - usuario corporativo: este usuario hace un tipo de compra al por mayor y además necesita ser abastecido con el producto por periodos prolongados de tiempo; este usuario prefiere celebrar un contrato y favorecerse con descuentos.
 
-# 2.1. Objetivo general:
+### 2.1. Objetivo general:
 
-    Desarrollar un sitio web que permita a los usuarios de LOYALTY acceder a una calculadora de descuentos dinámica.
+Desarrollar un sitio web que permita a los usuarios de LOYALTY acceder a una calculadora de descuentos dinámica.
 
-# 2.1. Objetivos específicos:
+### 2.1. Objetivos específicos:
 
-#   2.1.1. OBJ-001: 
-    Desarrollar una funcionalidad en la aplicación web que permita a los    usuarios visualizar todos los descuentos disponibles según su rol de usuario.
+####   2.1.1. OBJ-001: 
 
-#   2.1.2. OBJ-002:
-    Crear un formulario de inicio de sesión que permita a los usuarios acceder a su perfil y diligenciar formularios para solicitar la información de los descuentos.
+Desarrollar una funcionalidad en la aplicación web que permita a los    usuarios visualizar todos los descuentos disponibles según su rol de usuario.
 
-#   2.1.3. OBJ-003:
-    Desarrollar un módulo que le permita a los usuarios (segun su rol), la posibilidad de consultar los descuentos disponibles.
+####   2.1.2. OBJ-002:
 
-#   2.1.4. OBJ-004:
-    Desarrollar un módulo que le permita al cliente, administrar el aplicativo LOYALTY (Calculadora de descuentos dinámica) para agregar, quitar y/o modificar porcentajes y tipos de descuentos, incluso periodos de disponibilidad.
+Crear un formulario de inicio de sesión que permita a los usuarios acceder a su perfil y diligenciar formularios para solicitar la información de los descuentos.
 
-# 3. Cliente:
+####   2.1.3. OBJ-003:
+    
+Desarrollar un módulo que le permita a los usuarios (segun su rol), la posibilidad de consultar los descuentos disponibles.
 
-    LOYALTY es una tienda virtual que ofrece diferentes variedades de Café para la venta en línea, al por mayor y al detal. La tienda desea implementar una estratégia de marketing para el periodo entre octubre y diciembre; debido a que en esas fechas se produce el mayor porcentaje de cosechas en Colombia.
+####   2.1.4. OBJ-004:
+    
+Desarrollar un módulo que le permita al cliente, administrar el aplicativo LOYALTY (Calculadora de descuentos dinámica) para agregar, quitar y/o modificar porcentajes y tipos de descuentos, incluso periodos de disponibilidad.
 
-# 4. Aplicativo:
+## 3. Cliente:
 
-    El usuarios o compradores de LOYALTY podrán acceder a la plataforma según su rol, usando sus datos personales. Una vez dentro, tendrán la opción de validar que descuentos hay disponibles por productos para ellos y solicitarlos. Además se contará con un perfil que administre las diferentes ofertas
+LOYALTY es una tienda virtual que ofrece diferentes variedades de Café para la venta en línea, al por mayor y al detal. La tienda desea implementar una estratégia de marketing para el periodo entre octubre y diciembre; debido a que en esas fechas se produce el mayor porcentaje de cosechas en Colombia.
 
-# 5. Jerarquía de Macroprocesos:
+## 4. Aplicativo:
+
+El usuarios o compradores de LOYALTY podrán acceder a la plataforma según su rol, usando sus datos personales. Una vez dentro, tendrán la opción de validar que descuentos hay disponibles por productos para ellos y solicitarlos. Además se contará con un perfil que administre las diferentes ofertas
+
+## 5. Jerarquía de Macroprocesos:
 
     -----------------------------------------------------------------------------------------
     | Necesidad                |   Proceso                       | Resultado                |
@@ -69,29 +73,29 @@ Los perfiles de usuario son:
         otorgar descuentos.     descuentos dinámica                 a la solicitud del mismo.
 
 
-# 6. Alcance del proyecto:
+## 6. Alcance del proyecto:
 
-#   6.1. Desarrollar un sitio web funcional, tanto en diseño como en infraestructura, que permita el inicio de sesión de los usuarios de LOYALTY.
+- Desarrollar un sitio web funcional, tanto en diseño como en infraestructura, que permita el inicio de sesión de los usuarios de LOYALTY.
 
-#   6.2. Fcilitar al administrador la gestión de descuentos relacionados con el rol y fecha de disponibilidad.
+- Fcilitar al administrador la gestión de descuentos relacionados con el rol y fecha de disponibilidad.
 
-#   6.3. Garantizar el soporte del sitio web a cargo del equipo desarrollador.
+- 6.3. Garantizar el soporte del sitio web a cargo del equipo desarrollador.
 
-# 7. Partes interesadas:
+## 7. Partes interesadas:
     
-    - Negocio: LOYALTY
+- Negocio: LOYALTY
 
-    - Desarrollo:
+- Desarrollo:
 
-        Matías Regaló --> QA
-        Agustín Mites --> DEV
-        Luis Ospino   --> DEV
+    Matías Regaló --> QA
+    Agustín Mites --> DEV
+    Luis Ospino   --> DEV
 
 
-# 8. Selección de herramientas:
+## 8. Selección de herramientas:
 
-    - Java Script, JAVA, HTML, CSS, SQL
-    - Entornos de desarrollo: Visual Studio Code, IntelliJ IDEA.
-    - Procesador: Procesador a 1 GHz o más rápido o sistema en un chip (SoC) RAM: 1 GB para 32 bits o 2 GB para 64 bits Espacio en disco duro: 16 GB para SO de 32 bits; 32 GB para SO de 64 bits Tarjeta gráfica: Compatible con DirectX 9 o posterior con controlador WDDM 1.0 Conexión a Internet: Para realizar las actualizaciones y descargar y aprovechar algunas características se requiere conexión a Internet. Windows 10 Pro en modo S, Windows 10 Pro Education en modo S, Windows 10 Education en modo S y Windows 10 Enterprise en modo S requieren una conexión a Internet durante la configuración inicial del dispositivo (OOBE) así como una cuenta de Microsoft (MSA) o una cuenta de Azure Activity Directory (AAD). El cambio fuera de Windows 10 en modo S también requiere conexión a Internet.
+- Java Script, JAVA, HTML, CSS, SQL
+- Entornos de desarrollo: Visual Studio Code, IntelliJ IDEA.
+- Procesador: Procesador a 1 GHz o más rápido o sistema en un chip (SoC) RAM: 1 GB para 32 bits o 2 GB para 64 bits Espacio en disco duro: 16 GB para SO de 32 bits; 32 GB para SO de 64 bits Tarjeta gráfica: Compatible con DirectX 9 o posterior con controlador WDDM 1.0 Conexión a Internet: Para realizar las actualizaciones y descargar y aprovechar algunas características se requiere conexión a Internet. Windows 10 Pro en modo S, Windows 10 Pro Education en modo S, Windows 10 Education en modo S y Windows 10 Enterprise en modo S requieren una conexión a Internet durante la configuración inicial del dispositivo (OOBE) así como una cuenta de Microsoft (MSA) o una cuenta de Azure Activity Directory (AAD). El cambio fuera de Windows 10 en modo S también requiere conexión a Internet.
 
 
