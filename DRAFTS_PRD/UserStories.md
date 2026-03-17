@@ -36,8 +36,8 @@ Como usuario quiero que en caso de no completar con todos los campos obligatorio
 
 Como usuario quiero que en caso de completar la configuracion con porcentajes menores a 0 o mayores a 100 no me deje guardar la configuracion
 
-Como usuario quiero que el precio final, luego de aplicar los descuentos nunca sea menor a 0
+Como usuario quiero que el precio final, luego de aplicar los descuentos nunca sea menor a 0 ni mayor al precio base.
 
 6. Guardado de configuración con confirmación visible al usuario.
 
-como usuario quiero poder visualizar un Pop-Up de confirmación para el guardado de la configuración.
+Como usuario quiero poder visualizar un Modal de confirmación al guardar de la configuración.
