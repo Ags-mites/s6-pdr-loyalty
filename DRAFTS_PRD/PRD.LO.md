@@ -52,6 +52,23 @@ Los perfiles de usuario son:
 
 # 5. Jerarquía de Macroprocesos:
 
+    -----------------------------------------------------------------------------------------
+    | Necesidad                |   Proceso                       | Resultado                |
+
+        La tienda necesita      Despliegue de descuentos con        Sitio WEB dinámico e 
+        fidelizar Usuarios.     una calculadora a través de         iteractivo para el usuario
+                                un login o buscador por id.         registrado.
+
+        Los usuarios            Validar rol con un registro         Donde se pueda validar de
+        desconocen                  previo                          manera sencilla el tipo de
+        los descuentos.                                             rol.
+
+
+        De acuerdo al rol       Validar rol y fecha, para           Que se pueda redirigir
+        y la fecha, poder       mostrar la calculadora de           dependiendo el descuento
+        otorgar descuentos.     descuentos dinámica                 a la solicitud del mismo.
+
+
 6. Supuestos y limitaciones:
 
 7. Riesgos y dependencias:
