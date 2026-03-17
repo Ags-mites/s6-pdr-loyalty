@@ -26,6 +26,19 @@ Los perfiles de usuario son:
 
 - usuario corporativo: este usuario hace un tipo de compra al por mayor y además necesita ser abastecido con el producto por periodos prolongados de tiempo; este usuario prefiere celebrar un contrato y favorecerse con descuentos.
 
+2.1. Objetivo general:
+
+    Desarrollar un sitio web que permita a los usuarios de LOYALTY acceder a una calculadora de descuentos dinámica.
+
+2.1. Objetivos específicos:
+
+    2.1.1. OBJ-001: Desarrollar una funcionalidad en la aplicación web que permita a los usuarios visualizar todos los descuentos disponibles según su rol de usuario.
+
+    2.1.2. OBJ-002: Crear un formulario de inicio de sesión que permita a los usuarios acceder a su perfil y diligenciar formularios para solicitar la información de los descuentos.
+
+    2.1.3. OBJ-003: Desarrollar un módulo que le permita a los usuarios (segun su rol), la posibilidad de consultar los descuentos disponibles.
+
+    2.1.4. OBJ-004: Desarrollar un módulo que le permita al cliente, administrar el aplicativo LOYALTY (Calculadora de descuentos dinámica) para agregar, quitar y/o modificar porcentajes y tipos de descuentos, incluso periodos de disponibilidad.
 
 3. Características y funcionalidad:
 
