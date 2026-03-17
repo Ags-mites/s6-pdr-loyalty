@@ -23,7 +23,7 @@ Para simular promociones combinadas.
        - Precio final
 
 Como usario de LOYALTY
-Quiero poder Visualizar de forma inmediata el resultado de la operacion, mostrando el precio base, el %, el monto descontado por la temporada, tipo de producto, nivel de fidelidad del cliente y el precio final
+Quiero poder Calcular y Visualizar de forma inmediata el resultado de la operación, mostrando el precio base, el %, el monto descontado por la temporada, tipo de producto, nivel de fidelidad del cliente y el precio final
 Para tener una claridad del cálculo del descuento.
 
 4. Tabla de configuración editable para definir reglas de descuento:
@@ -34,19 +34,19 @@ Para tener una claridad del cálculo del descuento.
 Como usuario de LOYALTY
 Quiero poder editar en configuracion, el porcentaje de descuento aplicable a cada temporada, a cada nivel de fidelidad del cliente y a cada tipo de producto
 Para ajustar las reglas de promociones según las estratégias.
-
-
-5. Validaciones mínimas de negocio:
-       - Campos obligatorios
-       - Descuentos permitidos entre 0% y 100%
-       - El precio final no puede ser negativo
+---
+ESTO SE CONVIERTE EN CRITERIOS DE ACEPTACIÓN DE LA HU03:
 
 Como usuario quiero que en caso de no completar con todos los campos obligatorios, no poder enviar el formulario
 
 Como usuario quiero que en caso de completar la configuracion con porcentajes menores a 0 o mayores a 100 no me deje guardar la configuracion
 
 Como usuario quiero que el precio final, luego de aplicar los descuentos nunca sea menor a 0 ni mayor al precio base.
+---
 
-6. Guardado de configuración con confirmación visible al usuario.
+ESTO SE CONVIERTE EN CRITERIOS DE ACEPTACIÓN DE LA HU04:
 
-Como usuario quiero poder visualizar un Modal de confirmación al guardar de la configuración.
+Como usuario de LOYALTY
+Quiero poder visualizar una confirmación al guardar la configuración.
+Para asegurarme que los cambios han sido guardados.
+---
