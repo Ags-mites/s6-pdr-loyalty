@@ -20,7 +20,8 @@ Para simular promociones combinadas.
        - % y monto descontado por cada variable
        - Precio final
 
-Como usario quiero poder Visualizar de forma inmediata el resultado de la operacion, mostrando el precio base, el % y el monto descontado por la temporaada, tipo de producto y nivel de fidelidad del cliente y el precio final
+Como usario quiero poder Visualizar de forma inmediata el resultado de la operacion, mostrando el precio base, el %, el monto descontado por la temporada, tipo de producto, nivel de fidelidad del cliente y el precio final
+Para tener una claridad del cálculo del descuento.
 
 4. Tabla de configuración editable para definir reglas de descuento:
        - % por temporada
