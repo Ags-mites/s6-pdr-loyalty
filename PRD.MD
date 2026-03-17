@@ -63,3 +63,16 @@ Para tiendas de e-commerce B2C en fase de escalamiento que necesitan optimizar s
 4. Rendimiento por debajo del objetivo definido
    - Impacto: Pérdida de credibilidad en el producto
    - Mitigación QA: Validar que el producto cumpla al 100% con los criterios de aceptación
+
+   ### Riesgos técnicos
+1. Cálculo incorrecto del descuento total por orden de aplicación o acumulación de reglas.
+   - Impacto: precio final erróneo, pérdida de margen para el comercio o sobreprecio para el cliente, y aumento de reclamos.
+   - Mitigación QA: prueba de sistema extremo a extremo y validación de aceptación con ejemplos aprobados por negocio.
+
+2. Validaciones incompletas o inconsistentes de datos de entrada.
+   - Impacto: ingreso de valores inválidos (nulos, negativos, fuera de rango).
+   - Mitigación QA: pruebas de validación en frontend y backend, casos negativos y de frontera, y prueba de integración de sistemas para asegurar consistencia de rechazos entre servicios e interfaces externas.
+
+3. Rendimiento insuficiente en la simulación de precio bajo uso concurrente.
+   - Impacto: tiempos de respuesta altos o inestables en horas pico, degradación de la experiencia, abandono del flujo y menor conversión de promociones.
+   - Mitigación QA: ejecutar pruebas de carga y estrés con concurrencia progresiva en entorno representativo de sistema y monitorear latencia y estabilidad antes de despliegue.
