@@ -3,7 +3,8 @@
        - Nivel de fidelidad del cliente
        - Tipo de producto
 
-Como usuario Quiero poder realizar descuentos combinando Temporada, Nivel de fidelidad del cliente Y tipo de producto
+Como usuario de LOYALTY
+Quiero poder realizar descuentos combinando Temporada, Nivel de fidelidad del cliente Y tipo de producto
 Para Máximizar las conversiones mientras protege los márgenes de ganancias proyectando relaciones más justas, sostenibles y duraderas con los clientes.
 
 2. Pantalla única de simulación con los campos:
@@ -12,7 +13,8 @@ Para Máximizar las conversiones mientras protege los márgenes de ganancias pro
        - Nivel de fidelidad del cliente
        - Temporada
 
-Como usuario Quiero poder completar una pantalla unica de simulacion con los campos precio base del producto, tipo de producto, nivel de fidelidad del cliente y temporada
+Como usuario de LOYALTY
+Quiero poder completar una pantalla unica de simulacion con los campos precio base del producto, tipo de producto, nivel de fidelidad del cliente y temporada
 Para simular promociones combinadas.
 
 3. Cálculo y visualización inmediata del resultado:
@@ -20,7 +22,8 @@ Para simular promociones combinadas.
        - % y monto descontado por cada variable
        - Precio final
 
-Como usario quiero poder Visualizar de forma inmediata el resultado de la operacion, mostrando el precio base, el %, el monto descontado por la temporada, tipo de producto, nivel de fidelidad del cliente y el precio final
+Como usario de LOYALTY
+Quiero poder Visualizar de forma inmediata el resultado de la operacion, mostrando el precio base, el %, el monto descontado por la temporada, tipo de producto, nivel de fidelidad del cliente y el precio final
 Para tener una claridad del cálculo del descuento.
 
 4. Tabla de configuración editable para definir reglas de descuento:
@@ -28,7 +31,10 @@ Para tener una claridad del cálculo del descuento.
        - % por fidelidad
        - % por tipo de producto
 
-Como usuario quiero poder editar en configuracion el porcentaje de descuento aplicable a cada temporada, a cada nivel de fidelidad del cliente y a cada tipo de producto
+Como usuario de LOYALTY
+Quiero poder editar en configuracion, el porcentaje de descuento aplicable a cada temporada, a cada nivel de fidelidad del cliente y a cada tipo de producto
+Para ajustar las reglas de promociones según las estratégias.
+
 
 5. Validaciones mínimas de negocio:
        - Campos obligatorios
