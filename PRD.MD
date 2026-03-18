@@ -52,7 +52,7 @@ Para tiendas de e-commerce B2C en fase de escalamiento que necesitan optimizar s
 | Retrasos en la entrega del MVP | 3 | 3 | 9 | Comunicar avances y antes de la fecha limite notificar a los clientes que se extenderá la fecha de entrega  |
 | Cambios frecuentes en el alcance del MVP | 3 | 3 | 9 | Evaluar impacto en tiempo/costo y aprobar solo cambios críticos|
 | Definición ambigua de criterios de aceptación | 2 | 3 | 6 | Documentar criterios en formato Given-When-Then y validar que esten centrados en el negocio antes de iniciar desarrollo. |
-| Problemas de comunicación entre QA y DEV | 2 | 2 | 4 | Realizar reuniones cortas diarias para asignar responsables y fechas de solución. |
+| Problemas de comunicación entre QA y DEV | 1 | 2 | 2 | Realizar reuniones cortas diarias para asignar responsables y fechas de solución. |
 | Bajo uso inicial del MVP por parte de comercios clientes | 2 | 3 | 6 | Acompañar a los comercios en el uso del sistema durante las primeras 2 semanas y revisar cada semana el nivel de uso para aplicar mejoras. |
 
 ### Riesgos tecnicos
