@@ -46,21 +46,14 @@ Dado que, debido a los actuales de publicidad, la rentabilidad se ha transformad
 ## Riesgos de negocio y técnicos
 
 ### Riesgos de negocio
-1. Reglas de descuento ambiguas
-   - Impacto: decisiones promocionales inconsistentes, menor conversión y pérdida de confianza por parte del comercio cliente.
-   - Mitigación QA: prueba de aceptación temprana de criterios de negocio con usuarios objetivo y validación de criterios de aceptación antes del despliegue.
 
-2. Cambios frecuentes en descuentos dinámicos sin evaluación de impacto.
-   - Impacto: retrabajo continuo y defectos de regresión.
-   - Mitigación QA: control formal de cambios, prueba de sistema de extremo a extremo y regresión focalizada por riesgo en cada ajuste de reglas.
-
-3. Desglose del descuento poco claro para el usuario final.
-   - Impacto: abandono del flujo de compra, aumento de reclamos y percepción de falta de transparencia.
-   - Mitigación QA: prueba de sistema funcional de UX y prueba de aceptación con usuarios para validar claridad del desglose, descuento aplicado y precio final.
-
-4. Rendimiento por debajo del objetivo definido
-   - Impacto: Pérdida de credibilidad en el producto
-   - Mitigación QA: Validar que el producto cumpla al 100% con los criterios de aceptación
+| Descripción | Probabilidad | Impacto | Riesgo | Mitigación principal |
+|-------------|--------------|---------|--------|----------------------|
+| Retrasos en la entrega del MVP | 3 | 3 | 9 | Comunicar avances y antes de la fecha limite notificar a los clientes que se extenderá la fecha de entrega  |
+| Cambios frecuentes en el alcance del MVP | 3 | 3 | 9 | Evaluar impacto en tiempo/costo y aprobar solo cambios críticos|
+| Definición ambigua de criterios de aceptación | 2 | 3 | 6 | Documentar criterios en formato Given-When-Then y validar que esten centrados en el negocio antes de iniciar desarrollo. |
+| Problemas de comunicación entre QA y DEV | 2 | 2 | 4 | Realizar reuniones cortas diarias para asignar responsables y fechas de solución. |
+| Bajo uso inicial del MVP por parte de comercios clientes | 2 | 3 | 6 | Acompañar a los comercios en el uso del sistema durante las primeras 2 semanas y revisar cada semana el nivel de uso para aplicar mejoras. |
 
    ### Riesgos técnicos
 1. Cálculo incorrecto del descuento total por orden de aplicación o acumulación de reglas.
