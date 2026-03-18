@@ -2,16 +2,16 @@
 ## Información del proyecto
 * **Nombre del Producto:** LOYALTY (Calculadora de Descuentos Dinámicos) 
 * **Autores:** Agustín Mites, Matias Regaló y Luis Ospino
-* **Fecha:** 17 de Marzo de 2026 
+* **Fecha:** 18 de Marzo de 2026 
+
+### Introducción del problema:
+En la actualidad, las tiendas de comercio electrónico B2C, dependen de descuentos generales y estáticos que se administran manualmente, ocasionando un comportamiento perjudicial en el cliente, quien solo comprará cuando haya rebajas, por lo tanto la marca perderá valor. El modelo tradicional de promociones reduce las ganancias, ya que ofrece el mismo descuento a un comprador recurrente que a uno que solo busca ofertas puntuales. Esto genera que aumenté el costo de adquisición y disminuye el valor del cliente a lo largo del tiempo.  
+Dado el aumento de los costos de publicidad, la rentabilidad ha pasado de ser una estrategia de crecimiento a ser una estrategia enfocada en la retención efectiva. Como consecuencia, los comercios necesitan una herramienta que proteja sus márgenes.
 
 ## Visión y objetivos
 ### **Visión:** 
 Para tiendas de e-commerce B2C en fase de escalamiento que necesitan optimizar sus estrategias promocionales sin comprometer su rentabilidad, LOYALTY es una plataforma de descuentos dinámicos que permite tomar decisiones promocionales inteligentes basadas en la temporada, la fidelidad del cliente y el tipo de producto. A diferencia de las herramientas básicas de descuentos que ofrecen las plataformas de e-commerce, nuestro producto determina el descuento mínimo viable para maximizar las conversiones mientras protege los margenes de ganancias proyectando relaciones más justas, sostenibles y duraderas con los clientes.
 
-### Contexto del proyecto:
-En la actualidad, las tiendas de comercio electrónico B2C, dependen de descuentos generales y estáticos que se administran manualmente, ocasionando un comportamiento perjudicial en el cliente, quien solo comprará cuando haya rebajas, por lo tanto la marca perderá valor.  
-Este modelo de promociones impacta directamente en el margen operativo bruto, ya que ofrece el mismo descuento a un comprador recurrente que a uno que solo busca ofertas puntuales. Como tal, los comercios subsidian ventas innecesariamente, lo que aumenta el costo de adquisición del cliente y disminuye su valor con el paso del tiempo.  
-Dado que, debido a los actuales de publicidad, la rentabilidad se ha transformado de una estrategia de crecimiento a toda costa a una estrategia de retención efectiva, como consecuencia, los comercios necesitan una herramienta que proteja sus márgenes.
 ### Objetivos:
 1. Mejorar la experiencia de configuración para que los ecommerce clientes puedan crear promociones completas en menos de 3 minutos.
 2. Incrementar las compras de productos en promoción, comparado con el nivel inicial.
