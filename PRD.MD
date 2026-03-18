@@ -12,10 +12,12 @@ Para tiendas de e-commerce B2C en fase de escalamiento que necesitan optimizar s
 En la actualidad, las tiendas de comercio electrónico B2C, dependen de descuentos generales y estáticos que se administran manualmente, ocasionando un comportamiento perjudicial en el cliente, quien solo comprará cuando haya rebajas, por lo tanto la marca perderá valor.  
 Este modelo de promociones impacta directamente en el margen operativo bruto, ya que ofrece el mismo descuento a un comprador recurrente que a uno que solo busca ofertas puntuales. Como tal, los comercios subsidian ventas innecesariamente, lo que aumenta el costo de adquisición del cliente y disminuye su valor con el paso del tiempo.  
 Dado que, debido a los actuales de publicidad, la rentabilidad se ha transformado de una estrategia de crecimiento a toda costa a una estrategia de retención efectiva, como consecuencia, los comercios necesitan una herramienta que proteja sus márgenes.
+
 ### Objetivos:
-1. Mejorar la experiencia de configuración para que los ecommerce clientes puedan crear promociones completas en menos de 3 minutos.
-2. Incrementar las compras de productos en promoción, comparado con el nivel inicial.
-3. Fomentar la recompra de clientes fidelizados en los comercios clientes durante el primer trimestre de uso.
+1. Lograr que al menos el 80% de los clientes de e-commerce puedan crear y poner en marcha promociones completas en la plataforma en menos de 3 minutos, durante el primer mes despues de haber implementado el software.
+2. Incrementar en un 15% la tasa de conversión de productos promocionado, manteniendo un margen 25% de ganancia bruta durante los primero 6 meses posteriores al lanzamiento de la plataforma.
+3. Aumentar la tasa de recompra de clientes frecuentes en los e-commerce afiliado en al menos 20% durante el primer trimestre del uso del software.
+
 
 ## **Alcance del MVP**
 - IN 
