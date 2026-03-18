@@ -46,34 +46,24 @@ En este sentido, la rentabilidad y la retención son prioritarias, lo que impuls
    3. No incluye análisis avanzado del negocio, como tableros de indicadores o reportes personalizados.
    4. No incluye sugerencias automáticas para definir qué productos conviene poner en descuento, ni modelos predictivos.
 
-## Riesgos de negocio y técnicos
+## Riesgos de negocio y tecnicos
 
 ### Riesgos de negocio
-1. Reglas de descuento ambiguas
-   - Impacto: decisiones promocionales inconsistentes, menor conversión y pérdida de confianza por parte del comercio cliente.
-   - Mitigación QA: prueba de aceptación temprana de criterios de negocio con usuarios objetivo y validación de criterios de aceptación antes del despliegue.
 
-2. Cambios frecuentes en descuentos dinámicos sin evaluación de impacto.
-   - Impacto: retrabajo continuo y defectos de regresión.
-   - Mitigación QA: control formal de cambios, prueba de sistema de extremo a extremo y regresión focalizada por riesgo en cada ajuste de reglas.
+| Descripción | Probabilidad | Impacto | Riesgo | Mitigación principal |
+|-------------|--------------|---------|--------|----------------------|
+| Retrasos en la entrega del MVP | 3 | 3 | 9 | Comunicar avances y antes de la fecha limite notificar a los clientes que se extenderá la fecha de entrega  |
+| Cambios frecuentes en el alcance del MVP | 3 | 3 | 9 | Evaluar impacto en tiempo/costo y aprobar solo cambios críticos|
+| Definición ambigua de criterios de aceptación | 2 | 3 | 6 | Documentar criterios en formato Given-When-Then y validar que esten centrados en el negocio antes de iniciar desarrollo. |
+| Problemas de comunicación entre QA y DEV | 2 | 2 | 4 | Realizar reuniones cortas diarias para asignar responsables y fechas de solución. |
+| Bajo uso inicial del MVP por parte de comercios clientes | 2 | 3 | 6 | Acompañar a los comercios en el uso del sistema durante las primeras 2 semanas y revisar cada semana el nivel de uso para aplicar mejoras. |
 
-3. Desglose del descuento poco claro para el usuario final.
-   - Impacto: abandono del flujo de compra, aumento de reclamos y percepción de falta de transparencia.
-   - Mitigación QA: prueba de sistema funcional de UX y prueba de aceptación con usuarios para validar claridad del desglose, descuento aplicado y precio final.
+### Riesgos tecnicos
 
-4. Rendimiento por debajo del objetivo definido
-   - Impacto: Pérdida de credibilidad en el producto
-   - Mitigación QA: Validar que el producto cumpla al 100% con los criterios de aceptación
-
-   ### Riesgos técnicos
-1. Cálculo incorrecto del descuento total por orden de aplicación o acumulación de reglas.
-   - Impacto: precio final erróneo, pérdida de margen para el comercio o sobreprecio para el cliente, y aumento de reclamos.
-   - Mitigación QA: prueba de sistema extremo a extremo y validación de aceptación con ejemplos aprobados por negocio.
-
-2. Validaciones incompletas o inconsistentes de datos de entrada.
-   - Impacto: ingreso de valores inválidos (nulos, negativos, fuera de rango).
-   - Mitigación QA: pruebas de validación en frontend y backend, casos negativos y de frontera, y prueba de integración de sistemas para asegurar consistencia de rechazos entre servicios e interfaces externas.
-
-3. Rendimiento insuficiente en la simulación de precio bajo uso concurrente.
-   - Impacto: tiempos de respuesta altos o inestables en horas pico, degradación de la experiencia, abandono del flujo y menor conversión de promociones.
-   - Mitigación QA: ejecutar pruebas de carga y estrés con concurrencia progresiva en entorno representativo de sistema y monitorear latencia y estabilidad antes de despliegue.
+| Descripción | Probabilidad | Impacto | Riesgo | Mitigación principal |
+|-------------|--------------|---------|--------|----------------------|
+| Cálculo incorrecto del descuento total por orden de aplicación o acumulación de reglas | 3 | 3 | 9 | Definir reglas de cálculo claras y hacer pruebas completas con casos reales antes de publicar. |
+| Validaciones incompletas o inconsistentes de datos de entrada | 3 | 3 | 9 | Validar datos, bloqueando valores vacíos, negativos o fuera de rango. |
+| Rendimiento insuficiente en la simulación de precio bajo uso concurrente | 2 | 3 | 6 | Probar el sistema con alta concurrencia antes y optimizar consultas o procesos lentos detectados. |
+| Interfaz de configuración poco clara para usuarios del comercio | 2 | 3 | 6 | Simplificar la pantalla principal, usar etiquetas claras y validar la usabilidad con pruebas rápidas con usuarios reales. |
+| Cambios de reglas sin trazabilidad | 2 | 2 | 4 | Registrar quién, cuándo y qué regla se modificó, y mostrar un historial simple de cambios dentro del módulo. |
