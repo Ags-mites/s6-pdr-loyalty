@@ -4,15 +4,11 @@
 * **Autores:** Agustín Mites, Matias Regaló y Luis Ospino
 * **Fecha:** 18 de Marzo de 2026 
 
-### Introducción del problema:
-En la actualidad, las tiendas de comercio electrónico B2C, dependen de descuentos generales y estáticos que se administran manualmente, ocasionando un comportamiento perjudicial en el cliente, quien solo comprará cuando haya rebajas, por lo tanto la marca perderá valor. El modelo tradicional de promociones reduce las ganancias, ya que ofrece el mismo descuento a un comprador recurrente que a uno que solo busca ofertas puntuales. Esto genera que aumenté el costo de adquisición y disminuye el valor del cliente a lo largo del tiempo.  
-Dado el aumento de los costos de publicidad, la rentabilidad ha pasado de ser una estrategia de crecimiento a ser una estrategia enfocada en la retención efectiva. Como consecuencia, los comercios necesitan una herramienta que proteja sus márgenes.
-
 ## Visión y objetivos
 ### Visión:
 Para tiendas de e-commerce B2C en fase de escalamiento que necesitan optimizar sus estrategias promocionales sin comprometer su rentabilidad, LOYALTY es una plataforma de descuentos dinámicos que permite tomar decisiones promocionales inteligentes basadas en la temporada, la fidelidad del cliente y el tipo de producto. A diferencia de las herramientas básicas de descuentos que ofrecen las plataformas de e-commerce, nuestro producto determina el descuento mínimo viable para maximizar las conversiones mientras protege los margenes de ganancias proyectando relaciones más justas, sostenibles y duraderas con los clientes.
 
-### Contexto del proyecto:
+### Problema a resolver y Contexto:
 En la actualidad, las tiendas de comercio electrónico B2C dependen de descuentos generales, estáticos y administrados manualmente, lo que genera ineficiencias operativas y financieras, además de fomentar un comportamiento perjudicial en el cliente, quien solo comprará cuando haya rebajas; por lo tanto, la marca perderá valor.  
 Este modelo de promociones impacta directamente en el margen operativo bruto, ya que ofrece el mismo descuento a compradores recurrentes como a aquellos que solo buscan ofertas puntuales. A esto se suma la gestión manual de campañas, que dificulta reaccionar en tiempo real a cambios en la demanda, inventario o comportamiento del consumidor. Como resultado, los comercios subsidian ventas innecesariamente, aumentando el costo de adquisición y reduciendo su rentabilidad a largo plazo.  
 En un contexto donde los costos de publicidad aumentan, las empresas han pasado de priorizar el crecimiento a toda costa a una estrategia de retención efectiva; como consecuencia, es necesaria una herramienta que proteja sus márgenes.
@@ -21,42 +17,17 @@ En este sentido, la rentabilidad y la retención son prioritarias, lo que impuls
 ### Objetivos:
 1. Lograr que el 80% de los usuarios que adopten la calculadora de descuentos puedan crear y activar promociones completas en la plataforma en menos de 3 minutos, durante el primer mes posterior a la implementación del software.
 2. Mantener un margen de ganancia bruta promedio del 25% en productos con promociones, incrementando también en un 15% la tasa de conversión respecto al promedio previo a la implementación, durante los primeros 6 meses posteriores al lanzamiento.
-3. Aumentar en un 20% la frecuencia de recompra de clientes frecuentes en los e-commerce durante el primer trimestre, mediante ofertas personalizadas basadas en su historial de compras. 
+3. Aumentar en un 20% la frecuencia de recompra de clientes frecuentes en los e-commerce durante el primer trimestre, mediante ofertas personalizadas basadas en sus métricas de cantidad de compras y montos gastados. 
 
 
 ## Alcance del MVP
 
 | In                                                                 | Out                                                                  |
-|------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
-| **Lógica de descuentos combinada:** <br> Temporada, Nivel de fidelidad del cliente, Tipo de producto | **Modelos predictivos:** <br> Sugerencias automáticas de descuentos basadas en IA para definir conveniencia de productos. |
-| **Pantalla única de simulación:** <br> Incluye campos de precio base, tipo de producto, nivel de fidelidad y temporada. | **Gestión de usuarios:** <br> Sin registro, inicio de sesión ni manejo avanzado de permisos o roles. |
-| **Cálculo y visualización inmediata:** <br> Desglose de precio base, % y monto por variable, y precio final. | **Historial y auditoría:** <br> Sin registro de operaciones previas ni trazabilidad detallada de compras. |
-| **Tabla de configuración editable:** <br> Definición de reglas para los % de temporada, fidelidad y tipo de producto. | **Análisis avanzado:** <br> Sin tableros de indicadores (KPIs) ni reportes personalizados de negocio. |
-
-- IN 
-   1. Lógica de descuentos que combine:
-       - Temporada
-       - Nivel de fidelidad del cliente
-       - Tipo de producto
-    2. Pantalla única de simulación con los campos:
-       - Precio base del producto
-       - Tipo de producto
-       - Nivel de fidelidad del cliente
-       - Temporada
-    3. Cálculo y visualización inmediata del resultado:
-       - Precio base
-       - % y monto descontado por cada variable
-       - Precio final
-    4. Tabla de configuración editable para definir reglas de descuento:
-       - % por temporada
-       - % por fidelidad
-       - % por tipo de producto
-    
-- OUT
-   1. No incluye cuentas reales de usuario: registro, inicio de sesión y gestión avanzada de permisos o roles.
-   2. No incluye historial completo de operaciones ni auditoría detallada de compras.
-   3. No incluye análisis avanzado del negocio, como tableros de indicadores o reportes personalizados.
-   4. No incluye sugerencias automáticas para definir qué productos conviene poner en descuento, ni modelos predictivos.
+|-----|-----|
+| **API REST transaccional:** <br> Endpoint para cálculo en tiempo real que procesa un payload con datos de los productos del carrito y métricas de compras del usuario. | **Almacenamiento de usuarios finales:** <br> No se usará base de datos con historial de transacciones, nombres o datos personales de los clientes del e-commerce |
+| **Dashboard de configuración UI:** <br> Interfaz web para que el administrador del e-commerce pueda definir las reglas de descuentos y los umbrales de clasificación de fidelidad. | **Integraciones nativas/plugins:** <br> No se desarrollarán apps para Shopify, VTEX O MAGENTO. La integración vía API recae en el cliente. |
+| **Lógica de descuento combinada:** <br> Motor de reglas que utilice descuentos de temporada, fidelidad y tipo de producto. | **Modelos predictivos/IA:** <br> No tendrá sugerencias automáticas de optimización de precios o recomendaciones. |
+| **Gestión de accesos:** <br> Generación y revocación de access tokens para autenticar las peticiones del e-commerce. | **Pasarela de pagos/Checkout:** <br> Loyalty no procesará pagos, solo devolverá el precio calculado al frontend del cliente. |
 
 ## Riesgos de negocio y tecnicos
 
