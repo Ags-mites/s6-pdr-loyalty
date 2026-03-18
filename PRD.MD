@@ -5,7 +5,7 @@
 * **Fecha:** 17 de Marzo de 2026 
 
 ## Visión y objetivos
-### **Visión:** 
+### Visión:
 Para tiendas de e-commerce B2C en fase de escalamiento que necesitan optimizar sus estrategias promocionales sin comprometer su rentabilidad, LOYALTY es una plataforma de descuentos dinámicos que permite tomar decisiones promocionales inteligentes basadas en la temporada, la fidelidad del cliente y el tipo de producto. A diferencia de las herramientas básicas de descuentos que ofrecen las plataformas de e-commerce, nuestro producto determina el descuento mínimo viable para maximizar las conversiones mientras protege los margenes de ganancias proyectando relaciones más justas, sostenibles y duraderas con los clientes.
 
 ### Contexto del proyecto:
@@ -20,7 +20,15 @@ En este sentido, la rentabilidad y la retención son prioritarias, lo que impuls
 3. Aumentar en un 20% la frecuencia de recompra de clientes frecuentes en los e-commerce durante el primer trimestre, mediante ofertas personalizadas basadas en su historial de compras. 
 
 
-## **Alcance del MVP**
+## Alcance del MVP
+
+| In                                                                 | Out                                                                  |
+|------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
+| **Lógica de descuentos combinada:** <br> Temporada, Nivel de fidelidad del cliente, Tipo de producto | **Modelos predictivos:** <br> Sugerencias automáticas de descuentos basadas en IA para definir conveniencia de productos. |
+| **Pantalla única de simulación:** <br> Incluye campos de precio base, tipo de producto, nivel de fidelidad y temporada. | **Gestión de usuarios:** <br> Sin registro, inicio de sesión ni manejo avanzado de permisos o roles. |
+| **Cálculo y visualización inmediata:** <br> Desglose de precio base, % y monto por variable, y precio final. | **Historial y auditoría:** <br> Sin registro de operaciones previas ni trazabilidad detallada de compras. |
+| **Tabla de configuración editable:** <br> Definición de reglas para los % de temporada, fidelidad y tipo de producto. | **Análisis avanzado:** <br> Sin tableros de indicadores (KPIs) ni reportes personalizados de negocio. |
+
 - IN 
    1. Lógica de descuentos que combine:
        - Temporada
