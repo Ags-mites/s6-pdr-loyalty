@@ -2,7 +2,11 @@
 ## Información del proyecto
 * **Nombre del Producto:** LOYALTY (Calculadora de Descuentos Dinámicos) 
 * **Autores:** Agustín Mites, Matias Regaló y Luis Ospino
-* **Fecha:** 17 de Marzo de 2026 
+* **Fecha:** 18 de Marzo de 2026 
+
+### Introducción del problema:
+En la actualidad, las tiendas de comercio electrónico B2C, dependen de descuentos generales y estáticos que se administran manualmente, ocasionando un comportamiento perjudicial en el cliente, quien solo comprará cuando haya rebajas, por lo tanto la marca perderá valor. El modelo tradicional de promociones reduce las ganancias, ya que ofrece el mismo descuento a un comprador recurrente que a uno que solo busca ofertas puntuales. Esto genera que aumenté el costo de adquisición y disminuye el valor del cliente a lo largo del tiempo.  
+Dado el aumento de los costos de publicidad, la rentabilidad ha pasado de ser una estrategia de crecimiento a ser una estrategia enfocada en la retención efectiva. Como consecuencia, los comercios necesitan una herramienta que proteja sus márgenes.
 
 ## Visión y objetivos
 ### Visión:
@@ -63,7 +67,7 @@ En este sentido, la rentabilidad y la retención son prioritarias, lo que impuls
 | Retrasos en la entrega del MVP | 3 | 3 | 9 | Comunicar avances y antes de la fecha limite notificar a los clientes que se extenderá la fecha de entrega  |
 | Cambios frecuentes en el alcance del MVP | 3 | 3 | 9 | Evaluar impacto en tiempo/costo y aprobar solo cambios críticos|
 | Definición ambigua de criterios de aceptación | 2 | 3 | 6 | Documentar criterios en formato Given-When-Then y validar que esten centrados en el negocio antes de iniciar desarrollo. |
-| Problemas de comunicación entre QA y DEV | 2 | 2 | 4 | Realizar reuniones cortas diarias para asignar responsables y fechas de solución. |
+| Problemas de comunicación entre QA y DEV | 1 | 2 | 2 | Realizar reuniones cortas diarias para asignar responsables y fechas de solución. |
 | Bajo uso inicial del MVP por parte de comercios clientes | 2 | 3 | 6 | Acompañar a los comercios en el uso del sistema durante las primeras 2 semanas y revisar cada semana el nivel de uso para aplicar mejoras. |
 
 ### Riesgos tecnicos
