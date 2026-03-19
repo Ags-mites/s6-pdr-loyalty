@@ -22,11 +22,13 @@ Para mi negocio antes de llegar al tope máximo.
 
 HU 5:
 Como motor de descuentos,
-Quiero clasificar al cliente basándome en su gasto y número de compras totales recibidas por el e-comercio, Para determinar el nivel del consumidor y aplicar el descuento correspondiente.
+Quiero clasificar al cliente basándome en su gasto y número de compras totales recibidas por el e-comercio, 
+Para determinar el nivel del consumidor y aplicar el descuento correspondiente.
 
-6. Como usuario de LOYALTY
-Quiero poder editar en configuracion, el porcentaje de descuento según el nivel de fidelidad del cliente.
-Para incentivar la recompra de los clientes recurrentes y nuevos.
+HU 6:
+Como motor de descuentos
+Quiero aplicar un tope máximo de descuento
+Para asegurar que ninguna combinación de promociones afecte el margen de ganancia configurado
 
 7. Como usuario de LOYALTY
 Quiero poder editar en configuracion, el porcentaje de descuento según el tipo de producto.
