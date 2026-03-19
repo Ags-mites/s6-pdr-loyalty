@@ -10,7 +10,7 @@ Como Super Admin,
 Quiero crear perfiles para marketing con permisos limitados, 
 Para restringir acciones criticas como manipulación de API KEYS o eliminación de configuraciones críticas.
 
-3. HU 3:
+HU 3:
 Como Super Admin, 
 Quiero generar, revocar y rotar API Keys desde mi panel,
 Para asegurar que solo las plataformas de e-commerce autorizadas consuman el motor de descuentos.
