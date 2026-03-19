@@ -1,17 +1,17 @@
 E01 - Seguridad e Identidad - IAM
 
-- HU 1.1:
+- HU 1.1: Autenticacion del super admin
 	Como Super Admin, quiero autenticar me con email y contraseña, para acceder de forma segura al panel de configuración de Loyalty.
 
 
-Scenario: Autenticacion del super admin
+Scenario:  Inicio de sesión exitoso
 Given: que el super admin se encuentra en la pagina de inicio de sesión de Loyalty
 And:  ha ingresado un email y contraseña validos y registrados
 When: selecciona la opción de ingresar
 Then: El sistema debe validar las credenciales con los almacenados en la base de datos
 And: debe redirigir el usuario al Dashboard principal con todas las funciones de administración activas
 
-Scenario: Error de autenticacion credenciales incorrectas
+Scenario: Intento de inicio de sesión con credenciales erróneas
 Given: que el super admin ingresa un email no registrado o una contraseña incorrecta 
 When: Intenta iniciar sesión 
 Then: El sistema debe rechazar el ingreso de sesión
@@ -24,16 +24,17 @@ Then: El sistema debe negar la solicitud
 And: mostrar un mensaje con los campos vacíos que son obligatorios y resaltarlos. 
 
 
-- HU 1.2:
+- HU 1.2: Gestión de perfiles
 	Como Super Admin, quiero crear perfiles para marketing con permisos limitados, para restringir acciones criticas como manipulación de API KEYS o eliminación de configuraciones críticas.
 
-Scenario: Creacion de perfiles
-Given: que el super admin se encuentra en la pagina configuracion
-When: selecciona la opción de nuevo usuario
-And: usuario ingresara los campos como nombre, empresa, rol, y permisos y da en guardad
-Then: El sistema mostrara el mensaje de usuario creado
-And: se vera en la tabla de usuarios habilitados
-
+Scenario: Creación exitosa del perfil de marketing
+Given: que el super admin se encuentra en la pagina "Gestión de usuarios" del dashboard
+When: selecciona la opción de "Crear nuevo usuario"
+And: ingresa los campos obligatorios: como nombre, email, empresa y selecciona el rol de "Personal de marketing"
+And: da clic en el botón "Guardar"
+Then: El sistema debe persistir el nuevo perfil en la base de datos
+And: debe mostrar un mensaje de "Usuario creado exitosa mente"
+And: sel nuevo usuario debe aparecer en la tabla de usuarios con estado "Habilitado".
 
 
 - HU 1.3: 
