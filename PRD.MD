@@ -15,7 +15,7 @@ En un contexto donde los costos de publicidad aumentan, las empresas han pasado 
 En este sentido, la rentabilidad y la retención son prioritarias, lo que impulsa la necesidad de una capa inteligente que permita personalizar y optimizar descuentos de forma dinámica. En función de ello, LOYALTY plantea una solución entre el catálogo y el checkout, que sea capaz de calcular e inyectar precios personalizados en tiempo real.
 
 ### Objetivos:
-1. Lograr que el 80% de los usuarios que adopten la calculadora de descuentos puedan crear y activar promociones completas en la plataforma en menos de 3 minutos, durante el primer mes posterior a la implementación del software.
+1. Lograr que el 80% de los usuarios que adopten la calculadora de descuentos puedan crear y activar promociones completas en la plataforma en menos de 5 minutos, durante el primer mes posterior a la implementación del software.
 2. Mantener un margen de ganancia bruta promedio del 25% en productos con promociones, incrementando también en un 15% la tasa de conversión respecto al promedio previo a la implementación, durante los primeros 6 meses posteriores al lanzamiento.
 3. Aumentar en un 20% la frecuencia de recompra de clientes frecuentes en los e-commerce durante el primer trimestre, mediante ofertas personalizadas basadas en sus métricas de cantidad de compras y montos gastados. 
 
@@ -24,10 +24,12 @@ En este sentido, la rentabilidad y la retención son prioritarias, lo que impuls
 
 | In                                                                 | Out                                                                  |
 |-----|-----|
-| **API REST Stateless - S2S:** <br> Endpoint para cálculo en tiempo real que procesa un payload con datos de los productos del carrito y métricas de compras del usuario. | **Almacenamiento de usuarios finales:** <br> No se usará base de datos con historial de transacciones, nombres o datos personales de los clientes del e-commerce |
-| **Dashboard de configuración UI:** <br> Interfaz web para que el administrador del e-commerce pueda definir las reglas de descuentos y los umbrales de clasificación de fidelidad. | **Integraciones nativas/plugins:** <br> No se desarrollarán apps para Shopify, VTEX O MAGENTO. La integración vía API recae en el cliente. |
-| **Lógica de descuento combinada:** <br> Motor de reglas que utilice descuentos de temporada, fidelidad y tipo de producto. | **Modelos predictivos/IA:** <br> No tendrá sugerencias automáticas de optimización de precios o recomendaciones. |
-| **Gestión de accesos:** <br> Generación y revocación de access tokens para autenticar las peticiones del e-commerce. | **Pasarela de pagos/Checkout:** <br> Loyalty no procesará pagos, solo devolverá el precio calculado al frontend del cliente. |
+| **API REST Stateless - S2S**: <br> Comunicación exclusiva entre servidores: el backend del e-commerce envía el payload con el carrito y las métricas; posteriormente recibe el descuento en tiempo real. | **Sincronización de datos históricos**: <br> No se usará base de datos con historial de transacciones, nombres o datos personales con las bases de datos legadas |
+| **Validación de autenticación**: <br> El sistema solo procesará aquellas solicitudes que incluyan el API Key vinculada con el comercio. | **SDKs de frontend**: <br> No se desarrollarán librerías de JavaScript para el navegador. La integración debe ser estrictamente de servidor a servidor. |
+| **Lógica de descuento combinada**: <br> Motor de reglas que utilice descuentos de temporada, fidelidad y tipo de producto y resuelva conflictos de acumulación | **Modelos predictivos/IA**: <br> No tendrá sugerencias automáticas de optimización de precios o recomendaciones. |
+| **Dashboard de configuración UI**: <br> Interfaz web para que el administrador del e-commerce pueda definir las reglas de descuentos, umbrales de clasificación de fidelidad y logs de aplicación. | **Integraciones nativas/plugins**: <br> No se desarrollarán apps para Shopify, VTEX O MAGENTO. La integración vía API recae en el cliente. |
+| **Gestión de accesos**: <br> Administración para la generación, rotación y revocación de credenciales de acceso para autenticar las peticiones del e-commerce. | **Pasarela de pagos/Checkout**: <br> Loyalty no procesará pagos, solo devolverá el precio calculado al servidor del cliente. |
+| **Logs de auditoría**: <br> Registro técnico de qué regla se aplicó a cada solicitud del e-commerce. | **Gestión de identidad de usuarios**: <br> No gestionamos perfiles de usuario, contraseñas ni sesiones de los clientes finales del e-commerce. |
 
 ## Riesgos de negocio y tecnicos
 
