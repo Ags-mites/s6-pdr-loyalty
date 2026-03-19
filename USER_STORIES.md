@@ -20,9 +20,9 @@ Como personal de marketing,
 Quiero definir el orden de prioridad de las reglas de descuentos, producto, fidelidad, temporada, para que el sistema aplique primero los descuentos mas críticos 
 Para mi negocio antes de llegar al tope máximo.
 
-5. Como usuario de LOYALTY
-Quiero poder editar en configuracion, el porcentaje de descuento aplicable a cada temporada.
-Para estar acorde a la demanda del momento.
+HU 5:
+Como motor de descuentos,
+Quiero clasificar al cliente basándome en su gasto y número de compras totales recibidas por el e-comercio, Para determinar el nivel del consumidor y aplicar el descuento correspondiente.
 
 6. Como usuario de LOYALTY
 Quiero poder editar en configuracion, el porcentaje de descuento según el nivel de fidelidad del cliente.
