@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "a5976106fe998542",
@@ -185,10 +186,10 @@
   },
   "active": "e2b5177ece9ecfd3",
   "lastOpenFiles": [
-    "DRAFTS_PRD/UserStories.md",
-    "DRAFTS_PRD/PRD.MR.md",
     "PRD.MD",
     "DRAFTS_PRD/UserStoriesAG.md",
+    "DRAFTS_PRD/UserStories.md",
+    "DRAFTS_PRD/PRD.MR.md",
     "USER_STORIES.md",
     "DRAFTS/PRD.MR.md",
     "DRAFTS/PRD.AG.md"
