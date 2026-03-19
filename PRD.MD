@@ -5,7 +5,7 @@
 * **Fecha:** 18 de Marzo de 2026 
 
 ### Introducción del problema:
-En la actualidad, las tiendas de comercio electrónico B2C, dependen de descuentos generales y estáticos que se administran manualmente, ocasionando un comportamiento perjudicial en el cliente, quien solo comprará cuando haya rebajas, por lo tanto la marca perderá valor. El modelo tradicional de promociones reduce las ganancias, ya que ofrece el mismo descuento a un comprador recurrente que a uno que solo busca ofertas puntuales. Esto genera que aumenté el costo de adquisición y disminuye el valor del cliente a lo largo del tiempo.  
+En la actualidad, las tiendas de comercio electrónico B2C, dependen de descuentos generales y estáticos que se administran manualmente, ocasionando un comportamiento perjudicial en el cliente, quien solo comprará cuando haya rebajas, por lo tanto la marca perderá valor. El modelo tradicional de promociones reduce las ganancias, ya que ofrece el mismo descuento a un comprador recurrente que a uno que solo busca ofertas puntuales. Esto genera que aumente el costo de adquisición y disminuye el valor del cliente a lo largo del tiempo.  
 Dado el aumento de los costos de publicidad, la rentabilidad ha pasado de ser una estrategia de crecimiento a ser una estrategia enfocada en la retención efectiva. Como consecuencia, los comercios necesitan una herramienta que proteja sus márgenes.
 
 ## Visión y objetivos
