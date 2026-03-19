@@ -18,7 +18,7 @@ E02 - Cálculo de descuentos
 	Como motor de descuentos, quiero clasificar al cliente basándome en su gasto y numero de compras totales recibidas por el e-comercio, para determinar el nivel del consumidor y aplicar el descuento correspondiente.
 	
 +  HU 2.3:
-	Como personal de marketing, quiero aplicar un tope máximo de descuento, para asegurar que ninguna combinación de reglas afecte el margen de ganancia configurado 
+	Como motor de descuentos, quiero aplicar un tope máximo de descuento, para asegurar que ninguna combinación de promociones  afecte el margen de ganancia configurado 
 
 +  HU 2.4:
 	Como e-commerce quiero recibir el cálculo final y las reglas del descuento aplicadas como respuesta del servicio de Loyalty, para mostrar al usuario final en el checkout
