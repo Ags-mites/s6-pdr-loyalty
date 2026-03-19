@@ -10,9 +10,10 @@ Como Super Admin,
 Quiero crear perfiles para marketing con permisos limitados, 
 Para restringir acciones criticas como manipulación de API KEYS o eliminación de configuraciones críticas.
 
-3. Como usario de LOYALTY
-Quiero poder calcular y visualizar el precio final del producto aplicando el descuento total según las reglas configuradas.
-Para conocer el precio final real del producto.
+3. HU 3:
+Como Super Admin, 
+Quiero generar, revocar y rotar API Keys desde mi panel,
+Para asegurar que solo las plataformas de e-commerce autorizadas consuman el motor de descuentos.
 
 4. Como usario de LOYALTY
 Quiero poder Visualizar el porcentaje y el monto descontado por temporada, tipo de producto y nivel de fidelidad
