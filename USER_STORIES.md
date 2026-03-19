@@ -15,9 +15,10 @@ Como Super Admin,
 Quiero generar, revocar y rotar API Keys desde mi panel,
 Para asegurar que solo las plataformas de e-commerce autorizadas consuman el motor de descuentos.
 
-4. Como usario de LOYALTY
-Quiero poder Visualizar el porcentaje y el monto descontado por temporada, tipo de producto y nivel de fidelidad
-Para tener claridad del cálculo de descuento
+HU 4:
+Como personal de marketing, 
+Quiero definir el orden de prioridad de las reglas de descuentos, producto, fidelidad, temporada, para que el sistema aplique primero los descuentos mas críticos 
+Para mi negocio antes de llegar al tope máximo.
 
 5. Como usuario de LOYALTY
 Quiero poder editar en configuracion, el porcentaje de descuento aplicable a cada temporada.
