@@ -1,12 +1,14 @@
 Users Stories
 
-1. Como Super Admin, 
+HU 1:
+Como Super Admin
 Quiero autenticar me con email y contraseña,
 Para acceder de forma segura al panel de configuración de Loyalty.
 
-2. Como usario de LOYALTY
-Quiero poder completar una pantalla unica de simulacion con los campos precio base del producto, tipo de producto, nivel de fidelidad del cliente y temporada
-Para simular promociones combinadas.
+HU 2:
+Como Super Admin, 
+Quiero crear perfiles para marketing con permisos limitados, 
+Para restringir acciones criticas como manipulación de API KEYS o eliminación de configuraciones críticas.
 
 3. Como usario de LOYALTY
 Quiero poder calcular y visualizar el precio final del producto aplicando el descuento total según las reglas configuradas.
