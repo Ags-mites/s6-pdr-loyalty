@@ -1,8 +1,8 @@
 Users Stories
 
-1. Como usario de LOYALTY
-Quiero poder realizar descuentos combinando Temporada, Nivel de fidelidad del cliente Y tipo de producto
-Para Máximizar las conversiones mientras protege los márgenes de ganancias proyectando relaciones más justas, sostenibles y duraderas con los clientes.
+1. Como Super Admin, 
+Quiero autenticar me con email y contraseña,
+Para acceder de forma segura al panel de configuración de Loyalty.
 
 2. Como usario de LOYALTY
 Quiero poder completar una pantalla unica de simulacion con los campos precio base del producto, tipo de producto, nivel de fidelidad del cliente y temporada
