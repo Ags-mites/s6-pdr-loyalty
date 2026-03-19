@@ -22,30 +22,30 @@ En este sentido, la rentabilidad y la retención son prioritarias, lo que impuls
 
 ## Alcance del MVP
 
-| In                                                                 | Out                                                                  |
-|-----|-----|
+| In                                                                                                                                                                                                       | Out                                                                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **API REST Stateless - S2S**: <br> Comunicación exclusiva entre servidores: el backend del e-commerce envía el payload con el carrito y las métricas; posteriormente recibe el descuento en tiempo real. | **Sincronización de datos históricos**: <br> No se usará ni se consumira datos con historial de transacciones, nombres o datos personales de las bases de datos de los compradores finales |
-| **Validación de autenticación**: <br> El sistema solo procesará aquellas solicitudes que incluyan el API Key vinculada con el comercio. | **SDKs de frontend**: <br> No se desarrollarán librerías de JavaScript para el navegador. La integración debe ser estrictamente de servidor a servidor. |
-| **Lógica de descuento combinada**: <br> Capacidad de sumar descuentos, de temporada, fidelidad y tipo de producto con la aplicación del límite máximo de descuento permitido | **Modelos predictivos/IA**: <br> No tendrá sugerencias automáticas de optimización de precios o recomendaciones. |
-| **Dashboard de configuración UI**: <br> Interfaz web para que el administrador del e-commerce pueda definir las reglas de descuentos, umbrales de clasificación de fidelidad y logs de aplicación. | **Integraciones nativas/plugins**: <br> No se desarrollarán apps para Shopify, VTEX O MAGENTO. No se incluye análisis avanzados de negocio, tableros de indicadores ni reportes. |
-| **Autenticación al dashboard**: <br> Sistema de autenticación especifico para los gestores del e-commerce al dashboard de configuración. | **Gestion de identidad B2C**: <br> No se gestionara perfiles, sesiones ni contraseñas de los compradores finales de los e-commerce. |
-| **Persistencia de configuración y usuarios**: <br> Almacenamiento de las reglas, parámetros de fidelidad y credenciales de los usuarios administradores en base de datos. | **Persistencia de transacciones y perfiles B2C**: <br> No se almacenarán datos de transacciones, ni perfiles de los compradores finales, ni del detalle de carritos procesados. |
-| **Gestión de credenciales**: <br> Interfaz para generar, rotar y revocar API Keys de acceso para las peticiones del e-commerce restringida exclusivamente al perfil de administrador. | **Pasarela de pagos/Checkout**: <br> Loyalty no procesará pagos, solo devolverá el precio calculado al servidor del cliente. |
-| **Logs de auditoría**: <br> Registro técnico de qué regla se aplicó a cada solicitud del e-commerce. | **Almacenamiento de sesiones**: <br> No se guardara ni mantendra persistencia de la navegación del usuario final. |
+| **Validación de autenticación**: <br> El sistema solo procesará aquellas solicitudes que incluyan el API Key vinculada con el comercio.                                                                  | **SDKs de frontend**: <br> No se desarrollarán librerías de JavaScript para el navegador. La integración debe ser estrictamente de servidor a servidor.                                    |
+| **Lógica de descuento combinada**: <br> Capacidad de sumar descuentos, de temporada, fidelidad y tipo de producto con la aplicación del límite máximo de descuento permitido                             | **Modelos predictivos/IA**: <br> No tendrá sugerencias automáticas de optimización de precios o recomendaciones.                                                                           |
+| **Dashboard de configuración UI**: <br> Interfaz web para que el administrador del e-commerce pueda definir las reglas de descuentos, umbrales de clasificación de fidelidad y logs de aplicación.       | **Integraciones nativas/plugins**: <br> No se desarrollarán apps para Shopify, VTEX O MAGENTO. No se incluye análisis avanzados de negocio, tableros de indicadores ni reportes.           |
+| **Autenticación al dashboard**: <br> Sistema de autenticación especifico para los gestores del e-commerce al dashboard de configuración.                                                                 | **Gestion de identidad B2C**: <br> No se gestionara perfiles, sesiones ni contraseñas de los compradores finales de los e-commerce.                                                        |
+| **Persistencia de configuración y usuarios**: <br> Almacenamiento de las reglas, parámetros de fidelidad y credenciales de los usuarios administradores en base de datos.                                | **Persistencia de transacciones y perfiles B2C**: <br> No se almacenarán datos de transacciones, ni perfiles de los compradores finales, ni del detalle de carritos procesados.            |
+| **Gestión de credenciales**: <br> Interfaz para generar, rotar y revocar API Keys de acceso para las peticiones del e-commerce restringida exclusivamente al perfil de administrador.                    | **Pasarela de pagos/Checkout**: <br> Loyalty no procesará pagos, solo devolverá el precio calculado al servidor del cliente.                                                               |
+| **Logs de auditoría**: <br> Registro técnico de qué regla se aplicó a cada solicitud del e-commerce.                                                                                                     | **Almacenamiento de sesiones**: <br> No se guardara ni mantendra persistencia de la navegación del usuario final.                                                                          |
 
-## Riesgos de negocio y tecnicos
+## Riesgos de negocio y técnicos
 
 ### Riesgos de negocio
 
-| Descripción | Probabilidad | Impacto | Riesgo | Mitigación principal |
-|-------------|--------------|---------|--------|----------------------|
-| Retrasos en la entrega del MVP | 3 | 3 | 9 | Comunicar avances y antes de la fecha limite notificar a los clientes que se extenderá la fecha de entrega  |
-| Cambios frecuentes en el alcance del MVP | 3 | 3 | 9 | Evaluar impacto en tiempo/costo y aprobar solo cambios críticos|
-| Definición ambigua de criterios de aceptación | 2 | 3 | 6 | Definir criterios de aceptación claros y validar con QA antes de iniciar el sprint. |
-| Problemas de comunicación entre QA y DEV | 1 | 2 | 2 | Realizar reuniones cortas diarias para asignar responsables y fechas de solución. |
-| Bajo uso inicial del MVP por parte de comercios clientes | 2 | 3 | 6 | Acompañar a los comercios en el uso del sistema durante las primeras 2 semanas y revisar cada semana el nivel de uso para aplicar mejoras. |
+| Descripción                                              | Probabilidad | Impacto | Riesgo | Mitigación principal                                                                                                                       |
+| -------------------------------------------------------- | ------------ | ------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Retrasos en la entrega del MVP                           | 3            | 3       | 9      | Comunicar avances y antes de la fecha limite notificar a los clientes que se extenderá la fecha de entrega                                 |
+| Cambios frecuentes en el alcance del MVP                 | 3            | 3       | 9      | Evaluar impacto en tiempo/costo y aprobar solo cambios críticos                                                                            |
+| Definición ambigua de criterios de aceptación            | 2            | 3       | 6      | Definir criterios de aceptación claros y validar con QA antes de iniciar el sprint.                                                        |
+| Problemas de comunicación entre QA y DEV                 | 1            | 2       | 2      | Realizar reuniones cortas diarias para asignar responsables y fechas de solución.                                                          |
+| Bajo uso inicial del MVP por parte de comercios clientes | 2            | 3       | 6      | Acompañar a los comercios en el uso del sistema durante las primeras 2 semanas y revisar cada semana el nivel de uso para aplicar mejoras. |
 
-### Riesgos tecnicos
+### Riesgos técnicos
 
 | Descripción | Probabilidad | Impacto | Riesgo | Mitigación principal |
 |-------------|--------------|---------|--------|----------------------|
