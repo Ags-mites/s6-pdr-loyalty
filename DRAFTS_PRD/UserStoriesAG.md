@@ -19,9 +19,18 @@ E02 - Cálculo de descuentos
 	
 +  HU 2.3:
 	Como personal de marketing, quiero aplicar un tope máximo de descuento, para asegurar que ninguna combinación de reglas afecte el margen de ganancia configurado 
-	
-+  HU 2.4:
-	Como personal de marketing, quiero configurar los diferentes tipos de descuento, para asegurar que sigan las reglas y estrategias de marketing creadas. 
 
-+  HU 2.5:
++  HU 2.4:
 	Como e-commerce quiero recibir el cálculo final y las reglas del descuento aplicadas como respuesta del servicio de Loyalty, para mostrar al usuario final en el checkout
+
+E03 - Dashboard
+
++ HU 3.1:
+	Como personal de marketing, quiero crear, editar y eliminar reglas de descuentos para productos y temporada, para que sigan las reglas y estrategias de marketing creadas. 
+
++ HU 3.2:
+	Como personal de marketing, quiero configurar los umbrales de compras para la clasificación de fidelidad, para definir que clientes se clasifican como bronce, plata u oro.
+
++ HU 3.3:
+	Como personal de marketing, quiero establecer un tope máximo global y por campaña para asegurar que la suma de los beneficios nunca comprometan el margen operativo
+
