@@ -263,6 +263,14 @@ And el orden de aplicación de descuentos respeta la prioridad configurada
 And el descuento total no supera el tope máximo vigente
 And el precio final refleja ambas restricciones de negocio
 
+Scenario: Carrito sin descuentos aplicables
+Given el ecommerce está autorizado para consumir el servicio
+And el carrito es válido
+And no existen descuentos aplicables para ese carrito
+When el ecommerce solicita el cálculo del carrito
+Then el precio final es igual al subtotal del carrito
+And la respuesta indica que no hubo descuentos aplicados
+
 
 HU 10. 
 Como usuario de LOYALTY, 
