@@ -11,9 +11,9 @@ Quiero crear perfiles de usuario,
 Para cada ecommerce, para garantizar que cada uno gestione únicamente sus propias reglas de descuento sin afectar a otros ecommerce.
 
 HU 3:
-Como Super Admin, 
-Quiero generar, revocar y rotar API Keys desde mi panel,
-Para asegurar que solo las plataformas de e-commerce autorizadas consuman el motor de descuentos.
+Como sistema, 
+Quiero restringir el acceso a ciertas funcionalidades exclusivamente al Super Admin, 
+Para proteger la configuración global del sistema.
 
 HU 4:
 Como personal de marketing, 
