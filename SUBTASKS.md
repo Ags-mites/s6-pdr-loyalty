@@ -76,7 +76,6 @@
 - Implementar endpoints para listar, revocar y rotar llaves por ecommerce.
 - Realizar pruebas de cobertura sobre el middleware de validación de llaves.
 
-
 ### Frontend
 - Implementar panel de gestión de credenciales en la configuración del comercio.
 - Desarrollar funcionalidad para mostrar la llave completa solo en el momento de creación.
@@ -98,3 +97,26 @@
 ### Justificación:
 - DEV: Esfuerzo medio. Implica el manejo de una capa de seguridad distinta a la de usuarios, centrada en la integración técnica entre sistemas.
 - QA: Esfuerzo bajo-medio. Se centra en validar la denegación de acceso y la protección del secreto en la interfaz de usuario.
+
+---
+
+# HU-04
+## Subtareas DEV
+### Backend
+- Definir el modelo de datos para Reglas de Temporada con rangos de fechas.
+- Implementar algoritmo de validación para evitar solapamiento de fechas entre reglas activas.
+- Desarrollar CRUD completo con validaciones de porcentaje de descuento.
+- Implementar lógica de activación/desactivación manual de reglas.
+- Realizar pruebas unitarias enfocadas en el cálculo de colisiones de intervalos de tiempo.
+
+
+### Frontend
+- Desarrollar formulario con selectores de fecha y validación de periodos lógicos.
+- Implementar tabla de gestión de reglas con filtros por estado activa/inactiva.
+- Crear indicadores visuales para alertar sobre solapamientos detectados por el servidor.
+- Implementar servicios de consumo para la actualización de estados de las reglas.
+
+
+## Estimación: 5 puntos
+### Justificación:
+- DEV: Esfuerzo medio-alto. La lógica de solapamiento de fechas y la consistencia de los periodos de vigencia añaden una capa de complejidad algorítmica al CRUD tradicional.
