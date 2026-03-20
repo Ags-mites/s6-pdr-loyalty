@@ -384,30 +384,7 @@ And una transacción califica para múltiples descuentos
 When el descuento total calculado supera el tope máximo
 Then el descuento final aplicado se limita al tope máximo configurado
 
-### Definition of Ready (DoR)
-[ ] Historia claramente entendida evaluación in-memory de atributos B2C.
-[ ] Criterios de aceptación completos incluye el esquema estricto de rechazo.
-[ ] Reglas de negocio definidas:
-- Asignación de nivel "Default" si el cliente es nuevo o sus métricas son cero.
-- Comportamiento ante métricas negativas.
-[ ] Documentación de API: JSON Schema del objeto customer dentro del S2S definido, con tipado fuerte.
-[ ] Política de evaluación idempotente: Mismo payload de entrada, mismo nivel asignado, independientemente del tiempo.
 
-### Definition of Done (DoD)
-[ ] Código implementado y revisado code review enfocado en manejo de errores.
-[ ] Pruebas unitarias:
-- Validación estricta contra el JSON Schema.
-- Algoritmo de búsqueda de rango eficiente.
-[ ] Pruebas de integración:
-- Petición con payload válido y respuesta con el nivel correcto mapeado desde la BD de reglas.
-[ ] Manejo de Reglas de Negocio:
-- Retorno de HTTP 400 Bad Request estructurado si faltan atributos obligatorios para la clasificación.
-[ ] Validaciones y Edge Cases:
-- Payload con tipos incorrectos.
-- Payload con números negativos.
-- Payload sin el nodo customer.
-[ ] QA validado inyectando JSONs malformados por S2S.
-[ ] Sin bugs de excepciones no controladas.
 
 ---
 
@@ -439,6 +416,33 @@ Scenario: Consistencia de clasificación para mismo payload
 Given existe una configuración de clasificación vigente
 When el motor evalúa dos veces el mismo payload
 Then el nivel de fidelidad asignado es el mismo en ambas evaluaciones
+
+### Definition of Ready (DoR)
+[ ] Historia claramente entendida evaluación in-memory de atributos B2C.
+[ ] Criterios de aceptación completos incluye el esquema estricto de rechazo.
+[ ] Reglas de negocio definidas:
+- Asignación de nivel "Default" si el cliente es nuevo o sus métricas son cero.
+- Comportamiento ante métricas negativas.
+[ ] Documentación de API: JSON Schema del objeto customer dentro del S2S definido, con tipado fuerte.
+[ ] Política de evaluación idempotente: Mismo payload de entrada, mismo nivel asignado, independientemente del tiempo.
+
+### Definition of Done (DoD)
+[ ] Código implementado y revisado code review enfocado en manejo de errores.
+[ ] Pruebas unitarias:
+- Validación estricta contra el JSON Schema.
+- Algoritmo de búsqueda de rango eficiente.
+[ ] Pruebas de integración:
+- Petición con payload válido y respuesta con el nivel correcto mapeado desde la BD de reglas.
+[ ] Manejo de Reglas de Negocio:
+- Retorno de HTTP 400 Bad Request estructurado si faltan atributos obligatorios para la clasificación.
+[ ] Validaciones y Edge Cases:
+- Payload con tipos incorrectos.
+- Payload con números negativos.
+- Payload sin el nodo customer.
+[ ] QA validado inyectando JSONs malformados por S2S.
+[ ] Sin bugs de excepciones no controladas.
+
+---
 
 ## HU 9. 
 Como ecommerce, 
