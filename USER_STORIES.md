@@ -384,6 +384,29 @@ And una transacción califica para múltiples descuentos
 When el descuento total calculado supera el tope máximo
 Then el descuento final aplicado se limita al tope máximo configurado
 
+### Definition of Ready (DoR)
+[ ] Historia claramente entendida flujo matemático de sumatoria y descarte por prioridad.
+[ ] Criterios de aceptación completos incluye el comportamiento matemático exacto al alcanzar el tope.
+[ ] Reglas de negocio definidas:
+- Fórmula de acumulación explícita aditiva o multiplicativa.
+- Algoritmo de recorte truncamiento parcial del descuento de menor prioridad vs eliminación total del mismo.
+[ ] Esquema de base de datos preparado para almacenar el campo priority y max_discount_cap.
+[ ] Restricciones matemáticas acordadas.
+
+### Definition of Done (DoD)
+[ ] Código implementado y revisado code review aprobado.
+[ ] Pruebas unitarias:
+- Ordenamiento estricto de arreglos de descuentos basados en el índice de prioridad.
+- Función de limitación que trunca el cálculo al porcentaje exacto del tope.
+[ ] Pruebas de integración:
+- Simulaciones de evaluación de 3+ reglas simultáneas respetando el orden.
+[ ] Validaciones y Edge Cases:
+- Múltiples descuentos que, sumados, dan exactamente el valor del tope límite matemático.
+- Configuración de 2 reglas intentando guardar la misma prioridad manejo del error de unicidad.
+- Tope configurado deliberadamente al 100%.
+[ ] QA validado en ambiente de pruebas.
+[ ] Sin bugs financieros de sobredescuento.
+
 ---
 
 ## HU 8. 
