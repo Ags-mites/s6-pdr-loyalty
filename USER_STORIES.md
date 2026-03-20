@@ -115,6 +115,11 @@ When se define una nueva regla de descuento con parámetros válidos.
 Then la regla queda registrada
 And la regla puede ser aplicada por el motor
 
+Scenario: Rechazo de creación por duplicidad
+Given existe una regla para el mismo tipo de producto
+When se registra una regla
+Then el sistema rechaza la creación
+And reporta conflicto de reglas para ese tipo de producto
 
 HU 6. 
 Como usuario de LOYALTY,
