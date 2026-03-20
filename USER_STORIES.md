@@ -22,11 +22,6 @@ Como Super Admin,
 Quiero crear perfiles de usuario,
 Para cada ecommerce, para garantizar que cada uno gestione únicamente sus propias reglas de descuento sin afectar a otros ecommerce.
 
-HU 3:
-Como sistema, 
-Quiero restringir el acceso a ciertas funcionalidades exclusivamente al Super Admin, 
-Para proteger la configuración global del sistema.
-
 HU 4:
 Como Super Admin,
 Quiero gestionar credenciales de acceso,
