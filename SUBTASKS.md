@@ -48,4 +48,20 @@
 - Aplicar filtros en el estado global para asegurar la visualización única de datos del usuario de loyalty logueado.
 - Crear validaciones de UI para evitar la creación de usuarios sin ecommerce asignado.
 
+## Subtareas QA
+### Análisis y diseño
+- Analizar riesgos de seguridad sobre la fuga de datos entre diferentes comercios.
+- Diseñar matriz de pruebas de permisos
 
+
+### Validación técnica y funcional
+- Verificar que un Admin no pueda consultar ni modificar usuarios de otro ecommerce.
+- Validar que el Super Admin pueda asignar usuarios a cualquier comercio registrado.
+- Comprobar que el ecommerce_id se guarde correctamente en cada transacción del usuario.
+- Ejecutar pruebas negativas intentando saltar el aislamiento mediante manipulación de IDs.
+
+
+## Estimación: 5 puntos
+### Justificación:
+- DEV: Esfuerzo medio-alto. La implementación del aislamiento de datos es la base del sistema y requiere lógica rigurosa para evitar brechas de seguridad entre clientes.
+- QA: Esfuerzo medio. Requiere pruebas de seguridad exhaustivas para garantizar que no exista cruce de información entre cuentas.
