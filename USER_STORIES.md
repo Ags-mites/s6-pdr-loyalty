@@ -1,6 +1,6 @@
 Users Stories
 
-HU 1:
+## HU 1:
 Como usuario de LOYALTY,
 Quiero iniciar sesión y cerrar sesión, 
 Para acceder de forma segura al dashboard.
@@ -23,7 +23,21 @@ When: Intenta ingresar olvidando llenar los campos obligatorios
 Then: El sistema debe negar la solicitud 
 And: Muestra un mensaje de faltan campos obligatorios
 
-HU 2:
+### Definition of Ready (DoR)
+[ ] Claridad Técnica: Definir mecanismo de autenticación JWT y el Tiempo de Vida del token.
+[ ] Dependencias: Diseño de base de datos de usuarios administradores finalizado.
+[ ] Criterios de Aceptación: Incluir comportamiento explícito de bloqueo tras N intentos fallidos.
+[ ] Validación de Regla: Ningún usuario puede poseer múltiples sesiones concurrentes sin invalidar la anterior prevención de credenciales compartidas.
+
+###
+[ ] Pruebas Unitarias: Generación y validación de expiración del token JWT.
+[ ] Integración: Verificación de redirección de rutas protegidas hacia el dashboard correcto por rol.
+[ ] Cálculo Dinámico: N/A.
+[ ] QA & Bug-Free: Prueba de Edge Cases ejecutada intento de inyección SQL en campos de login, inicio de sesión con valores nulos, expiración de sesión en tiempo real mientras el usuario navega.
+
+---
+
+## HU 2:
 Como Super Admin,
 Quiero crear usuarios vinculados a un ecommerce,
 Para garantizar que cada uno gestione únicamente sus propias reglas de descuento sin afectar a otros ecommerce.
@@ -40,7 +54,7 @@ When el usuario inicia sesión,
 Then solo puede visualizar y gestionar información de su ecommerce
 And no puede acceder a datos de otros ecommerce
 
-HU 3:
+## HU 3:
 Como Super Admin,
 quiero gestionar y validar las API Keys de cada ecommerce,
 para asegurar que solo sistemas autorizados puedan acceder a sus recursos en la plataforma.
@@ -58,7 +72,7 @@ When consulto las claves de acceso de ese ecommerce
 Then el sistema muestra la lista de claves de acceso asociadas
 And oculta parte de la información de cada clave para proteger su seguridad
 
-HU 4. 
+## HU 4:
 Como usuario de LOYALTY, 
 Quiero crear, editar y eliminar reglas de temporada 
 Para automatizar las promociones por demanda de temporada
@@ -104,7 +118,7 @@ When se solicita su edición
 Then el sistema rechaza la operación
 And informa que no existe una regla para el identificador solicitado
 
-HU 5:
+## HU 5:
 Como usuario de LOYALTY, 
 Quiero crear, editar y eliminar reglas por tipo de producto,
 Para automatizar las promociones en base a inventario 
@@ -185,7 +199,7 @@ When el motor clasifica a un cliente con métricas vigentes
 Then el cliente queda asignado al nivel correspondiente a su rango
 And los beneficios aplicables se determinan según ese nivel
 
-HU 7. 
+## HU 7. 
 Como usuario de LOYALTY,
 Quiero definir el tope maximo y la prioridad de descuentos,
 Para proteger la rentabilidad del negocio.
@@ -216,7 +230,7 @@ And una transacción califica para múltiples descuentos
 When el descuento total calculado supera el tope máximo
 Then el descuento final aplicado se limita al tope máximo configurado
 
-HU 8. 
+## HU 8. 
 Como motor de descuentos,
 Quiero clasificar al cliente segun el payload recibido 
 Para asignar su nivel de descuento.
@@ -245,7 +259,7 @@ Given existe una configuración de clasificación vigente
 When el motor evalúa dos veces el mismo payload
 Then el nivel de fidelidad asignado es el mismo en ambas evaluaciones
 
-HU 9. 
+## HU 9. 
 Como ecommerce, 
 Quiero enviar el carrito y recibir el precio final con descuentos aplicados, 
 Para mostrarle al usuario final en el checkout.
@@ -277,7 +291,7 @@ When el ecommerce envía un carrito con datos incompletos o inconsistentes
 Then la solicitud es rechazada
 And no se retorna precio final hasta contar con un carrito válido
 
-HU 10. 
+## HU 10. 
 Como usuario de LOYALTY, 
 Quiero consultar los descuentos aplicados en las transacciones de los últimos siete días, 
 Para verificar que el motor de cálculo esté operando bajo las reglas y topes máximos configurados.
@@ -294,7 +308,7 @@ When se visualiza el detalle de una transacción en el log
 Then el sistema no debe mostrar nombres, correos, ni datos de identidad del comprador final.
 And solo se debe mostrar el payload técnico que justifica el descuento
 
-HU 11. 
+## HU 11. 
 Como super admin,
 Quiero ver el registro de los cambios de las reglas de descuento de todos los ecommerce,
 Para identificar que usuarios realizaron modificaciones y en que momentos.
@@ -305,7 +319,7 @@ When consulto el historial de cambios de un ecommerce específico
 Then el sistema debe mostrar una tabla cronológica con: usuario que realizó el cambio, fecha/hora, regla afectada, valor anterior y valor nuevo.
 And debe permitir filtrar por tipo de regla Temporada, Producto o Fidelidad.
 
-HU 12. 
+## HU 12. 
 Como usuario de LOYALTY,
 Quiero poder activar o desactivar reglas con un solo click
 Para reaccionar rápidamente a cambios en el mercado sin tener que borrar la configuración.
