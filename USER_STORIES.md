@@ -29,6 +29,7 @@ And: Muestra un mensaje de faltan campos obligatorios
 * Reglas de negocio definidas:
 
 > Política de sesiones concurrentes.
+
 > Redirección estricta según el rol del usuario Super Admin vs. Admin de Ecommerce.
 
 > Tiempo de Vida TTL de la sesión establecido.
@@ -42,27 +43,33 @@ And: Muestra un mensaje de faltan campos obligatorios
 * Pruebas unitarias:
 
 > Generación, firmado y validación de expiración del token JWT.
+
 > Algoritmo de validación de contraseñas hasheadas.
 
 * Pruebas de integración:
 
 > Login exitoso y generación correcta del payload del token.
+
 > Redirección en el frontend/backend basada en los claims del rol.
+
 > Protección de rutas privadas retorno de HTTP 401/403.
 
 * Pruebas de seguridad:
 
 > Bloqueo de cuenta tras 5 intentos fallidos.
+
 > Protección contra inyección SQL en los campos de email y contraseña.
 
 * Manejo de sesiones:
 
 > Expiración de sesión validada forzando el timeout en pruebas.
+
 > Logout añade el token a una blacklist o invalida la cookie correctamente.
 
 * Validaciones y Edge Cases Casos Borde:
 
 > Intento de envío de payload con campos nulos o vacíos.
+
 > Intento de login de un usuario que ha sido desactivado lógicamente.
 
 * QA validado en ambiente de pruebas.
@@ -93,6 +100,7 @@ And no puede acceder a datos de otros ecommerce
 * Reglas de negocio definidas:
 
 > Aislamiento estricto: Todo usuario excepto Super Admin, debe tener un id inmutable.
+
 > Un Super Admin no puede crear un usuario sin vincularlo a un ID de ecommerce válido y existente.
 
 * Diseño de base de datos actualizado: Entidad Ecommerce creada y relación obligatoria 1:N con la tabla Usuarios.
@@ -107,6 +115,7 @@ And no puede acceder a datos de otros ecommerce
 * Pruebas de integración:
 
 > Creación exitosa del perfil vinculando correctamente el UUID del ecommerce.
+
 > Verificar que al consultar un recurso de otro ecommerce, el sistema responde con HTTP 403 Forbidden o 404 Not Found.
 
 * Pruebas de seguridad:
@@ -116,6 +125,7 @@ And no puede acceder a datos de otros ecommerce
 * Validaciones y Edge Cases Casos Borde:
 
 > Super Admin intenta crear un usuario asociándolo a un ID de ecommerce que no existe.
+
 > Intento de inyectar un tenant_id distinto mediante manipulación del LocalStorage o Headers en el navegador.
 
 * QA validado en ambiente de pruebas.
@@ -147,6 +157,7 @@ And oculta parte de la información de cada clave para proteger su seguridad
 * Reglas de negocio definidas:
 
 > Permitir un máximo de dos API Keys activas simultáneamente por ecommerce para permitir la rotación.
+
 > La API Key solo se muestra completa una única vez al momento de la creación.
 
 * Diseño de base de datos: Tabla de api_keys con campos de hash unidireccional, prefijo para visualización, y estado activa/revocada.
@@ -157,11 +168,13 @@ And oculta parte de la información de cada clave para proteger su seguridad
 * Pruebas unitarias:
 
 > Generación de prefijos y aplicación del hashing unidireccional de la API Key.
+
 > Función de enmascaramiento visual para la interfaz.
 
 * Pruebas de integración:
 
 > Creación, listado y revocación de API Keys en base de datos.
+
 > Validación de middleware: Rechazo de peticiones S2S usando una clave revocada o inexistente.
 
 * Pruebas de seguridad:
@@ -171,6 +184,7 @@ And oculta parte de la información de cada clave para proteger su seguridad
 * Validaciones y Edge Cases Casos Borde:
 
 > Intento de generar una tercera API Key cuando el límite de negocio dos ya está alcanzado.
+
 > Envío de una petición S2S en el milisegundo exacto en que la clave es marcada como revocada.
 
 * QA validado en ambiente de pruebas.
@@ -230,6 +244,7 @@ And informa que no existe una regla para el identificador solicitado
 * Reglas de negocio definidas:
 
 > Obligatoriedad de uso del estándar en formato UTC para todas las fechas.
+
 > Definición de precedencia si una regla inicia exactamente en el milisegundo que otra termina.
 
 * Diseño de base de datos actualizado para soportar índices de rangos de fechas sin superposición.
@@ -240,11 +255,13 @@ And informa que no existe una regla para el identificador solicitado
 * Pruebas unitarias:
 
 > Algoritmo de detección de solapamiento de fechas.
+
 > Conversión y evaluación de timestamps UTC vs Locales.
 
 * Pruebas de integración:
 
 > CRUD completo de la regla en base de datos.
+
 > Aplicación activa de la regla en el motor solo dentro del rango [inicio, fin).
 
 * Manejo de Reglas de Negocio:
@@ -254,6 +271,7 @@ And informa que no existe una regla para el identificador solicitado
 * Validaciones y Edge Cases:
 
 > Edición de una regla que actualmente está en ejecución vigente en este segundo.
+
 > Solicitud de creación con fecha de inicio y fin idénticas.
 
 * QA validado en ambiente de pruebas.
@@ -313,6 +331,7 @@ And informa que no existe una regla para el identificador solicitado
 * Reglas de negocio definidas:
 
 > Algoritmo de normalización obligatorio antes de inserción/evaluación.
+
 > Definición del beneficio.
 
 * Diseño de base de datos actualizado: Índice único compuesto por id + tipo_producto normalizado para evitar duplicidad a nivel físico, no solo lógico.
@@ -323,6 +342,7 @@ And informa que no existe una regla para el identificador solicitado
 * Pruebas unitarias:
 
 > Función de normalización de texto validada contra variaciones de mayúsculas y espacios.
+
 > Rechazo de guardado ante violación del índice único.
 
 * Pruebas de integración:
@@ -336,7 +356,9 @@ And informa que no existe una regla para el identificador solicitado
 * Validaciones y Edge Cases:
 
 > Intento de creación con strings vacíos o compuestos solo por espacios ("   ").
+
 > Envío de caracteres especiales o emojis en el tipo de producto.
+
 > Actualización de una regla omitiendo el payload del valor de descuento.
 
 * QA validado en ambiente de pruebas.
@@ -385,6 +407,7 @@ And los beneficios aplicables se determinan según ese nivel
 * Reglas de negocio definidas:
 
 > Estándar de intervalo algebraico a usar: Límite Inferior Inclusivo y Límite Superior Exclusivo [min, max).
+
 > Métrica exacta sobre la cual se clasifica.
 
 * Diseño de base de datos preparado para manejar valores numéricos de alta precisión.
@@ -395,6 +418,7 @@ And los beneficios aplicables se determinan según ese nivel
 * Pruebas unitarias:
 
 > Algoritmo de validación de continuidad y no-superposición.
+
 > Ordenamiento jerárquico de niveles asegurando progresión ascendente.
 
 * Pruebas de integración:
@@ -408,7 +432,9 @@ And los beneficios aplicables se determinan según ese nivel
 * Validaciones y Edge Cases:
 
 > Clasificación exacta en el límite del rango.
+
 > Configuración del nivel máximo con límite superior abierto.
+
 > Eliminación de un nivel intermedio que genere un vacío.
 
 * QA validado mediante pruebas de escritorio con tablas de valores.
@@ -453,6 +479,7 @@ Then el descuento final aplicado se limita al tope máximo configurado
 * Reglas de negocio definidas:
 
 > Fórmula de acumulación explícita aditiva o multiplicativa.
+
 > Algoritmo de recorte truncamiento parcial del descuento de menor prioridad vs eliminación total del mismo.
 
 * Esquema de base de datos preparado para almacenar el campo priority y max_discount_cap.
@@ -463,6 +490,7 @@ Then el descuento final aplicado se limita al tope máximo configurado
 * Pruebas unitarias:
 
 > Ordenamiento estricto de arreglos de descuentos basados en el índice de prioridad.
+
 > Función de limitación que trunca el cálculo al porcentaje exacto del tope.
 
 * Pruebas de integración:
@@ -472,7 +500,9 @@ Then el descuento final aplicado se limita al tope máximo configurado
 * Validaciones y Edge Cases:
 
 > Múltiples descuentos que, sumados, dan exactamente el valor del tope límite matemático.
+
 > Configuración de 2 reglas intentando guardar la misma prioridad manejo del error de unicidad.
+
 > Tope configurado deliberadamente al 100%.
 
 * QA validado en ambiente de pruebas.
@@ -515,6 +545,7 @@ Then el nivel de fidelidad asignado es el mismo en ambas evaluaciones
 * Reglas de negocio definidas:
 
 > Asignación de nivel "Default" si el cliente es nuevo o sus métricas son cero.
+
 > Comportamiento ante métricas negativas.
 
 * Documentación de API: JSON Schema del objeto customer dentro del S2S definido, con tipado fuerte.
@@ -525,6 +556,7 @@ Then el nivel de fidelidad asignado es el mismo en ambas evaluaciones
 * Pruebas unitarias:
 
 > Validación estricta contra el JSON Schema.
+
 > Algoritmo de búsqueda de rango eficiente.
 
 * Pruebas de integración:
@@ -538,7 +570,9 @@ Then el nivel de fidelidad asignado es el mismo en ambas evaluaciones
 * Validaciones y Edge Cases:
 
 > Payload con tipos incorrectos.
+
 > Payload con números negativos.
+
 > Payload sin el nodo customer.
 
 * QA validado inyectando JSONs malformados por S2S.
@@ -584,6 +618,7 @@ And no se retorna precio final hasta contar con un carrito válido
 * Reglas de negocio y técnicas definidas:
 
 > Estándar de redondeo monetario exacto a utilizar.
+
 > Acuerdo de Nivel de Servicio de latencia máxima de respuesta < 150ms.
 
 * JSON Schema estricto documentado Payload de entrada y salida con tipos de datos y campos requeridos.
@@ -594,6 +629,7 @@ And no se retorna precio final hasta contar con un carrito válido
 * Pruebas unitarias:
 
 > Cálculos matemáticos precisos forzando decimales periódicos conflictivos.
+
 > Validación estricta contra el JSON Schema rechazo de strings donde van floats.
 
 * Pruebas de integración:
@@ -607,7 +643,9 @@ And no se retorna precio final hasta contar con un carrito válido
 * Validaciones y Edge Cases:
 
 > Payload con precios base de íte m en negativo o $0.00.
+
 > Inyección de caracteres no válidos en IDs de producto.
+
 > Cálculo dinámico verificando que nunca se retorne un total a pagar negativo.
 
 * QA validado mediante Postman/cURL u otra herramienta de testing de APIs.
@@ -638,6 +676,7 @@ And solo se debe mostrar el payload técnico que justifica el descuento
 * Reglas de negocio definidas:
 
 > Lista explícita de campos PII que deben ser eliminados/enmascarados antes de escribir en la base de datos (nombres, correos, IPs, direcciones).
+
 > Obligatoriedad de paginación Limit/Offset en la UI y API.
 
 * Diseño de base de datos: Tabla de logs particionada por fecha o con un Job/Cron configurado para borrar físicamente registros created_at < NOW() - 7 days.
@@ -648,11 +687,13 @@ And solo se debe mostrar el payload técnico que justifica el descuento
 * Pruebas unitarias:
 
 > Función de sanitización de payload verificada.
+
 > Formateo correcto de respuestas de log.
 
 * Pruebas de integración:
 
 > Endpoint de recuperación respetando el id.
+
 > Funcionamiento correcto del filtro "últimos 7 días".
 
 * Manejo de Reglas de Negocio:
@@ -662,6 +703,7 @@ And solo se debe mostrar el payload técnico que justifica el descuento
 * Validaciones y Edge Cases:
 
 > Inyección de 100,000 logs simulados para verificar tiempos de respuesta y paginación.
+
 > Intento de consultar datos del día 8.
 
 * QA validado verificando la base de datos directamente.
@@ -686,6 +728,7 @@ And debe permitir filtrar por tipo de regla Temporada, Producto o Fidelidad.
 * Reglas de negocio definidas:
 
 > Formato de almacenamiento del historial campos old_value y new_value en formato JSONB para soportar cualquier estructura de regla.
+
 > Registro inmutable: Nadie, ni un Super Admin, puede borrar un registro de auditoría.
 
 * Arquitectura definida: Implementación vía Interceptores/Middlewares o Triggers de Base de Datos para garantizar que ninguna mutación evada el log.
@@ -700,6 +743,7 @@ And debe permitir filtrar por tipo de regla Temporada, Producto o Fidelidad.
 * Pruebas de integración:
 
 > Todo endpoint de mutación (POST/PUT/PATCH/DELETE) de reglas de negocio inserta automáticamente en la tabla de auditoría.
+
 > Filtros del panel global por tipo de regla y por ecommerce operativos.
 
 * Manejo de Reglas de Negocio:
@@ -709,6 +753,7 @@ And debe permitir filtrar por tipo de regla Temporada, Producto o Fidelidad.
 * Validaciones y Edge Cases:
 
 > Petición de actualización sin cambios reales el sistema no debe generar un log fantasma.
+
 > Super Admin es eliminado del sistema; sus registros históricos deben mantener su nombre referenciado.
 
 * QA validado cruzando acciones reales con la tabla de logs.
@@ -738,6 +783,7 @@ Then la regla debe volver a participar en el cálculo del motor con sus parámet
 * Reglas de negocio definidas:
 
 > Definición del SLA para "inmediatamente" el cambio debe propagarse al motor en menos de 100ms.
+
 > Desactivar una regla no altera sus configuraciones internas; solo cambia un flag is_active.
 
 * Arquitectura definida: Estrategia de invalidación de caché o modelo Event-Driven documentado por el equipo de backend para este caso de uso.
@@ -760,6 +806,7 @@ Then la regla debe volver a participar en el cálculo del motor con sus parámet
 * Validaciones y Edge Cases:
 
 > Prueba de "Debounce" en UI: Usuario haciendo click al toggle 10 veces en 1 segundo.
+
 > Concurrencia severa: Una petición S2S entrando en el exacto milisegundo en que la regla se está marcando como inactiva.
 
 * QA validado usando Postman lanzar S2S repetitivo mientras se apaga la regla en otro monitor.
