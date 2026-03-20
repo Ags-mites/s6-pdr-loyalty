@@ -264,7 +264,34 @@ When se solicita su edición
 Then el sistema rechaza la operación
 And informa que no existe una regla para el identificador solicitado
 
-HU 6. 
+### Definition of Ready (DoR)
+[ ] Historia claramente entendida flujo de CRUD y estandarización de strings.
+[ ] Criterios de aceptación completos incluye manejo de rechazos por duplicidad exacta y normalizada.
+[ ] Reglas de negocio definidas:
+- Algoritmo de normalización obligatorio antes de inserción/evaluación.
+- Definición del beneficio.
+[ ] Diseño de base de datos actualizado: Índice único compuesto por id + tipo_producto normalizado para evitar duplicidad a nivel físico, no solo lógico.
+[ ] Límite de caracteres para el campo tipo_producto definido para evitar inyección de payloads gigantes.
+
+### Definition of Done (DoD)
+[ ] Código implementado y revisado code review aprobado.
+[ ] Pruebas unitarias:
+- Función de normalización de texto validada contra variaciones de mayúsculas y espacios.
+- Rechazo de guardado ante violación del índice único.
+[ ] Pruebas de integración:
+- CRUD completo verificando que la edición no permita sobreescribir otro tipo de producto existente.
+[ ] Manejo de Reglas de Negocio:
+- Validación de campos obligatorios (producto, tipo de beneficio, valor).
+[ ] Validaciones y Edge Cases:
+- Intento de creación con strings vacíos o compuestos solo por espacios ("   ").
+- Envío de caracteres especiales o emojis en el tipo de producto.
+- Actualización de una regla omitiendo el payload del valor de descuento.
+[ ] QA validado en ambiente de pruebas.
+[ ] Sin bugs lógicos de duplicidad.
+
+---
+
+## HU 6. 
 Como usuario de LOYALTY,
 Quiero definir los rangos de clasificación de fidelidad,
 Para segmentar a los clientes y sus beneficios.
