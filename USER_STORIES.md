@@ -17,6 +17,12 @@ When: Intenta ingresar con credenciales inválidas
 Then: El sistema debe rechazar el ingreso de sesión 
 And: Muestra un mensaje de credenciales inválidas
 
+Scenario: Validación de campos obligatorios 
+Given: que existe un usuario registrado en el LOYALTY
+When: Intenta ingresar olvidando llenar los campos obligatorios
+Then: El sistema debe negar la solicitud 
+And: Muestra un mensaje de faltan campos obligatorios
+
 HU 2:
 Como Super Admin,
 Quiero crear perfiles de usuario,
