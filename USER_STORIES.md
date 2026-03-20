@@ -11,6 +11,11 @@ When: Intenta ingresar con credenciales válidas
 Then: El sistema le otorga el acceso
 And: debe redirigir el usuario al Dashboard correspondiente según el rol con todas las funciones pertinentes
 
+Scenario: Intento de inicio de sesión con credenciales erróneas 
+Given: que existe un usuario registrado en el LOYALTY
+When: Intenta ingresar con credenciales inválidas
+Then: El sistema debe rechazar el ingreso de sesión 
+And: Muestra un mensaje de credenciales inválidas
 
 HU 2:
 Como Super Admin,
