@@ -155,6 +155,12 @@ Como usuario de LOYALTY,
 Quiero definir los rangos de clasificación de fidelidad,
 Para segmentar a los clientes y sus beneficios.
 
+Scenario: Configuración exitosa de rangos de fidelidad
+Given los rangos propuestos son completos y no se superponen
+When se registran los nuevos umbrales de clasificación
+Then el sistema guarda la configuración de rangos
+And la segmentación de clientes utiliza los nuevos umbrales
+
 HU 7. 
 Como usuario de LOYALTY,
 Quiero definir el tope maximo y la prioridad de descuentos,
