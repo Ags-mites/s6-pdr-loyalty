@@ -14,8 +14,19 @@
 - Desarrollar lógica de rutas protegidas para el Dashboard.
 - Implementar componente de cierre de sesión con redirección automática.
 
+## Subtareas QA
+### Análisis y diseño
+- Revisar criterios de aceptación para mensajes de error de credenciales.
+- Diseñar casos de prueba para sesiones expiradas y acceso por URL directa sin login.
 
+
+### Validación técnica y funcional
+- Verificar el rechazo de acceso con contraseñas incorrectas o usuarios inexistentes.
+- Validar que el token no sea visible ni manipulable de forma insegura.
+- Comprobar que el cierre de sesión elimine efectivamente los permisos de acceso.
+- Ejecutar pruebas de regresión sobre el flujo de entrada al sistema.
 
 ## Estimación: 3 puntos
 ### Justificación:
 - DEV: Esfuerzo bajo-medio. Se centra en la implementación de un estándar de seguridad conocido, sin integraciones complejas de terceros.
+- QA: Esfuerzo bajo. Los escenarios de prueba son directos y se enfocan en la validación de acceso y seguridad básica del formulario.
