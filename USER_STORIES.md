@@ -49,25 +49,41 @@ Como usuario de LOYALTY,
 Quiero crear, editar y eliminar reglas por tipo de producto,
 Para automatizar las promociones en base a inventario 
 
-HU 6. Como usuario de LOYALTY,
+HU 6. 
+Como usuario de LOYALTY,
 Quiero definir los rangos de clasificación de fidelidad,
 Para segmentar a los clientes y sus beneficios.
 
-HU 7. Como usuario de LOYALTY,
+HU 7. 
+Como usuario de LOYALTY,
 Quiero definir el tope maximo y la prioridad de descuentos,
 Para proteger la rentabilidad del negocio.
 
-HU 8. Como motor de descuentos,
+HU 8. 
+Como motor de descuentos,
 Quiero clasificar al cliente segun el payload recibido 
 Para asignar su nivel de descuento.
 
-HU 9. Como ecommerce, 
+HU 9. 
+Como ecommerce, 
 Quiero enviar el carrito y recibir el precio final con descuentos aplicados, para mostrarle al usuario final en el checkout.
 
-HU 19. Como usuario de LOYALTY, 
-Quiero consultar un registro de los descuentos aplicados en las transacciones de los últimos siete días, 
-Para verificar que el motor de cálculo esté operando bajo los parámetros del tope máximo
+HU 10. 
+Como usuario de LOYALTY, 
+Quiero consultar los descuentos aplicados en las transacciones de los últimos siete días, 
+Para verificar que el motor de cálculo esté operando bajo las reglas y topes máximos configurados.
 
-HU 20. Como super admin,
-Quiero ver el registro de los cambios de las reglas de descuento de todos los usuarios,
-Para saber a qué hora y qué usuario modificó un descuento o tope máximo.
+HU 11. 
+Como super admin,
+Quiero ver el registro de los cambios de las reglas de descuento de todos los ecommerce,
+Para identificar que usuarios realizaron modificaciones y en que momentos.
+
+HU 12. 
+Como usuario de LOYALTY,
+Quiero poder activar o desactivar reglas con un solo click
+Para reaccionar rápidamente a cambios en el mercado sin tener que borrar la configuración.
+
+HU 13. 
+Como motor de descuentos
+Quiero rechazar peticiones con valores negativos,
+para evitar cálculos erróneos que afecten el margen de ganancia.
