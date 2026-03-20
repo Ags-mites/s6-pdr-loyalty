@@ -92,6 +92,12 @@ Given existe una regla de temporada registrada
 When se confirma su eliminación
 Then la regla deja de participar en evaluaciones futuras
 
+Scenario: Rechazo de eliminación de regla inexistente
+Given no existe una regla asociada al identificador solicitado
+When se solicita su eliminación
+Then el sistema rechaza la operación
+And informa que no existe una regla para el identificador solicitado
+
 HU 5:
 Como usuario de LOYALTY, 
 Quiero crear, editar y eliminar reglas por tipo de producto,
