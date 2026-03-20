@@ -299,6 +299,12 @@ Como super admin,
 Quiero ver el registro de los cambios de las reglas de descuento de todos los ecommerce,
 Para identificar que usuarios realizaron modificaciones y en que momentos.
 
+Scenario: Trazabilidad de modificaciones por el Super Admin
+Given que soy un Super Admin y accedo al panel global de auditoría
+When consulto el historial de cambios de un ecommerce específico
+Then el sistema debe mostrar una tabla cronológica con: usuario que realizó el cambio, fecha/hora, regla afectada, valor anterior y valor nuevo.
+And debe permitir filtrar por tipo de regla Temporada, Producto o Fidelidad.
+
 HU 12. 
 Como usuario de LOYALTY,
 Quiero poder activar o desactivar reglas con un solo click
