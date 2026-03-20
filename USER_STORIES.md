@@ -30,6 +30,6 @@ Como Super Admin,
 Quiero validar la credencial por cada solicitud al panel,
 Para asegurar que solo las plataformas de e-commerce autorizadas consuman los descuentos.
 
-7. Como usuario de LOYALTY
-Quiero poder editar en configuracion, el porcentaje de descuento según el tipo de producto.
-Para optimizar la rotación de inventario y la rentabilidad.
+7. Como usuario de LOYALTY, 
+Quiero crear reglas de descuentos para cada temporada, 
+Para automatizar las promociones por demanda de temporada.
