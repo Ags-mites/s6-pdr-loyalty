@@ -148,6 +148,18 @@
 - Manejar estados de error específicos para casos de duplicidad informados por la API.
 - Implementar confirmaciones visuales para la eliminación de reglas.
 
+## Subtareas QA
+### Análisis y diseño
+- Identificar casos de borde en la definición de tipos de producto (strings vacíos, caracteres especiales).
+Diseñar matriz de pruebas para creación exitosa, duplicidad y edición parcial.
+
+### Validación técnica y funcional
+- Verificar que no se puedan crear dos reglas para el mismo tipo de producto.
+- Validar que al eliminar una regla, esta deje de ser considerada por el motor de cálculo de inmediato.
+- Comprobar que el sistema mantenga la versión válida si una edición falla por datos incompletos.
+- Ejecutar pruebas de regresión en el motor para asegurar que las nuevas reglas de producto se apliquen correctamente.
+
 ## Estimación:  3 puntos
 ### Justificación:
 - DEV: Esfuerzo bajo-medio. Se trata de un CRUD estándar con una restricción de unicidad simple. La lógica es menos compleja que la de fechas de temporada.
+- QA: Esfuerzo bajo. Las pruebas son directas y se centran en la integridad referencial y validación de campos.
