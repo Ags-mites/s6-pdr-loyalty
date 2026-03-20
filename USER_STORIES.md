@@ -167,6 +167,13 @@ When se define una configuración con rangos superpuestos
 Then el sistema rechaza la configuración
 And reporta inconsistencia en la definición de niveles
 
+Scenario: Rechazo por discontinuidad o vacíos en rangos
+Given la clasificación exige cobertura continua del dominio definido
+When se registra una configuración con vacíos entre rangos
+Then el sistema rechaza la configuración
+And mantiene la última segmentación válida
+
+
 HU 7. 
 Como usuario de LOYALTY,
 Quiero definir el tope maximo y la prioridad de descuentos,
