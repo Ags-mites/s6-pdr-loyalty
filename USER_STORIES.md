@@ -43,5 +43,9 @@ Quiero eliminar reglas de descuentos para cada temporada,
 Para poder tomar una decisión estratégica y eliminar aquellas reglas que no hayan resultado acorde a la temporada
 
 HU 10. Como usuario de LOYALTY,
-Quiero crear reglas de descuentos
+Quiero crear reglas de descuentos,
 Para tipo de producto, para automatizar las promociones en base a inventario
+
+HU 11. Como usuario de LOYALTY,
+Quiero editar reglas de descuento,
+Para tipo de producto para ajustar las promociones según las necesidades de rotación de inventario
