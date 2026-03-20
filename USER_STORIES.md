@@ -69,3 +69,7 @@ Para que el sistema aplique primero los descuentos más críticos para mi negoci
 HU 16. Como motor de descuentos,
 Quiero clasificar al cliente basándome en su gasto histórico y número de compras,
 Para garantizar que reciba los beneficios correspondientes
+
+HU 17. Como motor de descuentos, 
+Quiero aplicar un tope máximo de descuento, 
+Para asegurar que ninguna combinación de promociones afecte el margen de ganancia configurado
