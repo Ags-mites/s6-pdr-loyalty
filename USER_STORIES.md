@@ -210,6 +210,13 @@ When se registra una prioridad con empates o niveles duplicados
 Then la configuración es rechazada
 And no se altera la prioridad vigente
 
+Scenario: Aplicación del tope ante acumulación de descuentos
+Given existe una configuración vigente de tope y prioridad
+And una transacción califica para múltiples descuentos
+When el descuento total calculado supera el tope máximo
+Then el descuento final aplicado se limita al tope máximo configurado
+
+
 HU 8. 
 Como motor de descuentos,
 Quiero clasificar al cliente segun el payload recibido 
