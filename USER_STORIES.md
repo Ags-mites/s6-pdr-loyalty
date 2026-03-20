@@ -98,6 +98,8 @@ And no puede acceder a datos de otros ecommerce
 [ ] QA validado en ambiente de pruebas.
 [ ] Sin bugs críticos o bloqueantes.
 
+---
+
 ## HU 3:
 Como Super Admin,
 quiero gestionar y validar las API Keys de cada ecommerce,
@@ -140,6 +142,8 @@ And oculta parte de la información de cada clave para proteger su seguridad
 - Envío de una petición S2S en el milisegundo exacto en que la clave es marcada como revocada.
 [ ] QA validado en ambiente de pruebas.
 [ ] Sin bugs críticos o bloqueantes.
+
+---
 
 ## HU 4:
 Como usuario de LOYALTY, 
@@ -186,6 +190,33 @@ Given no existe una regla asociada al identificador solicitado
 When se solicita su edición 
 Then el sistema rechaza la operación
 And informa que no existe una regla para el identificador solicitado
+
+### Definition of Ready (DoR)
+[ ] Historia claramente entendida por el equipo flujo de evaluación temporal estandarizado.
+[ ] Criterios de aceptación completos.
+[ ] Reglas de negocio definidas:
+- Obligatoriedad de uso del estándar en formato UTC para todas las fechas.
+- Definición de precedencia si una regla inicia exactamente en el milisegundo que otra termina.
+[ ] Diseño de base de datos actualizado para soportar índices de rangos de fechas sin superposición.
+[ ] Tipos de descuento y sus límites documentados en la historia.
+
+### Definition of Done (DoD)
+[ ] Código implementado y revisado code review aprobado.
+[ ] Pruebas unitarias:
+- Algoritmo de detección de solapamiento de fechas.
+- Conversión y evaluación de timestamps UTC vs Locales.
+[ ] Pruebas de integración:
+- CRUD completo de la regla en base de datos.
+- Aplicación activa de la regla en el motor solo dentro del rango [inicio, fin).
+[ ] Manejo de Reglas de Negocio:
+- Rechazo automático de fechas de fin menores o iguales a las de inicio.
+[ ] Validaciones y Edge Cases:
+- Edición de una regla que actualmente está en ejecución vigente en este segundo.
+- Solicitud de creación con fecha de inicio y fin idénticas.
+[ ] QA validado en ambiente de pruebas.
+[ ] Sin bugs lógicos de superposición o parseo de fechas.
+
+---
 
 ## HU 5:
 Como usuario de LOYALTY, 
