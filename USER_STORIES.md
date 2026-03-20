@@ -542,7 +542,30 @@ Then el sistema no debe mostrar nombres, correos, ni datos de identidad del comp
 And solo se debe mostrar el payload técnico que justifica el descuento
 
 ### Definition of Ready (DoR)
+[ ] Historia claramente entendida registro de auditoría operativa del motor.
+[ ] Criterios de aceptación completos incluye políticas de retención y privacidad.
+[ ] Reglas de negocio definidas:
+- Lista explícita de campos PII que deben ser eliminados/enmascarados antes de escribir en la base de datos (nombres, correos, IPs, direcciones).
+- Obligatoriedad de paginación Limit/Offset en la UI y API.
+[ ] Diseño de base de datos: Tabla de logs particionada por fecha o con un Job/Cron configurado para borrar físicamente registros created_at < NOW() - 7 days.
+[ ] Definición de carga máxima a mostrar por página en el Dashboard.
+
 ### Definition of Done (DoD)
+[ ] Código implementado y revisado code review aprobado.
+[ ] Pruebas unitarias:
+- Función de sanitización de payload verificada.
+- Formateo correcto de respuestas de log.
+[ ] Pruebas de integración:
+- Endpoint de recuperación respetando el id.
+- Funcionamiento correcto del filtro "últimos 7 días".
+[ ] Manejo de Reglas de Negocio:
+- Resaltado en UI de logs marcados con status: rejected_by_cap.
+[ ] Validaciones y Edge Cases:
+- Inyección de 100,000 logs simulados para verificar tiempos de respuesta y paginación.
+- Intento de consultar datos del día 8.
+[ ] QA validado verificando la base de datos directamente.
+[ ] Sin bugs de rendimiento ni fugas de datos de clientes finales.
+
 ---
 
 ## HU 11. 
@@ -557,7 +580,11 @@ Then el sistema debe mostrar una tabla cronológica con: usuario que realizó el
 And debe permitir filtrar por tipo de regla Temporada, Producto o Fidelidad.
 
 ### Definition of Ready (DoR)
+
+
 ### Definition of Done (DoD)
+
+
 ---
 
 ## HU 12. 
