@@ -28,6 +28,12 @@ Como Super Admin,
 Quiero crear perfiles de usuario,
 Para cada ecommerce, para garantizar que cada uno gestione únicamente sus propias reglas de descuento sin afectar a otros ecommerce.
 
+Scenario: Creación de perfil asociado a un ecommerce específico
+Given un usuario con rol super admin ha iniciado sesión
+And un e-commerce contrató los servicios de LOYALTY    
+When el Super Admin crea un perfil de usuario asociado a ese ecommerce
+Then el perfil queda vinculado exclusivamente a dicho ecommerce
+
 HU 3:
 Como sistema, 
 Quiero restringir el acceso a ciertas funcionalidades exclusivamente al Super Admin, 
