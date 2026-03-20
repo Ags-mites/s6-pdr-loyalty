@@ -21,9 +21,9 @@ Quiero gestionar credenciales de acceso,
 Para cada ecommerce, para controlar su autorización en el sistema.
 
 HU 5:
-Como motor de descuentos,
-Quiero clasificar al cliente basándome en su gasto y número de compras totales recibidas por el e-comercio, 
-Para determinar el nivel del consumidor y aplicar el descuento correspondiente.
+Como Super Admin, 
+Quiero visualizar las credenciales de los diferentes ecommerce desde mi panel, 
+Para administrar los accesos de los ecommerce.
 
 HU 6:
 Como motor de descuentos
