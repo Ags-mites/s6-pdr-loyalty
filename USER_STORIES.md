@@ -109,6 +109,13 @@ Como usuario de LOYALTY,
 Quiero crear, editar y eliminar reglas por tipo de producto,
 Para automatizar las promociones en base a inventario 
 
+Scenario: Creación exitosa de una regla por tipo de producto
+Given no hay una regla activa para ese tipo de producto
+When se define una nueva regla de descuento con parámetros válidos.
+Then la regla queda registrada
+And la regla puede ser aplicada por el motor
+
+
 HU 6. 
 Como usuario de LOYALTY,
 Quiero definir los rangos de clasificación de fidelidad,
