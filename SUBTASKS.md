@@ -163,3 +163,23 @@ Diseñar matriz de pruebas para creación exitosa, duplicidad y edición parcial
 ### Justificación:
 - DEV: Esfuerzo bajo-medio. Se trata de un CRUD estándar con una restricción de unicidad simple. La lógica es menos compleja que la de fechas de temporada.
 - QA: Esfuerzo bajo. Las pruebas son directas y se centran en la integridad referencial y validación de campos.
+
+---
+
+# HU-06
+## Subtareas DEV
+### Backend
+- Crear modelo de persistencia para niveles de fidelidad y sus umbrales.
+- Implementar algoritmo de validación de continuidad para asegurar que no existan vacíos entre rangos.
+- Implementar lógica de exclusividad para evitar superposición de límites (Min/Max).
+- Desarrollar lógica de ordenamiento ascendente para garantizar la jerarquía de niveles.
+- Realizar pruebas unitarias sobre el servicio de validación de rangos.
+
+### Frontend
+- Diseñar interfaz dinámica para la definición de niveles (Bronce, Plata, Oro, etc.).
+- Implementar validaciones de UI que impidan ingresar rangos incoherentes antes de enviar al servidor.
+- Desarrollar visualización clara de la jerarquía de beneficios por nivel.
+
+## Estimación:  5 puntos
+### Justificación:
+- DEV: Esfuerzo medio. La complejidad radica en la validación matemática de la continuidad y no superposición de los rangos para evitar comportamientos erráticos en el motor. 
