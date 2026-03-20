@@ -204,6 +204,12 @@ When se intenta registrar un tope máximo menor o igual a cero
 Then la configuración es rechazada
 And se mantiene la última configuración válida
 
+Scenario: Rechazo por prioridad ambigua
+Given la prioridad de descuentos debe ser determinística
+When se registra una prioridad con empates o niveles duplicados
+Then la configuración es rechazada
+And no se altera la prioridad vigente
+
 HU 8. 
 Como motor de descuentos,
 Quiero clasificar al cliente segun el payload recibido 
