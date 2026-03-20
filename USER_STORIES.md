@@ -234,6 +234,13 @@ When se recibe un payload sin uno o más atributos obligatorios
 Then la clasificación es rechazada
 And se informa que no es posible determinar el nivel de descuento
 
+Scenario: Rechazo por valores fuera de dominio
+Given existen reglas de validación para los atributos del payload
+When se recibe un payload con valores inválidos para el dominio definido
+Then la clasificación es rechazada
+And no se asigna nivel de descuento al cliente
+
+
 HU 9. 
 Como ecommerce, 
 Quiero enviar el carrito y recibir el precio final con descuentos aplicados, 
