@@ -238,4 +238,22 @@ Validación técnica y funcional
 - DEV: Alta (lógica núcleo del motor + contratos + validaciones + determinismo).
 - QA: Media-alta (data-driven testing + bordes + consistencia).
 
+# HU-09
+
+## Subtareas DEV
+### Backend
+- Ajustar DTOs y validar carrito.
+- Integrar autenticación S2S y control de ecommerce autorizado.
+- Aplicar reglas vigentes con prioridad y tope máximo.
+- Exponer `POST /carritos/calcular` con manejo de errores.
+- Agregar pruebas unitarias y de integración.
+### Frontend
+- Consumir endpoint en checkout y mapear payload del carrito.
+- Mostrar subtotal, descuentos y precio final.
+- Manejar estados de carga, de error y sin descuentos y agregar pruebas unitarias.
+
+## Estimación: 8 puntos
+### Justificación:
+- DEV: Alto por lógica de cálculo con reglas, prioridad, tope y validaciones.
+
 
