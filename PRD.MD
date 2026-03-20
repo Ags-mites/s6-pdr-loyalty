@@ -2,7 +2,7 @@
 ## Información del proyecto
 * **Nombre del Producto:** LOYALTY (Calculadora de Descuentos Dinámicos) 
 * **Autores:** Agustín Mites, Matias Regaló y Luis Ospino
-* **Fecha:** 18 de Marzo de 2026 
+* **Fecha:** 20 de Marzo de 2026 
 
 ## Visión y objetivos
 ### Visión:
