@@ -64,3 +64,26 @@
 ### Justificación:
 - DEV: Esfuerzo medio-alto. La implementación del aislamiento de datos es la base del sistema y requiere lógica rigurosa para evitar brechas de seguridad entre clientes.
 - QA: Esfuerzo medio. Requiere pruebas de seguridad exhaustivas para garantizar que no exista cruce de información entre cuentas.
+
+---
+
+# HU-03
+## Subtareas DEV
+### Backend
+- Implementar servicio de generación de API Keys mediante cadenas criptográficas aleatorias.
+- Crear lógica de almacenamiento seguro mediante hashing.
+- Desarrollar Guard de validación de API Keys para peticiones de servidor a servidor.
+- Implementar endpoints para listar, revocar y rotar llaves por ecommerce.
+- Realizar pruebas de cobertura sobre el middleware de validación de llaves.
+
+
+### Frontend
+- Implementar panel de gestión de credenciales en la configuración del comercio.
+- Desarrollar funcionalidad para mostrar la llave completa solo en el momento de creación.
+- Implementar lógica de enmascaramiento de llaves en tablas de administración.
+- Crear diálogos de confirmación para la revocación o rotación de credenciales.
+
+
+## Estimación: 3 puntos
+### Justificación:
+- DEV: Esfuerzo medio. Implica el manejo de una capa de seguridad distinta a la de usuarios, centrada en la integración técnica entre sistemas.
