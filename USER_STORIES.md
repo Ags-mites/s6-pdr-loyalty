@@ -250,6 +250,20 @@ Como ecommerce,
 Quiero enviar el carrito y recibir el precio final con descuentos aplicados, 
 Para mostrarle al usuario final en el checkout.
 
+Scenario: Cálculo exitoso de precio final
+Given el ecommerce está autorizado para consumir el servicio
+And el carrito contiene ítems válidos con cantidades y precios válidos
+And existen reglas de descuento vigentes aplicables
+And existe una configuración vigente de topes y prioridad de descuentos
+And el carrito califica para múltiples descuentos
+When el ecommerce solicita el cálculo del carrito
+Then el servicio responde el precio final del carrito
+And el total incluye los descuentos aplicados según reglas vigentes y prioridades configuradas
+And el orden de aplicación de descuentos respeta la prioridad configurada
+And el descuento total no supera el tope máximo vigente
+And el precio final refleja ambas restricciones de negocio
+
+
 HU 10. 
 Como usuario de LOYALTY, 
 Quiero consultar los descuentos aplicados en las transacciones de los últimos siete días, 
