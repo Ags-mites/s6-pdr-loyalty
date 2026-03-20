@@ -30,10 +30,14 @@ Como Super Admin,
 Quiero validar la credencial por cada solicitud al panel,
 Para asegurar que solo las plataformas de e-commerce autorizadas consuman los descuentos.
 
-7. Como usuario de LOYALTY, 
+HU 7. Como usuario de LOYALTY, 
 Quiero crear reglas de descuentos para cada temporada, 
 Para automatizar las promociones por demanda de temporada.
 
-8. Como usuario de LOYALTY,
+HU 8. Como usuario de LOYALTY,
 Quiero editar reglas de descuentos para cada temporada,
 Para realizar cambios en las automatizaciones de promociones por demanda de temporada
+
+HU 9. Como usuario de LOYALTY ,
+Quiero eliminar reglas de descuentos para cada temporada, 
+Para poder tomar una decisión estratégica y eliminar aquellas reglas que no hayan resultado acorde a la temporada
