@@ -53,3 +53,7 @@ Para tipo de producto para ajustar las promociones según las necesidades de rot
 HU 12. Como usuario de LOYALTY,
 Quiero eliminar reglas de descuento para tipo de producto 
 Para no seguir contando con promociones en determinado producto cuando no hay suficiente mercadería
+
+HU 13. Como usuario de LOYALTY,
+Quiero configurar los umbrales de compras para la clasificación de fidelidad,
+Para definir qué clientes se clasifican como bronce, plata u oro.
