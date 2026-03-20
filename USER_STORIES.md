@@ -6,9 +6,9 @@ Quiero iniciar sesión y cerrar sesión,
 Para acceder de forma segura al sistema y poder proteger mi cuenta al finalizar la jornada.
 
 HU 2:
-Como Super Admin, 
-Quiero crear perfiles para marketing con permisos limitados, 
-Para restringir acciones criticas como manipulación de API KEYS o eliminación de configuraciones críticas.
+Como Super Admin,
+Quiero crear perfiles de usuario,
+Para cada ecommerce, para garantizar que cada uno gestione únicamente sus propias reglas de descuento sin afectar a otros ecommerce.
 
 HU 3:
 Como Super Admin, 
