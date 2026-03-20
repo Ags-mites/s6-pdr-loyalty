@@ -193,3 +193,16 @@ Validación técnica y funcional
 ### Justificación:
 - DEV: Esfuerzo medio. La complejidad radica en la validación matemática de la continuidad y no superposición de los rangos para evitar comportamientos erráticos en el motor. 
 - QA: Esfuerzo medio. Requiere pruebas exhaustivas de lógica de intervalos para asegurar que cada posible valor del cliente caiga en un único segmento.
+
+# HU-07
+## Subtareas DEV
+### Backend
+- Modelo `ConfigDescuentos` (topeMax, prioridades[]) + validaciones (tope>0, prioridades únicas).
+- Endpoint para registrar/actualizar configuración + mantener última válida en rechazos.
+- Ajustar motor: aplicar prioridad y recortar descuento total al tope.
+- Pruebas unitarias (cálculo tope/prioridad) + integración (API).
+
+### Frontend
+- Pantalla de configuración (tope + ordenamiento de descuentos) y validaciones básicas.
+- Manejo de errores (tope inválido, prioridad ambigua).
+- Pruebas unitarias.
