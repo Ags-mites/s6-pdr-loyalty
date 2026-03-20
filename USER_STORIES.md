@@ -49,48 +49,20 @@ Como usuario de LOYALTY,
 Quiero crear, editar y eliminar reglas por tipo de producto,
 Para automatizar las promociones en base a inventario 
 
-
 HU 6. Como usuario de LOYALTY,
 Quiero definir los rangos de clasificación de fidelidad,
 Para segmentar a los clientes y sus beneficios.
 
-HU 9. Como usuario de LOYALTY ,
-Quiero eliminar reglas de descuentos para cada temporada, 
-Para poder tomar una decisión estratégica y eliminar aquellas reglas que no hayan resultado acorde a la temporada
+HU 7. Como usuario de LOYALTY,
+Quiero definir el tope maximo y la prioridad de descuentos,
+Para proteger la rentabilidad del negocio.
 
-HU 10. Como usuario de LOYALTY,
-Quiero crear reglas de descuentos,
-Para tipo de producto, para automatizar las promociones en base a inventario
+HU 8. Como motor de descuentos,
+Quiero clasificar al cliente segun el payload recibido 
+Para asignar su nivel de descuento.
 
-HU 11. Como usuario de LOYALTY,
-Quiero editar reglas de descuento,
-Para tipo de producto para ajustar las promociones según las necesidades de rotación de inventario
-
-HU 12. Como usuario de LOYALTY,
-Quiero eliminar reglas de descuento para tipo de producto 
-Para no seguir contando con promociones en determinado producto cuando no hay suficiente mercadería
-
-HU 13. Como usuario de LOYALTY,
-Quiero configurar los umbrales de compras para la clasificación de fidelidad,
-Para definir qué clientes se clasifican como bronce, plata u oro.
-
-HU 14. Como usuario de LOYALTY,
-Quiero establecer un tope máximo global de descuentos permitidos, 
-Para asegurar que la suma de los beneficios nunca comprometan el margen operativo.
-
-HU 15. Como usuario de LOYALTY, 
-Quiero definir el orden de prioridad de las reglas de descuentos, producto, fidelidad, temporada, 
-Para que el sistema aplique primero los descuentos más críticos para mi negocio antes de llegar al tope máximo.
-
-HU 16. Como motor de descuentos,
-Quiero clasificar al cliente basándome en su gasto histórico y número de compras,
-Para garantizar que reciba los beneficios correspondientes
-
-HU 17. Como motor de descuentos, 
-Quiero aplicar un tope máximo de descuento, 
-Para asegurar que ninguna combinación de promociones afecte el margen de ganancia configurado
-
-HU 18. Como e-commerce, quiero poder enviar un payload con el carrito y las métricas a un endpoint de LOYALTY y recibir el precio final y las reglas descuento calculado, para mostrarle al usuario final en el checkout el precio final y los beneficios aplicados.
+HU 9. Como ecommerce, 
+Quiero enviar el carrito y recibir el precio final con descuentos aplicados, para mostrarle al usuario final en el checkout.
 
 HU 19. Como usuario de LOYALTY, 
 Quiero consultar un registro de los descuentos aplicados en las transacciones de los últimos siete días, 
