@@ -240,6 +240,10 @@ When se recibe un payload con valores inválidos para el dominio definido
 Then la clasificación es rechazada
 And no se asigna nivel de descuento al cliente
 
+Scenario: Consistencia de clasificación para mismo payload
+Given existe una configuración de clasificación vigente
+When el motor evalúa dos veces el mismo payload
+Then el nivel de fidelidad asignado es el mismo en ambas evaluaciones
 
 HU 9. 
 Como ecommerce, 
