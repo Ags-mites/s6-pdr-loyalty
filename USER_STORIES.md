@@ -66,7 +66,8 @@ Para asignar su nivel de descuento.
 
 HU 9. 
 Como ecommerce, 
-Quiero enviar el carrito y recibir el precio final con descuentos aplicados, para mostrarle al usuario final en el checkout.
+Quiero enviar el carrito y recibir el precio final con descuentos aplicados, 
+Para mostrarle al usuario final en el checkout.
 
 HU 10. 
 Como usuario de LOYALTY, 
@@ -82,8 +83,3 @@ HU 12.
 Como usuario de LOYALTY,
 Quiero poder activar o desactivar reglas con un solo click
 Para reaccionar rápidamente a cambios en el mercado sin tener que borrar la configuración.
-
-HU 13. 
-Como motor de descuentos
-Quiero rechazar peticiones con valores negativos,
-para evitar cálculos erróneos que afecten el margen de ganancia.
