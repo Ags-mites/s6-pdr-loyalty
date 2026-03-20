@@ -41,7 +41,6 @@
 - Implementar validaciones de integridad para asegurar que el usuario pertenezca a un solo ecommerce.
 - Realizar pruebas unitarias de aislamiento de datos
 
-
 ### Frontend
 - Desarrollar vista de gestión de usuarios para el Super Admin.
 - Implementar formulario de registro con vinculación obligatoria a un ecommerce.
