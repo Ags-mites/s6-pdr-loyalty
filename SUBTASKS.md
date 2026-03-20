@@ -229,7 +229,13 @@ Validación técnica y funcional
 ### Frontend (si aplica)
 - (Opcional) herramienta interna de prueba: pegar payload y ver resultado/mensajes.
 
+## Subtareas QA
+- Diseño de payloads: completo válido, faltantes, fuera de dominio, borde de rangos.
+- Validación API/motor: rechazos con mensajes claros; determinismo con re-ejecución del mismo payload.
+
 ## Estimación: 8 puntos
 ### Justificación
 - DEV: Alta (lógica núcleo del motor + contratos + validaciones + determinismo).
+- QA: Media-alta (data-driven testing + bordes + consistencia).
+
 
