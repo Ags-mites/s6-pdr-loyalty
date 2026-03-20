@@ -216,11 +216,18 @@ And una transacción califica para múltiples descuentos
 When el descuento total calculado supera el tope máximo
 Then el descuento final aplicado se limita al tope máximo configurado
 
-
 HU 8. 
 Como motor de descuentos,
 Quiero clasificar al cliente segun el payload recibido 
 Para asignar su nivel de descuento.
+
+Scenario: Clasificación exitosa con payload completo y válido
+Given existe una matriz de clasificación vigente
+And el payload contiene todos los atributos requeridos
+When el motor evalúa el payload del cliente
+Then el cliente queda asignado a un único nivel de fidelidad
+And el nivel asignado corresponde a las reglas de clasificación vigentes
+
 
 HU 9. 
 Como ecommerce, 
