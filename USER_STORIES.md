@@ -121,6 +121,13 @@ When se registra una regla
 Then el sistema rechaza la creación
 And reporta conflicto de reglas para ese tipo de producto
 
+Scenario: Edición exitosa de una regla por tipo de producto
+Given existe una regla por tipo de producto registrada
+When se modifican sus parámetros dentro de los límites permitidos
+Then el sistema guarda la nueva versión
+And las nuevas evaluaciones consideran la configuración actualizada
+
+
 HU 6. 
 Como usuario de LOYALTY,
 Quiero definir los rangos de clasificación de fidelidad,
