@@ -622,4 +622,24 @@ When el usuario activa nuevamente
 Then la regla debe volver a participar en el cálculo del motor con sus parámetros originales sin necesidad de reconfigurarla
 
 ### Definition of Ready (DoR)
+[ ] Historia claramente entendida.
+[ ] Criterios de aceptación completos incluye latencia de propagación.
+[ ] Reglas de negocio definidas:
+- Definición del SLA para "inmediatamente" el cambio debe propagarse al motor en menos de 100ms.
+- Desactivar una regla no altera sus configuraciones internas; solo cambia un flag is_active.
+[ ] Arquitectura definida: Estrategia de invalidación de caché o modelo Event-Driven documentado por el equipo de backend para este caso de uso.
+[ ] Interfaz de usuario: El botón debe reflejar estado de carga y bloquearse durante la petición para evitar envíos múltiples.
+
 ### Definition of Done (DoD)
+[ ] Código implementado y revisado code review aprobado.
+[ ] Pruebas unitarias:
+- Mutación correcta del estado is_active preservando el resto del objeto.
+[ ] Pruebas de integración:
+- Flujo completo: Cambio de Toggle -> Purga de Caché -> Lectura del Motor S2S reflectando el nuevo estado.
+[ ] Manejo de Reglas de Negocio:
+- Reactivación restaura el estado operativo sin pedir configuración extra.
+[ ] Validaciones y Edge Cases:
+- Prueba de "Debounce" en UI: Usuario haciendo click al toggle 10 veces en 1 segundo.
+- Concurrencia severa: Una petición S2S entrando en el exacto milisegundo en que la regla se está marcando como inactiva.
+[ ] QA validado usando Postman lanzar S2S repetitivo mientras se apaga la regla en otro monitor.
+[ ] Sin bugs de sincronización de estados ni reglas "zombies" cobrando descuentos.
