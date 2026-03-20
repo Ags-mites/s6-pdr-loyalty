@@ -30,6 +30,7 @@ And: Muestra un mensaje de faltan campos obligatorios
 
 > Política de sesiones concurrentes.
 > Redirección estricta según el rol del usuario Super Admin vs. Admin de Ecommerce.
+
 > Tiempo de Vida TTL de la sesión establecido.
 
 * Diseño de base de datos de usuarios con campos para intentos fallidos y logs de acceso disponible.
