@@ -109,7 +109,6 @@
 - Implementar lógica de activación/desactivación manual de reglas.
 - Realizar pruebas unitarias enfocadas en el cálculo de colisiones de intervalos de tiempo.
 
-
 ### Frontend
 - Desarrollar formulario con selectores de fecha y validación de periodos lógicos.
 - Implementar tabla de gestión de reglas con filtros por estado activa/inactiva.
@@ -131,3 +130,24 @@
 ### Justificación:
 - DEV: Esfuerzo medio-alto. La lógica de solapamiento de fechas y la consistencia de los periodos de vigencia añaden una capa de complejidad algorítmica al CRUD tradicional.
 - QA: Esfuerzo medio. Requiere pruebas matemáticas y de lógica temporal para asegurar que no se apliquen descuentos dobles por errores de configuración.
+
+---
+
+# HU-05
+## Subtareas DEV
+### Backend
+- Crear entidad y tabla para reglas por tipo de producto.
+- Implementar validación de unicidad para evitar duplicidad de reglas por categoría/tipo.
+- Desarrollar endpoints CRUD para la gestión de estas reglas.
+- Implementar lógica de validación de campos obligatorios y tipos de beneficio permitidos.
+- Realizar pruebas unitarias sobre el controlador y el servicio de reglas.
+
+### Frontend
+- Implementar interfaz para el listado y filtrado de reglas por producto.
+- Desarrollar formulario de creación y edición con validaciones en tiempo real.
+- Manejar estados de error específicos para casos de duplicidad informados por la API.
+- Implementar confirmaciones visuales para la eliminación de reglas.
+
+## Estimación:  3 puntos
+### Justificación:
+- DEV: Esfuerzo bajo-medio. Se trata de un CRUD estándar con una restricción de unicidad simple. La lógica es menos compleja que la de fechas de temporada.
