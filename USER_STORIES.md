@@ -5,6 +5,13 @@ Como usuario de LOYALTY,
 Quiero iniciar sesión y cerrar sesión, 
 Para acceder de forma segura al sistema y poder proteger mi cuenta al finalizar la jornada.
 
+Scenario: Inicio de sesión exitoso
+Given: que existe un usuario registrado en el LOYALTY
+When: Intenta ingresar con credenciales válidas 
+Then: El sistema le otorga el acceso
+And: debe redirigir el usuario al Dashboard correspondiente según el rol con todas las funciones pertinentes
+
+
 HU 2:
 Como Super Admin,
 Quiero crear perfiles de usuario,
