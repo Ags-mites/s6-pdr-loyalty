@@ -24,16 +24,36 @@ Then: El sistema debe negar la solicitud
 And: Muestra un mensaje de faltan campos obligatorios
 
 ### Definition of Ready (DoR)
-[ ] Claridad Técnica: Definir mecanismo de autenticación JWT y el Tiempo de Vida del token.
-[ ] Dependencias: Diseño de base de datos de usuarios administradores finalizado.
-[ ] Criterios de Aceptación: Incluir comportamiento explícito de bloqueo tras N intentos fallidos.
-[ ] Validación de Regla: Ningún usuario puede poseer múltiples sesiones concurrentes sin invalidar la anterior prevención de credenciales compartidas.
+[ ] Historia claramente entendida por el equipo, flujo de login/logout y ciclo de vida del token definido.
+[ ] Criterios de aceptación completos.
+[ ] Reglas de negocio definidas:
+- Política de sesiones concurrentes.
+- Redirección estricta según el rol del usuario Super Admin vs. Admin de Ecommerce.
+- Tiempo de Vida TTL de la sesión establecido.
+[ ] Diseño de base de datos de usuarios con campos para intentos fallidos y logs de acceso disponible.
+[ ] Definición del mecanismo de autenticación ej. JWT, cookies HttpOnly acordada.
+[ ] Mensajes de error unificados evitar revelar si el usuario existe o si la contraseña es la incorrecta; usar "Credenciales inválidas".
 
-###
-[ ] Pruebas Unitarias: Generación y validación de expiración del token JWT.
-[ ] Integración: Verificación de redirección de rutas protegidas hacia el dashboard correcto por rol.
-[ ] Cálculo Dinámico: N/A.
-[ ] QA & Bug-Free: Prueba de Edge Cases ejecutada intento de inyección SQL en campos de login, inicio de sesión con valores nulos, expiración de sesión en tiempo real mientras el usuario navega.
+### Definition of Done (DoD)
+[ ] Código implementado y revisado - code review aprobado.
+[ ] Pruebas unitarias:
+- Generación, firmado y validación de expiración del token JWT.
+- Algoritmo de validación de contraseñas hasheadas.
+[ ] Pruebas de integración:
+- Login exitoso y generación correcta del payload del token.
+- Redirección en el frontend/backend basada en los claims del rol.
+- Protección de rutas privadas retorno de HTTP 401/403.
+[ ] Pruebas de seguridad:
+- Bloqueo de cuenta tras 5 intentos fallidos.
+- Protección contra inyección SQL en los campos de email y contraseña.
+[ ] Manejo de sesiones:
+- Expiración de sesión validada forzando el timeout en pruebas.
+- Logout añade el token a una blacklist o invalida la cookie correctamente.
+[ ] Validaciones y Edge Cases Casos Borde:
+- Intento de envío de payload con campos nulos o vacíos.
+- Intento de login de un usuario que ha sido desactivado lógicamente.
+[ ] QA validado en ambiente de pruebas.
+[ ] Sin bugs críticos o bloqueantes.
 
 ---
 
