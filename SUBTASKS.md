@@ -207,3 +207,29 @@ Validación técnica y funcional
 - Manejo de errores (tope inválido, prioridad ambigua).
 - Pruebas unitarias.
 
+## Subtareas QA
+- Casos: configuración OK, tope inválido, prioridad duplicada, aplicación de tope en acumulación.
+- Validación API + pruebas funcionales del motor con múltiples descuentos.
+
+## Estimación: 5 puntos
+### Justificación
+- DEV: Media (impacto directo en motor de descuentos).
+- QA: Media (escenarios de concurrencia y verificación de cálculo).
+
+# HU-08
+
+## Subtareas DEV
+### Backend / Motor
+- Definir contrato `PayloadCliente` + DTOs/respuestas de clasificación (nivel asignado, motivos de rechazo).
+- Validaciones: atributos obligatorios, dominios/formatos, determinismo (mismo input → mismo output).
+- Endpoint/función del motor para evaluar payload (o módulo interno) consumiendo matriz vigente (HU-06).
+- Pruebas unitarias (validación + clasificación) y de consistencia (repetición mismo payload).
+- Pruebas integración (API) con payloads válidos/ inválidos.
+
+### Frontend (si aplica)
+- (Opcional) herramienta interna de prueba: pegar payload y ver resultado/mensajes.
+
+## Estimación: 8 puntos
+### Justificación
+- DEV: Alta (lógica núcleo del motor + contratos + validaciones + determinismo).
+
