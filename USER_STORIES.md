@@ -17,20 +17,27 @@ When: Intenta ingresar con credenciales inválidas
 Then: El sistema debe rechazar el ingreso de sesión 
 And: Muestra un mensaje de credenciales inválidas
 
+Scenario: Validación de campos obligatorios 
+Given: que existe un usuario registrado en el LOYALTY
+When: Intenta ingresar olvidando llenar los campos obligatorios
+Then: El sistema debe negar la solicitud 
+And: Muestra un mensaje de faltan campos obligatorios
+
 HU 2:
 Como Super Admin,
 Quiero crear perfiles de usuario,
 Para cada ecommerce, para garantizar que cada uno gestione únicamente sus propias reglas de descuento sin afectar a otros ecommerce.
 
+Scenario: Creación de perfil asociado a un ecommerce específico
+Given un usuario con rol super admin ha iniciado sesión
+And un e-commerce contrató los servicios de LOYALTY    
+When el Super Admin crea un perfil de usuario asociado a ese ecommerce
+Then el perfil queda vinculado exclusivamente a dicho ecommerce
+
 HU 4:
 Como Super Admin,
 Quiero gestionar credenciales de acceso,
 Para cada ecommerce, para controlar su autorización en el sistema.
-
-HU 5:
-Como Super Admin, 
-Quiero visualizar las credenciales de los diferentes ecommerce desde mi panel, 
-Para administrar los accesos de los ecommerce.
 
 HU 6:
 Como Super Admin,
