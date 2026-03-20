@@ -116,7 +116,18 @@
 - Crear indicadores visuales para alertar sobre solapamientos detectados por el servidor.
 - Implementar servicios de consumo para la actualización de estados de las reglas.
 
+## Subtareas QA
+### Análisis y diseño
+- Revisar la lógica de negocio para casos donde una regla termina y otra empieza el mismo día.
+- Diseñar casos de prueba para límites de descuento (mínimos y máximos permitidos).
+
+### Validación técnica y funcional
+- Validar el rechazo de creación de reglas que se solapen con fechas de una promoción ya existente.
+- Verificar que el motor de descuentos ignore reglas que han sido marcadas como inactivas.
+- Comprobar que la edición de fechas también dispare la validación de colisiones.
+- Ejecutar pruebas de flujo completo Creación, Activación, Aplicación, Eliminación.
 
 ## Estimación: 5 puntos
 ### Justificación:
 - DEV: Esfuerzo medio-alto. La lógica de solapamiento de fechas y la consistencia de los periodos de vigencia añaden una capa de complejidad algorítmica al CRUD tradicional.
+- QA: Esfuerzo medio. Requiere pruebas matemáticas y de lógica temporal para asegurar que no se apliquen descuentos dobles por errores de configuración.
