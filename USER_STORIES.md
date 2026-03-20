@@ -173,6 +173,12 @@ When se registra una configuración con vacíos entre rangos
 Then el sistema rechaza la configuración
 And mantiene la última segmentación válida
 
+Scenario: Rechazo por orden inválido de niveles
+Given los niveles deben mantener progresión ascendente de exigencia
+When se define un nivel superior con umbral menor o igual que uno inferior
+Then el sistema rechaza la configuración
+And notifica incumplimiento de jerarquía de fidelidad
+
 
 HU 7. 
 Como usuario de LOYALTY,
