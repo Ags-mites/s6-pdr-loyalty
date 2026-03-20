@@ -297,6 +297,12 @@ Validación técnica y funcional
 - Implementar filtros por ecommerce y por tipo de regla, con paginación en la tabla.
 - Implementar y validar los estados de carga, sin resultados y error, junto con pruebas unitarias.
 
+## Subtareas QA
+- Diseñar casos de trazabilidad y exactitud de cambios.
+- Validar filtros combinados y orden cronológico.
+- Confirmar que solo el Super Admin pueda acceder al módulo y ejecutar pruebas de funcionamiento general del flujo.
+
 ## Estimación: 5 puntos
 ### Justificación:
 - DEV: Medio por auditoría transversal y consulta segura filtrable.
+- QA: Medio por consistencia histórica y pruebas de autorización.
