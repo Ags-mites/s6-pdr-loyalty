@@ -262,3 +262,19 @@ Validación técnica y funcional
 - DEV: Alto por lógica de cálculo con reglas, prioridad, tope y validaciones.
 - QA: Medio-alto por combinaciones funcionales y validación técnica del API.
 
+# HU-10 | Consultar descuentos aplicados en los últimos 7 días
+## Subtareas DEV
+### Backend
+- Implementar consulta por ecommerce para últimos 7 días y DTO de historial.
+- Marcar transacciones recortadas por tope máximo.
+- Exponer `GET /descuentos/historial?days=7` con paginación y control de acceso.
+- Asegurar que la respuesta no muestre datos personales del cliente.
+- Agregar pruebas unitarias y de integración de filtro temporal, tope y privacidad.
+### Frontend
+- Crear módulo "Historial de Descuentos" con filtro de 7 días.
+- Mostrar tabla cronológica y resaltar transacciones con tope.
+- Mostrar un detalle técnico sin datos personales y contemplar estados de carga, sin resultados y error.
+
+## Estimación: 5 puntos
+### Justificación:
+- DEV: Medio por consulta histórica, formateo y privacidad.
