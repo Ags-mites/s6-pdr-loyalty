@@ -25,8 +25,8 @@ And: Muestra un mensaje de faltan campos obligatorios
 
 HU 2:
 Como Super Admin,
-Quiero crear perfiles de usuario,
-Para cada ecommerce, para garantizar que cada uno gestione únicamente sus propias reglas de descuento sin afectar a otros ecommerce.
+Quiero crear usuarios vinculados a un ecommerce,
+Para garantizar que cada uno gestione únicamente sus propias reglas de descuento sin afectar a otros ecommerce.
 
 Scenario: Creación de perfil asociado a un ecommerce específico
 Given un usuario con rol super admin ha iniciado sesión
@@ -34,23 +34,25 @@ And un e-commerce contrató los servicios de LOYALTY
 When el Super Admin crea un perfil de usuario asociado a ese ecommerce
 Then el perfil queda vinculado exclusivamente a dicho ecommerce
 
-HU 4:
+HU 3:
 Como Super Admin,
-Quiero gestionar credenciales de acceso,
-Para cada ecommerce, para controlar su autorización en el sistema.
+quiero gestionar y validar las API Keys de cada ecommerce,
+para asegurar que solo sistemas autorizados puedan acceder a sus recursos en la plataforma.
 
-HU 6:
-Como Super Admin,
-Quiero validar la credencial por cada solicitud al panel,
-Para asegurar que solo las plataformas de e-commerce autorizadas consuman los descuentos.
+HU 4. 
+Como usuario de LOYALTY, 
+Quiero crear, editar y eliminar reglas de temporada 
+Para automatizar las promociones por demanda de temporada
 
-HU 7. Como usuario de LOYALTY, 
-Quiero crear reglas de descuentos para cada temporada, 
-Para automatizar las promociones por demanda de temporada.
+HU 5:
+Como usuario de LOYALTY, 
+Quiero crear, editar y eliminar reglas por tipo de producto,
+Para automatizar las promociones en base a inventario 
 
-HU 8. Como usuario de LOYALTY,
-Quiero editar reglas de descuentos para cada temporada,
-Para realizar cambios en las automatizaciones de promociones por demanda de temporada
+
+HU 6. Como usuario de LOYALTY,
+Quiero definir los rangos de clasificación de fidelidad,
+Para segmentar a los clientes y sus beneficios.
 
 HU 9. Como usuario de LOYALTY ,
 Quiero eliminar reglas de descuentos para cada temporada, 
