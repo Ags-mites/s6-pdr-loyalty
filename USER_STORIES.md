@@ -45,6 +45,12 @@ Como Super Admin,
 quiero gestionar y validar las API Keys de cada ecommerce,
 para asegurar que solo sistemas autorizados puedan acceder a sus recursos en la plataforma.
 
+Scenario: Crear una clave de acceso para un ecommerce válido
+Given que soy un Super Admin con acceso al sistema,
+And existe un ecommerce registrado,
+When creo una nueva clave de acceso para ese ecommerce,
+Then el sistema genera la clave de acceso correctamente.
+
 HU 4. 
 Como usuario de LOYALTY, 
 Quiero crear, editar y eliminar reglas de temporada 
