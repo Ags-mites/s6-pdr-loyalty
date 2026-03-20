@@ -384,8 +384,6 @@ And una transacción califica para múltiples descuentos
 When el descuento total calculado supera el tope máximo
 Then el descuento final aplicado se limita al tope máximo configurado
 
-
-
 ---
 
 ## HU 8. 
