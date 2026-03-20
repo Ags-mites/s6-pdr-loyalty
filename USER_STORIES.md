@@ -45,6 +45,12 @@ And existen funcionalidades restringidas
 When el usuario intenta acceder
 Then el acceso es permitido
 
+Scenario Acceso denegado a funcionalidades restringidas
+Given un usuario que no es super admin ha iniciado sesión
+And existen funcionalidades restringidas
+When el usuario intenta acceder
+Then el acceso es denegado
+
 HU 4:
 Como Super Admin,
 Quiero gestionar credenciales de acceso,
