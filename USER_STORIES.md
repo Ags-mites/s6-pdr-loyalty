@@ -144,6 +144,12 @@ When se intenta eliminar la regla
 Then el sistema rechaza la operación
 And mantiene sin cambios la configuración 
 
+Scenario: Rechazo de edición de regla inexistente
+Given no existe una regla asociada al tipo de producto indicado
+When se solicita su edición 
+Then el sistema rechaza la operación
+And informa que no existe una regla para el identificador solicitado
+
 HU 6. 
 Como usuario de LOYALTY,
 Quiero definir los rangos de clasificación de fidelidad,
