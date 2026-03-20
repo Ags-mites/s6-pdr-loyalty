@@ -306,3 +306,19 @@ Validación técnica y funcional
 ### Justificación:
 - DEV: Medio por auditoría transversal y consulta segura filtrable.
 - QA: Medio por consistencia histórica y pruebas de autorización.
+
+# HU-12
+## Subtareas DEV
+### Backend
+- Actualizar el modelo de reglas para incluir estado y fecha de última modificación.
+- Exponer `PATCH /reglas/{id}/estado` con validaciones de existencia, permisos y transición.
+- Garantizar efecto inmediato en motor S2S y registrar auditoría del cambio.
+- Agregar pruebas unitarias y de integración del impacto en cálculo.
+### Frontend
+- Implementar toggle de estado en listado de reglas.
+- Actualizar UI en tiempo real con rollback en error.
+- Mostrar feedback de resultado y agregar pruebas unitarias.
+
+## Estimación: 3 puntos
+### Justificación:
+- DEV: Medio-bajo por alcance acotado con requisito de efecto inmediato.
