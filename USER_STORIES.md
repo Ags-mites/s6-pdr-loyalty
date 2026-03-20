@@ -127,6 +127,11 @@ When se modifican sus parámetros dentro de los límites permitidos
 Then el sistema guarda la nueva versión
 And las nuevas evaluaciones consideran la configuración actualizada
 
+Scenario: Rechazo de edición por datos incompletos
+Given la regla requiere tipo de producto y beneficio para ser válida
+When la actualización omite uno o más datos obligatorios
+Then el sistema rechaza la modificación
+And mantiene la versión previamente válida
 
 HU 6. 
 Como usuario de LOYALTY,
