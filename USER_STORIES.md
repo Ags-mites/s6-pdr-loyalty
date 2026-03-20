@@ -309,3 +309,9 @@ HU 12.
 Como usuario de LOYALTY,
 Quiero poder activar o desactivar reglas con un solo click
 Para reaccionar rápidamente a cambios en el mercado sin tener que borrar la configuración.
+
+Scenario: Desactivación inmediata de una regla activa
+Given que existe una regla de descuento por Temporada en estado "activa"
+When el usuario hace click en el botón para cambiarlo a "Inactivo"
+Then el sistema debe actualizar el estado de la regla inmediatamente
+And el motor de cálculo debe ignorar esta regla en todas las peticiones S2S recibidas a partir de ese momento.
