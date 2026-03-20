@@ -65,3 +65,7 @@ Para asegurar que la suma de los beneficios nunca comprometan el margen operativ
 HU 15. Como usuario de LOYALTY, 
 Quiero definir el orden de prioridad de las reglas de descuentos, producto, fidelidad, temporada, 
 Para que el sistema aplique primero los descuentos más críticos para mi negocio antes de llegar al tope máximo.
+
+HU 16. Como motor de descuentos,
+Quiero clasificar al cliente basándome en su gasto histórico y número de compras,
+Para garantizar que reciba los beneficios correspondientes
