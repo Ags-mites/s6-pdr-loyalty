@@ -262,7 +262,7 @@ Validación técnica y funcional
 - DEV: Alto por lógica de cálculo con reglas, prioridad, tope y validaciones.
 - QA: Medio-alto por combinaciones funcionales y validación técnica del API.
 
-# HU-10 | Consultar descuentos aplicados en los últimos 7 días
+# HU-10
 ## Subtareas DEV
 ### Backend
 - Implementar consulta por ecommerce para últimos 7 días y DTO de historial.
@@ -285,3 +285,14 @@ Validación técnica y funcional
 - DEV: Medio por consulta histórica, formateo y privacidad.
 - QA: Medio por consistencia histórica y pruebas de autorización.
 
+# HU-11
+## Subtareas DEV
+### Backend
+- Implementar registro de auditoría.
+- Exponer `GET /auditoria/reglas` con filtros por ecommerce y tipo.
+- Garantizar orden cronológico, paginación y acceso exclusivo de Super Admin.
+- Agregar pruebas unitarias y de integración para trazabilidad y permisos.
+### Frontend
+- Crear vista de auditoría global con tabla cronológica.
+- Implementar filtros por ecommerce y por tipo de regla, con paginación en la tabla.
+- Implementar y validar los estados de carga, sin resultados y error, junto con pruebas unitarias.
