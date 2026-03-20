@@ -206,3 +206,4 @@ Validación técnica y funcional
 - Pantalla de configuración (tope + ordenamiento de descuentos) y validaciones básicas.
 - Manejo de errores (tope inválido, prioridad ambigua).
 - Pruebas unitarias.
+
