@@ -58,12 +58,6 @@ When consulto las claves de acceso de ese ecommerce
 Then el sistema muestra la lista de claves de acceso asociadas
 And oculta parte de la información de cada clave para proteger su seguridad
 
-Scenario: Rechazo de creación por superposición de fechas
-Given ya hay una regla activa para esa temporada
-When se intenta registrar una nueva regla con las mismas fechas
-Then el sistema rechaza el registro
-And informa el conflicto de superposición de fechas entre reglas de temporada
-
 HU 4. 
 Como usuario de LOYALTY, 
 Quiero crear, editar y eliminar reglas de temporada 
@@ -74,6 +68,18 @@ Given no hay una regla activa para esa temporada,
 When se registra una regla de descuento con vigencia y beneficio válidos,
 Then la regla queda almacenada en el sistema,
 And la regla queda disponible para su aplicación durante la vigencia definida.
+
+Scenario: Rechazo de creación por superposición de fechas
+Given ya hay una regla activa para esa temporada
+When se intenta registrar una nueva regla con las mismas fechas
+Then el sistema rechaza el registro
+And informa el conflicto de superposición de fechas entre reglas de temporada
+
+Escenario: Edición exitosa de una regla de temporada
+Given existe una regla de temporada registrada
+When se actualizan sus condiciones con valores válidos
+Then el sistema conserva la regla con la nueva configuración
+And la versión actualizada es la considerada para nuevas evaluaciones
 
 HU 5:
 Como usuario de LOYALTY, 
