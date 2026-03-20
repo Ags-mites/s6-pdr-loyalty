@@ -179,6 +179,12 @@ When se define un nivel superior con umbral menor o igual que uno inferior
 Then el sistema rechaza la configuración
 And notifica incumplimiento de jerarquía de fidelidad
 
+Scenario: Aplicación efectiva de la nueva segmentación
+Given la configuración de rangos fue aceptada
+When el motor clasifica a un cliente con métricas vigentes
+Then el cliente queda asignado al nivel correspondiente a su rango
+And los beneficios aplicables se determinan según ese nivel
+
 
 HU 7. 
 Como usuario de LOYALTY,
