@@ -87,6 +87,10 @@ When la actualización propuesta excede los límites permitidos
 Then el sistema rechaza la modificación
 And mantiene la última configuración válida
 
+Scenario: Eliminación exitosa de una regla de temporada
+Given existe una regla de temporada registrada
+When se confirma su eliminación
+Then la regla deja de participar en evaluaciones futuras
 
 HU 5:
 Como usuario de LOYALTY, 
