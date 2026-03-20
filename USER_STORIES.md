@@ -57,3 +57,7 @@ Para no seguir contando con promociones en determinado producto cuando no hay su
 HU 13. Como usuario de LOYALTY,
 Quiero configurar los umbrales de compras para la clasificación de fidelidad,
 Para definir qué clientes se clasifican como bronce, plata u oro.
+
+HU 14. Como usuario de LOYALTY,
+Quiero establecer un tope máximo global de descuentos permitidos, 
+Para asegurar que la suma de los beneficios nunca comprometan el margen operativo.
