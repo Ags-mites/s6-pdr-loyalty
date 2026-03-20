@@ -180,6 +180,145 @@ Diseñar matriz de pruebas para creación exitosa, duplicidad y edición parcial
 - Implementar validaciones de UI que impidan ingresar rangos incoherentes antes de enviar al servidor.
 - Desarrollar visualización clara de la jerarquía de beneficios por nivel.
 
+## Subtareas QA
+- Revisar la lógica de negocio para la cobertura total del dominio de clasificación.
+- Diseñar escenarios de prueba para rangos solapados, huecos entre niveles y orden descendente inválido.
+
+Validación técnica y funcional
+- Verificar el rechazo de la configuración si existe una discontinuidad (ej. Nivel 1 termina en 100 y Nivel 2 empieza en 110).
+- Validar que la segmentación de clientes en el motor utilice los nuevos umbrales tras guardar cambios.
+- Comprobar que no se puedan guardar niveles con umbrales negativos o iguales a cero.
+
 ## Estimación:  5 puntos
 ### Justificación:
 - DEV: Esfuerzo medio. La complejidad radica en la validación matemática de la continuidad y no superposición de los rangos para evitar comportamientos erráticos en el motor. 
+- QA: Esfuerzo medio. Requiere pruebas exhaustivas de lógica de intervalos para asegurar que cada posible valor del cliente caiga en un único segmento.
+
+# HU-07
+## Subtareas DEV
+### Backend
+- Modelo `ConfigDescuentos` (topeMax, prioridades[]) + validaciones (tope>0, prioridades únicas).
+- Endpoint para registrar/actualizar configuración + mantener última válida en rechazos.
+- Ajustar motor: aplicar prioridad y recortar descuento total al tope.
+- Pruebas unitarias (cálculo tope/prioridad) + integración (API).
+
+### Frontend
+- Pantalla de configuración (tope + ordenamiento de descuentos) y validaciones básicas.
+- Manejo de errores (tope inválido, prioridad ambigua).
+- Pruebas unitarias.
+
+## Subtareas QA
+- Casos: configuración OK, tope inválido, prioridad duplicada, aplicación de tope en acumulación.
+- Validación API + pruebas funcionales del motor con múltiples descuentos.
+
+## Estimación: 5 puntos
+### Justificación
+- DEV: Media (impacto directo en motor de descuentos).
+- QA: Media (escenarios de concurrencia y verificación de cálculo).
+
+# HU-08
+
+## Subtareas DEV
+### Backend / Motor
+- Definir contrato `PayloadCliente` + DTOs/respuestas de clasificación (nivel asignado, motivos de rechazo).
+- Validaciones: atributos obligatorios, dominios/formatos, determinismo (mismo input → mismo output).
+- Endpoint/función del motor para evaluar payload (o módulo interno) consumiendo matriz vigente (HU-06).
+- Pruebas unitarias (validación + clasificación) y de consistencia (repetición mismo payload).
+- Pruebas integración (API) con payloads válidos/ inválidos.
+
+### Frontend (si aplica)
+- (Opcional) herramienta interna de prueba: pegar payload y ver resultado/mensajes.
+
+## Subtareas QA
+- Diseño de payloads: completo válido, faltantes, fuera de dominio, borde de rangos.
+- Validación API/motor: rechazos con mensajes claros; determinismo con re-ejecución del mismo payload.
+
+## Estimación: 8 puntos
+### Justificación
+- DEV: Alta (lógica núcleo del motor + contratos + validaciones + determinismo).
+- QA: Media-alta (data-driven testing + bordes + consistencia).
+
+# HU-09
+
+## Subtareas DEV
+### Backend
+- Ajustar DTOs y validar carrito.
+- Integrar autenticación S2S y control de ecommerce autorizado.
+- Aplicar reglas vigentes con prioridad y tope máximo.
+- Exponer `POST /carritos/calcular` con manejo de errores.
+- Agregar pruebas unitarias y de integración.
+### Frontend
+- Consumir endpoint en checkout y mapear payload del carrito.
+- Mostrar subtotal, descuentos y precio final.
+- Manejar estados de carga, de error y sin descuentos y agregar pruebas unitarias.
+
+## Subtareas QA
+- Diseñar matriz de prueba para prioridad, tope y carrito inválido.
+- Validar control de acceso del endpoint  y cumplimiento del contrato de respuesta.
+- Verificar orden de descuentos, límite por tope y flujo E2E.
+
+## Estimación: 8 puntos
+### Justificación:
+- DEV: Alto por lógica de cálculo con reglas, prioridad, tope y validaciones.
+- QA: Medio-alto por combinaciones funcionales y validación técnica del API.
+
+# HU-10
+## Subtareas DEV
+### Backend
+- Implementar consulta por ecommerce para últimos 7 días y DTO de historial.
+- Marcar transacciones recortadas por tope máximo.
+- Exponer `GET /descuentos/historial?days=7` con paginación y control de acceso.
+- Asegurar que la respuesta no muestre datos personales del cliente.
+- Agregar pruebas unitarias y de integración de filtro temporal, tope y privacidad.
+### Frontend
+- Crear módulo "Historial de Descuentos" con filtro de 7 días.
+- Mostrar tabla cronológica y resaltar transacciones con tope.
+- Mostrar un detalle técnico sin datos personales y contemplar estados de carga, sin resultados y error.
+
+## Subtareas QA
+- Diseñar casos para consulta exitosa, vacía y filtros por fecha.
+- Verificar que se destaquen las transacciones ajustadas por tope y que no se muestren datos personales del cliente.
+- Probar que todo siga funcionando y registrar hallazgos.
+
+## Estimación: 5 puntos
+### Justificación:
+- DEV: Medio por consulta histórica, formateo y privacidad.
+- QA: Medio por cobertura de filtros y validaciones de protección de datos.
+
+# HU-11
+## Subtareas DEV
+### Backend
+- Implementar registro de auditoría.
+- Exponer `GET /auditoria/reglas` con filtros por ecommerce y tipo.
+- Garantizar orden cronológico, paginación y acceso exclusivo de Super Admin.
+- Agregar pruebas unitarias y de integración para trazabilidad y permisos.
+### Frontend
+- Crear vista de auditoría global con tabla cronológica.
+- Implementar filtros por ecommerce y por tipo de regla, con paginación en la tabla.
+- Implementar y validar los estados de carga, sin resultados y error, junto con pruebas unitarias.
+
+## Subtareas QA
+- Diseñar casos de trazabilidad y exactitud de cambios.
+- Validar filtros combinados y orden cronológico.
+- Confirmar que solo el Super Admin pueda acceder al módulo y ejecutar pruebas de funcionamiento general del flujo.
+
+## Estimación: 5 puntos
+### Justificación:
+- DEV: Medio por auditoría transversal y consulta segura filtrable.
+- QA: Medio por consistencia histórica y pruebas de autorización.
+
+# HU-12
+## Subtareas DEV
+### Backend
+- Actualizar el modelo de reglas para incluir estado y fecha de última modificación.
+- Exponer `PATCH /reglas/{id}/estado` con validaciones de existencia, permisos y transición.
+- Garantizar efecto inmediato en motor S2S y registrar auditoría del cambio.
+- Agregar pruebas unitarias y de integración del impacto en cálculo.
+### Frontend
+- Implementar toggle de estado en listado de reglas.
+- Actualizar UI en tiempo real con rollback en error.
+- Mostrar feedback de resultado y agregar pruebas unitarias.
+
+## Estimación: 3 puntos
+### Justificación:
+- DEV: Medio-bajo por alcance acotado con requisito de efecto inmediato.
