@@ -34,6 +34,12 @@ And un ecommerce contrató los servicios de LOYALTY
 When el Super Admin crea un perfil de usuario asociado a ese ecommerce
 Then el perfil queda vinculado exclusivamente a dicho ecommerce
 
+Scenario: Validar que el usuario solo accede a su ecommerce
+Given que existe un usuario asociado a un ecommerce,
+When el usuario inicia sesión,
+Then solo puede visualizar y gestionar información de su ecommerce
+And no puede acceder a datos de otros ecommerce
+
 HU 3:
 Como Super Admin,
 quiero gestionar y validar las API Keys de cada ecommerce,
