@@ -19,7 +19,6 @@
 - Revisar criterios de aceptación para mensajes de error de credenciales.
 - Diseñar casos de prueba para sesiones expiradas y acceso por URL directa sin login.
 
-
 ### Validación técnica y funcional
 - Verificar el rechazo de acceso con contraseñas incorrectas o usuarios inexistentes.
 - Validar que el token no sea visible ni manipulable de forma insegura.
@@ -30,3 +29,23 @@
 ### Justificación:
 - DEV: Esfuerzo bajo-medio. Se centra en la implementación de un estándar de seguridad conocido, sin integraciones complejas de terceros.
 - QA: Esfuerzo bajo. Los escenarios de prueba son directos y se enfocan en la validación de acceso y seguridad básica del formulario.
+
+---
+
+# HU-02
+## Subtareas DEV
+### Backend
+- Diseñar la relación en base de datos entre la entidad Ecommerce y Usuario.
+- Implementar Interceptor para la inyección automática de ecommerce_id en consultas.
+- Crear endpoint POST /admin/users restringido a rol Super Admin.
+- Implementar validaciones de integridad para asegurar que el usuario pertenezca a un solo ecommerce.
+- Realizar pruebas unitarias de aislamiento de datos
+
+
+### Frontend
+- Desarrollar vista de gestión de usuarios para el Super Admin.
+- Implementar formulario de registro con vinculación obligatoria a un ecommerce.
+- Aplicar filtros en el estado global para asegurar la visualización única de datos del usuario de loyalty logueado.
+- Crear validaciones de UI para evitar la creación de usuarios sin ecommerce asignado.
+
+
