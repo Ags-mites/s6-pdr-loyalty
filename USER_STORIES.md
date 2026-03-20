@@ -497,6 +497,33 @@ When el ecommerce envía un carrito con datos incompletos o inconsistentes
 Then la solicitud es rechazada
 And no se retorna precio final hasta contar con un carrito válido
 
+### Definition of Ready (DoR)
+[ ] Historia claramente entendida flujo de entrada del JSON, evaluación en memoria y salida del JSON.
+[ ] Criterios de aceptación completos.
+[ ] Reglas de negocio y técnicas definidas:
+- Estándar de redondeo monetario exacto a utilizar.
+- Acuerdo de Nivel de Servicio de latencia máxima de respuesta < 150ms.
+[ ] JSON Schema estricto documentado Payload de entrada y salida con tipos de datos y campos requeridos.
+[ ] Manejo de errores HTTP definidos 400 Bad Request para payloads inválidos, 401 para API Keys inválidas, 200 OK para cálculos exitosos.
+
+### Definition of Done (DoD)
+[ ] Código implementado y revisado code review aprobado.
+[ ] Pruebas unitarias:
+- Cálculos matemáticos precisos forzando decimales periódicos conflictivos.
+- Validación estricta contra el JSON Schema rechazo de strings donde van floats.
+[ ] Pruebas de integración:
+- Ciclo completo S2S: Entrada -> Auth -> Motor -> Topes -> Respuesta en JSON.
+[ ] Pruebas de Rendimiento:
+- Pruebas de carga demostrando que el endpoint responde bajo el SLA establecido.
+[ ] Validaciones y Edge Cases:
+- Payload con precios base de ítem en negativo o $0.00.
+- Inyección de caracteres no válidos en IDs de producto.
+- Cálculo dinámico verificando que nunca se retorne un total a pagar negativo.
+[ ] QA validado mediante Postman/cURL u otra herramienta de testing de APIs.
+[ ] Sin cuellos de botella bloqueantes ni discrepancias de redondeo.
+
+---
+
 ## HU 10. 
 Como usuario de LOYALTY, 
 Quiero consultar los descuentos aplicados en las transacciones de los últimos siete días, 
@@ -514,6 +541,10 @@ When se visualiza el detalle de una transacción en el log
 Then el sistema no debe mostrar nombres, correos, ni datos de identidad del comprador final.
 And solo se debe mostrar el payload técnico que justifica el descuento
 
+### Definition of Ready (DoR)
+### Definition of Done (DoD)
+---
+
 ## HU 11. 
 Como super admin,
 Quiero ver el registro de los cambios de las reglas de descuento de todos los ecommerce,
@@ -524,6 +555,10 @@ Given que soy un Super Admin y accedo al panel global de auditoría
 When consulto el historial de cambios de un ecommerce específico
 Then el sistema debe mostrar una tabla cronológica con: usuario que realizó el cambio, fecha/hora, regla afectada, valor anterior y valor nuevo.
 And debe permitir filtrar por tipo de regla Temporada, Producto o Fidelidad.
+
+### Definition of Ready (DoR)
+### Definition of Done (DoD)
+---
 
 ## HU 12. 
 Como usuario de LOYALTY,
@@ -540,3 +575,6 @@ Scenario: Reactivación de regla sin pérdida de datos
 Given que una regla de fidelidad oro fue desactivada previamente
 When el usuario activa nuevamente
 Then la regla debe volver a participar en el cálculo del motor con sus parámetros originales sin necesidad de reconfigurarla
+
+### Definition of Ready (DoR)
+### Definition of Done (DoD)
