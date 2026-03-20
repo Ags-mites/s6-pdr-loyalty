@@ -49,3 +49,7 @@ Para tipo de producto, para automatizar las promociones en base a inventario
 HU 11. Como usuario de LOYALTY,
 Quiero editar reglas de descuento,
 Para tipo de producto para ajustar las promociones según las necesidades de rotación de inventario
+
+HU 12. Como usuario de LOYALTY,
+Quiero eliminar reglas de descuento para tipo de producto 
+Para no seguir contando con promociones en determinado producto cuando no hay suficiente mercadería
