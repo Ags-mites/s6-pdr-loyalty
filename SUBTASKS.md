@@ -83,7 +83,18 @@
 - Implementar lógica de enmascaramiento de llaves en tablas de administración.
 - Crear diálogos de confirmación para la revocación o rotación de credenciales.
 
+## Subtareas QA
+### Análisis y diseño
+- Revisar que el proceso de rotación de llaves no interrumpa el servicio si no es deseado.
+- Diseñar pruebas de integración para el motor de cálculo usando llaves válidas y nulas.
+
+### Validación técnica y funcional
+- Verificar que las peticiones al motor sean rechazadas si la API Key está revocada o es incorrecta.
+- Validar que la llave real no se guarde en logs ni se exponga en respuestas de API comunes.
+- Comprobar que el enmascaramiento en la UI funcione correctamente (solo ver últimos dígitos).
+- Ejecutar pruebas de carga básica para asegurar que la validación de la llave no degrade el performance.
 
 ## Estimación: 3 puntos
 ### Justificación:
 - DEV: Esfuerzo medio. Implica el manejo de una capa de seguridad distinta a la de usuarios, centrada en la integración técnica entre sistemas.
+- QA: Esfuerzo bajo-medio. Se centra en validar la denegación de acceso y la protección del secreto en la interfaz de usuario.
