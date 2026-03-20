@@ -206,3 +206,12 @@ Validación técnica y funcional
 - Pantalla de configuración (tope + ordenamiento de descuentos) y validaciones básicas.
 - Manejo de errores (tope inválido, prioridad ambigua).
 - Pruebas unitarias.
+
+## Subtareas QA
+- Casos: configuración OK, tope inválido, prioridad duplicada, aplicación de tope en acumulación.
+- Validación API + pruebas funcionales del motor con múltiples descuentos.
+
+## Estimación: 5 puntos
+### Justificación
+- DEV: Media (impacto directo en motor de descuentos).
+- QA: Media (escenarios de concurrencia y verificación de cálculo).
