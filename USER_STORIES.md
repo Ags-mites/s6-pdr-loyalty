@@ -185,11 +185,18 @@ When el motor clasifica a un cliente con métricas vigentes
 Then el cliente queda asignado al nivel correspondiente a su rango
 And los beneficios aplicables se determinan según ese nivel
 
-
 HU 7. 
 Como usuario de LOYALTY,
 Quiero definir el tope maximo y la prioridad de descuentos,
 Para proteger la rentabilidad del negocio.
+
+Scenario: Configuración válida de tope y prioridad
+Given existen tipos de descuento disponibles en el ecommerce
+And el tope máximo propuesto es un valor positivo
+And la prioridad define un orden único entre descuentos
+When se registra la configuración de topes y prioridad
+Then la configuración queda vigente para el ecommerce
+And el motor utiliza ese orden para resolver descuentos concurrentes
 
 HU 8. 
 Como motor de descuentos,
