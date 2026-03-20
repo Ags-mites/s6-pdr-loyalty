@@ -319,6 +319,12 @@ Validación técnica y funcional
 - Actualizar UI en tiempo real con rollback en error.
 - Mostrar feedback de resultado y agregar pruebas unitarias.
 
+## Subtareas QA
+- Diseñar casos de activación, desactivación, regla inexistente y permisos inválidos.
+- Validar endpoint y consistencia entre UI y estado persistido.
+- Verificar que una regla inactiva no se aplique en la siguiente petición S2S.
+
 ## Estimación: 3 puntos
 ### Justificación:
 - DEV: Medio-bajo por alcance acotado con requisito de efecto inmediato.
+- QA: Bajo-medio por validación de no regresión y permisos.
