@@ -98,6 +98,12 @@ When se solicita su eliminación
 Then el sistema rechaza la operación
 And informa que no existe una regla para el identificador solicitado
 
+Scenario: Rechazo de edición de regla inexistente
+Given no existe una regla asociada al identificador solicitado
+When se solicita su edición 
+Then el sistema rechaza la operación
+And informa que no existe una regla para el identificador solicitado
+
 HU 5:
 Como usuario de LOYALTY, 
 Quiero crear, editar y eliminar reglas por tipo de producto,
