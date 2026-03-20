@@ -326,6 +326,33 @@ When el motor clasifica a un cliente con métricas vigentes
 Then el cliente queda asignado al nivel correspondiente a su rango
 And los beneficios aplicables se determinan según ese nivel
 
+### Definition of Ready (DoR)
+[ ] Historia claramente entendida flujo de validación de continuidad numérica.
+[ ] Criterios de aceptación completos incluye validación matemática de umbrales.
+[ ] Reglas de negocio definidas:
+- Estándar de intervalo algebraico a usar: Límite Inferior Inclusivo y Límite Superior Exclusivo [min, max).
+- Métrica exacta sobre la cual se clasifica.
+[ ] Diseño de base de datos preparado para manejar valores numéricos de alta precisión.
+[ ] Regla de progresión: El sistema debe forzar que el Límite Inferior del Nivel N+1 sea exactamente igual al Límite Superior del Nivel N.
+
+### Definition of Done (DoD)
+[ ] Código implementado y revisado code review aprobado.
+[ ] Pruebas unitarias:
+- Algoritmo de validación de continuidad y no-superposición.
+- Ordenamiento jerárquico de niveles asegurando progresión ascendente.
+[ ] Pruebas de integración:
+- Inserción/Actualización en lote de toda la matriz de rangos para asegurar atomicidad si falla un rango, falla toda la configuración.
+[ ] Manejo de Reglas de Negocio:
+- Rechazo si el Límite Superior es menor o igual al Límite Inferior.
+[ ] Validaciones y Edge Cases:
+- Clasificación exacta en el límite del rango.
+- Configuración del nivel máximo con límite superior abierto.
+- Eliminación de un nivel intermedio que genere un vacío.
+[ ] QA validado mediante pruebas de escritorio con tablas de valores.
+[ ] Sin bugs matemáticos de clasificación.
+
+---
+
 ## HU 7. 
 Como usuario de LOYALTY,
 Quiero definir el tope maximo y la prioridad de descuentos,
@@ -356,6 +383,10 @@ Given existe una configuración vigente de tope y prioridad
 And una transacción califica para múltiples descuentos
 When el descuento total calculado supera el tope máximo
 Then el descuento final aplicado se limita al tope máximo configurado
+
+
+
+---
 
 ## HU 8. 
 Como motor de descuentos,
