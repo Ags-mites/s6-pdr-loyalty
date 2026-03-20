@@ -138,6 +138,12 @@ Given existe una regla por tipo de producto
 When se solicita su eliminación
 Then la regla deja de estar disponible para nuevas transacciones
 
+Scenario: Rechazo de eliminación por regla no encontrada
+Given no existe una regla para el tipo de producto indicado
+When se intenta eliminar la regla
+Then el sistema rechaza la operación
+And mantiene sin cambios la configuración 
+
 HU 6. 
 Como usuario de LOYALTY,
 Quiero definir los rangos de clasificación de fidelidad,
