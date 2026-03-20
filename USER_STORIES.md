@@ -39,6 +39,12 @@ Como sistema,
 Quiero restringir el acceso a ciertas funcionalidades exclusivamente al Super Admin, 
 Para proteger la configuración global del sistema.
 
+Scenario Acceso permitido a funcionalidades restringidas
+Given un usuario con rol super admin ha iniciado sesión
+And existen funcionalidades restringidas
+When el usuario intenta acceder
+Then el acceso es permitido
+
 HU 4:
 Como Super Admin,
 Quiero gestionar credenciales de acceso,
