@@ -296,3 +296,7 @@ Validación técnica y funcional
 - Crear vista de auditoría global con tabla cronológica.
 - Implementar filtros por ecommerce y por tipo de regla, con paginación en la tabla.
 - Implementar y validar los estados de carga, sin resultados y error, junto con pruebas unitarias.
+
+## Estimación: 5 puntos
+### Justificación:
+- DEV: Medio por auditoría transversal y consulta segura filtrable.
