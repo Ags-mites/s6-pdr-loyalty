@@ -271,6 +271,11 @@ When el ecommerce solicita el cálculo del carrito
 Then el precio final es igual al subtotal del carrito
 And la respuesta indica que no hubo descuentos aplicados
 
+Scenario: Rechazo por carrito inválido
+Given el servicio requiere estructura mínima y datos válidos de carrito
+When el ecommerce envía un carrito con datos incompletos o inconsistentes
+Then la solicitud es rechazada
+And no se retorna precio final hasta contar con un carrito válido
 
 HU 10. 
 Como usuario de LOYALTY, 
