@@ -51,6 +51,13 @@ And existe un ecommerce registrado,
 When creo una nueva clave de acceso para ese ecommerce,
 Then el sistema genera la clave de acceso correctamente.
 
+Scenario: Ver las claves de acceso de un ecommerce
+Given que soy un Super Administrador con acceso al sistema
+And existen claves de acceso registradas para un ecommerce
+When consulto las claves de acceso de ese ecommerce
+Then el sistema muestra la lista de claves de acceso asociadas
+And oculta parte de la información de cada clave para proteger su seguridad
+
 HU 4. 
 Como usuario de LOYALTY, 
 Quiero crear, editar y eliminar reglas de temporada 
