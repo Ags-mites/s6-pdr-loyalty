@@ -198,6 +198,12 @@ When se registra la configuración de topes y prioridad
 Then la configuración queda vigente para el ecommerce
 And el motor utiliza ese orden para resolver descuentos concurrentes
 
+Scenario: Rechazo por tope máximo inválido
+Given existen límites de negocio para proteger la rentabilidad
+When se intenta registrar un tope máximo menor o igual a cero
+Then la configuración es rechazada
+And se mantiene la última configuración válida
+
 HU 8. 
 Como motor de descuentos,
 Quiero clasificar al cliente segun el payload recibido 
