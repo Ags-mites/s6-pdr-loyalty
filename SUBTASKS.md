@@ -252,8 +252,13 @@ Validación técnica y funcional
 - Mostrar subtotal, descuentos y precio final.
 - Manejar estados de carga, de error y sin descuentos y agregar pruebas unitarias.
 
+## Subtareas QA
+- Diseñar matriz de prueba para prioridad, tope y carrito inválido.
+- Validar control de acceso del endpoint  y cumplimiento del contrato de respuesta.
+- Verificar orden de descuentos, límite por tope y flujo E2E.
+
 ## Estimación: 8 puntos
 ### Justificación:
 - DEV: Alto por lógica de cálculo con reglas, prioridad, tope y validaciones.
-
+- QA: Medio-alto por combinaciones funcionales y validación técnica del API.
 
