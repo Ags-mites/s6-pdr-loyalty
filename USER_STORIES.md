@@ -580,10 +580,28 @@ Then el sistema debe mostrar una tabla cronológica con: usuario que realizó el
 And debe permitir filtrar por tipo de regla Temporada, Producto o Fidelidad.
 
 ### Definition of Ready (DoR)
-
+[ ] Historia claramente entendida registro de mutaciones del sistema.
+[ ] Criterios de aceptación completos incluye campos de estado previo y nuevo.
+[ ] Reglas de negocio definidas:
+- Formato de almacenamiento del historial campos old_value y new_value en formato JSONB para soportar cualquier estructura de regla.
+- Registro inmutable: Nadie, ni un Super Admin, puede borrar un registro de auditoría.
+[ ] Arquitectura definida: Implementación vía Interceptores/Middlewares o Triggers de Base de Datos para garantizar que ninguna mutación evada el log.
+[ ] Relación de usuario autoría: Registrar el UUID de quién hizo el cambio.
 
 ### Definition of Done (DoD)
-
+[ ] Código implementado y revisado code review aprobado.
+[ ] Pruebas unitarias:
+- Generación correcta del Diff comparando dos objetos de estado.
+[ ] Pruebas de integración:
+- Todo endpoint de mutación (POST/PUT/PATCH/DELETE) de reglas de negocio inserta automáticamente en la tabla de auditoría.
+- Filtros del panel global por tipo de regla y por ecommerce operativos.
+[ ] Manejo de Reglas de Negocio:
+- Manejo de borrados almacenar old_value completo y new_value: null.
+[ ] Validaciones y Edge Cases:
+- Petición de actualización sin cambios reales el sistema no debe generar un log fantasma.
+- Super Admin es eliminado del sistema; sus registros históricos deben mantener su nombre referenciado.
+[ ] QA validado cruzando acciones reales con la tabla de logs.
+[ ] Sin bugs de inconsistencia de datos históricos.
 
 ---
 
