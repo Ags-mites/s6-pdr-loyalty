@@ -26,9 +26,9 @@ Quiero visualizar las credenciales de los diferentes ecommerce desde mi panel,
 Para administrar los accesos de los ecommerce.
 
 HU 6:
-Como motor de descuentos
-Quiero aplicar un tope máximo de descuento
-Para asegurar que ninguna combinación de promociones afecte el margen de ganancia configurado
+Como Super Admin,
+Quiero validar la credencial por cada solicitud al panel,
+Para asegurar que solo las plataformas de e-commerce autorizadas consuman los descuentos.
 
 7. Como usuario de LOYALTY
 Quiero poder editar en configuracion, el porcentaje de descuento según el tipo de producto.
