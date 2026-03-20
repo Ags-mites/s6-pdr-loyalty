@@ -133,6 +133,11 @@ When la actualización omite uno o más datos obligatorios
 Then el sistema rechaza la modificación
 And mantiene la versión previamente válida
 
+Scenario: Eliminación exitosa de una regla por tipo de producto
+Given existe una regla por tipo de producto
+When se solicita su eliminación
+Then la regla deja de estar disponible para nuevas transacciones
+
 HU 6. 
 Como usuario de LOYALTY,
 Quiero definir los rangos de clasificación de fidelidad,
