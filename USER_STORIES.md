@@ -74,6 +74,30 @@ When el usuario inicia sesión,
 Then solo puede visualizar y gestionar información de su ecommerce
 And no puede acceder a datos de otros ecommerce
 
+### Definition of Ready (DoR)
+[ ] Historia claramente entendida flujo de creación de usuarios y aislamiento de datos.
+[ ] Criterios de aceptación completos incluye el rechazo de operaciones si el id no coincide.
+[ ] Reglas de negocio definidas:
+- Aislamiento estricto: Todo usuario excepto Super Admin, debe tener un id inmutable.
+- Un Super Admin no puede crear un usuario sin vincularlo a un ID de ecommerce válido y existente.
+[ ] Diseño de base de datos actualizado: Entidad Ecommerce creada y relación obligatoria 1:N con la tabla Usuarios.
+[ ] Estrategia de filtrado global de consultas a base de datos definida por el equipo backend.
+
+### Definition of Done (DoD)
+[ ] Código implementado y revisado code review aprobado.
+[ ] Pruebas unitarias:
+- Validar que la asignación del ID del ecommerce en la entidad usuario sea inmutable post-creación.
+[ ] Pruebas de integración:
+- Creación exitosa del perfil vinculando correctamente el UUID del ecommerce.
+- Verificar que al consultar un recurso de otro ecommerce, el sistema responde con HTTP 403 Forbidden o 404 Not Found.
+[ ] Pruebas de seguridad:
+- Prevención de vulnerabilidades IDOR Insecure Direct Object Reference manipulando IDs en la URL.
+[ ] Validaciones y Edge Cases Casos Borde:
+- Super Admin intenta crear un usuario asociándolo a un ID de ecommerce que no existe.
+- Intento de inyectar un tenant_id distinto mediante manipulación del LocalStorage o Headers en el navegador.
+[ ] QA validado en ambiente de pruebas.
+[ ] Sin bugs críticos o bloqueantes.
+
 ## HU 3:
 Como Super Admin,
 quiero gestionar y validar las API Keys de cada ecommerce,
