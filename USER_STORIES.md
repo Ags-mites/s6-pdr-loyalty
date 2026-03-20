@@ -33,3 +33,7 @@ Para asegurar que solo las plataformas de e-commerce autorizadas consuman los de
 7. Como usuario de LOYALTY, 
 Quiero crear reglas de descuentos para cada temporada, 
 Para automatizar las promociones por demanda de temporada.
+
+8. Como usuario de LOYALTY,
+Quiero editar reglas de descuentos para cada temporada,
+Para realizar cambios en las automatizaciones de promociones por demanda de temporada
