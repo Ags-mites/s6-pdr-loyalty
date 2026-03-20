@@ -282,6 +282,12 @@ Como usuario de LOYALTY,
 Quiero consultar los descuentos aplicados en las transacciones de los últimos siete días, 
 Para verificar que el motor de cálculo esté operando bajo las reglas y topes máximos configurados.
 
+Scenario: Verificación exitosa de transacciones recientes
+Given soy un usuario de LOYALTY con acceso al dashboard de mi ecommerce
+When accedo al módulo de "Historial de Descuentos" y filtro por los últimos 7 días
+Then el sistema debe mostrar una lista con: id de transacción, fecha/hora, reglas aplicadas, descuento calculado y descuento final
+And debe resaltar aquellas transacciones donde el descuento fue rechazado por alcanzar el tope máximo configurado.
+
 HU 11. 
 Como super admin,
 Quiero ver el registro de los cambios de las reglas de descuento de todos los ecommerce,
