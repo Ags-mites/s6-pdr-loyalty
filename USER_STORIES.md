@@ -288,6 +288,12 @@ When accedo al módulo de "Historial de Descuentos" y filtro por los últimos 7 
 Then el sistema debe mostrar una lista con: id de transacción, fecha/hora, reglas aplicadas, descuento calculado y descuento final
 And debe resaltar aquellas transacciones donde el descuento fue rechazado por alcanzar el tope máximo configurado.
 
+Scenario: Cumplimiento de privacidad de datos
+Given que el sistema registra el uso del motor de descuentos
+When se visualiza el detalle de una transacción en el log
+Then el sistema no debe mostrar nombres, correos, ni datos de identidad del comprador final.
+And solo se debe mostrar el payload técnico que justifica el descuento
+
 HU 11. 
 Como super admin,
 Quiero ver el registro de los cambios de las reglas de descuento de todos los ecommerce,
