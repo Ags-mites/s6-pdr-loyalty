@@ -41,3 +41,7 @@ Para realizar cambios en las automatizaciones de promociones por demanda de temp
 HU 9. Como usuario de LOYALTY ,
 Quiero eliminar reglas de descuentos para cada temporada, 
 Para poder tomar una decisión estratégica y eliminar aquellas reglas que no hayan resultado acorde a la temporada
+
+HU 10. Como usuario de LOYALTY,
+Quiero crear reglas de descuentos
+Para tipo de producto, para automatizar las promociones en base a inventario
