@@ -3,7 +3,7 @@ Users Stories
 HU 1:
 Como usuario de LOYALTY,
 Quiero iniciar sesión y cerrar sesión, 
-Para acceder de forma segura al sistema y poder proteger mi cuenta al finalizar la jornada.
+Para acceder de forma segura al dashboard.
 
 Scenario: Inicio de sesión exitoso
 Given: que existe un usuario registrado en el LOYALTY
