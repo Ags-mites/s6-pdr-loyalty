@@ -79,3 +79,7 @@ HU 18. Como e-commerce, quiero poder enviar un payload con el carrito y las mét
 HU 19. Como usuario de LOYALTY, 
 Quiero consultar un registro de los descuentos aplicados en las transacciones de los últimos siete días, 
 Para verificar que el motor de cálculo esté operando bajo los parámetros del tope máximo
+
+HU 20. Como super admin,
+Quiero ver el registro de los cambios de las reglas de descuento de todos los usuarios,
+Para saber a qué hora y qué usuario modificó un descuento o tope máximo.
