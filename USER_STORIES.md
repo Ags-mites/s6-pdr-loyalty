@@ -63,6 +63,12 @@ Como usuario de LOYALTY,
 Quiero crear, editar y eliminar reglas de temporada 
 Para automatizar las promociones por demanda de temporada
 
+Escenario: Creación exitosa de una regla de temporada
+Given no hay una regla activa para esa temporada,
+When se registra una regla de descuento con vigencia y beneficio válidos,
+Then la regla queda almacenada en el sistema,
+And la regla queda disponible para su aplicación durante la vigencia definida.
+
 HU 5:
 Como usuario de LOYALTY, 
 Quiero crear, editar y eliminar reglas por tipo de producto,
