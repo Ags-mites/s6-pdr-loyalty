@@ -116,6 +116,31 @@ When consulto las claves de acceso de ese ecommerce
 Then el sistema muestra la lista de claves de acceso asociadas
 And oculta parte de la información de cada clave para proteger su seguridad
 
+### Definition of Ready (DoR)
+[ ] Historia claramente entendida flujo de generación, almacenamiento seguro y visualización parcial.
+[ ] Criterios de aceptación completos incluye soporte para rotación de claves sin caídas de servicio.
+[ ] Reglas de negocio definidas:
+- Permitir un máximo de dos API Keys activas simultáneamente por ecommerce para permitir la rotación.
+- La API Key solo se muestra completa una única vez al momento de la creación.
+[ ] Diseño de base de datos: Tabla de api_keys con campos de hash unidireccional, prefijo para visualización, y estado activa/revocada.
+[ ] Definición de mecanismo criptográfico SHA-256 para el hash, generación de cadenas criptográficamente seguras.
+
+### Definition of Done (DoD)
+[ ] Código implementado y revisado code review aprobado.
+[ ] Pruebas unitarias:
+- Generación de prefijos y aplicación del hashing unidireccional de la API Key.
+- Función de enmascaramiento visual para la interfaz.
+[ ] Pruebas de integración:
+- Creación, listado y revocación de API Keys en base de datos.
+- Validación de middleware: Rechazo de peticiones S2S usando una clave revocada o inexistente.
+[ ] Pruebas de seguridad:
+- Imposibilidad de recuperar la clave original desde la base de datos o cualquier endpoint post-creación.
+[ ] Validaciones y Edge Cases Casos Borde:
+- Intento de generar una tercera API Key cuando el límite de negocio dos ya está alcanzado.
+- Envío de una petición S2S en el milisegundo exacto en que la clave es marcada como revocada.
+[ ] QA validado en ambiente de pruebas.
+[ ] Sin bugs críticos o bloqueantes.
+
 ## HU 4:
 Como usuario de LOYALTY, 
 Quiero crear, editar y eliminar reglas de temporada 
