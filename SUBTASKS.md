@@ -180,6 +180,16 @@ Diseñar matriz de pruebas para creación exitosa, duplicidad y edición parcial
 - Implementar validaciones de UI que impidan ingresar rangos incoherentes antes de enviar al servidor.
 - Desarrollar visualización clara de la jerarquía de beneficios por nivel.
 
+## Subtareas QA
+- Revisar la lógica de negocio para la cobertura total del dominio de clasificación.
+- Diseñar escenarios de prueba para rangos solapados, huecos entre niveles y orden descendente inválido.
+
+Validación técnica y funcional
+- Verificar el rechazo de la configuración si existe una discontinuidad (ej. Nivel 1 termina en 100 y Nivel 2 empieza en 110).
+- Validar que la segmentación de clientes en el motor utilice los nuevos umbrales tras guardar cambios.
+- Comprobar que no se puedan guardar niveles con umbrales negativos o iguales a cero.
+
 ## Estimación:  5 puntos
 ### Justificación:
 - DEV: Esfuerzo medio. La complejidad radica en la validación matemática de la continuidad y no superposición de los rangos para evitar comportamientos erráticos en el motor. 
+- QA: Esfuerzo medio. Requiere pruebas exhaustivas de lógica de intervalos para asegurar que cada posible valor del cliente caiga en un único segmento.
