@@ -63,7 +63,7 @@ Como usuario de LOYALTY,
 Quiero crear, editar y eliminar reglas de temporada 
 Para automatizar las promociones por demanda de temporada
 
-Escenario: Creación exitosa de una regla de temporada
+Scenario: Creación exitosa de una regla de temporada
 Given no hay una regla activa para esa temporada,
 When se registra una regla de descuento con vigencia y beneficio válidos,
 Then la regla queda almacenada en el sistema,
@@ -75,11 +75,18 @@ When se intenta registrar una nueva regla con las mismas fechas
 Then el sistema rechaza el registro
 And informa el conflicto de superposición de fechas entre reglas de temporada
 
-Escenario: Edición exitosa de una regla de temporada
+Scenario: Edición exitosa de una regla de temporada
 Given existe una regla de temporada registrada
 When se actualizan sus condiciones con valores válidos
 Then el sistema conserva la regla con la nueva configuración
 And la versión actualizada es la considerada para nuevas evaluaciones
+
+Scenario: Rechazo de edición por incumplir rangos
+Given existen límites de descuento definidos 
+When la actualización propuesta excede los límites permitidos
+Then el sistema rechaza la modificación
+And mantiene la última configuración válida
+
 
 HU 5:
 Como usuario de LOYALTY, 
