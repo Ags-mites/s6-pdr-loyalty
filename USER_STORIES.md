@@ -75,3 +75,7 @@ Quiero aplicar un tope máximo de descuento,
 Para asegurar que ninguna combinación de promociones afecte el margen de ganancia configurado
 
 HU 18. Como e-commerce, quiero poder enviar un payload con el carrito y las métricas a un endpoint de LOYALTY y recibir el precio final y las reglas descuento calculado, para mostrarle al usuario final en el checkout el precio final y los beneficios aplicados.
+
+HU 19. Como usuario de LOYALTY, 
+Quiero consultar un registro de los descuentos aplicados en las transacciones de los últimos siete días, 
+Para verificar que el motor de cálculo esté operando bajo los parámetros del tope máximo
