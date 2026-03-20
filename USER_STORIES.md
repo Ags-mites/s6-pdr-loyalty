@@ -228,6 +228,11 @@ When el motor evalúa el payload del cliente
 Then el cliente queda asignado a un único nivel de fidelidad
 And el nivel asignado corresponde a las reglas de clasificación vigentes
 
+Scenario: Rechazo por payload incompleto
+Given existen atributos obligatorios para clasificar al cliente
+When se recibe un payload sin uno o más atributos obligatorios
+Then la clasificación es rechazada
+And se informa que no es posible determinar el nivel de descuento
 
 HU 9. 
 Como ecommerce, 
