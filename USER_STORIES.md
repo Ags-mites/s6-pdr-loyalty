@@ -16,9 +16,9 @@ Quiero restringir el acceso a ciertas funcionalidades exclusivamente al Super Ad
 Para proteger la configuración global del sistema.
 
 HU 4:
-Como personal de marketing, 
-Quiero definir el orden de prioridad de las reglas de descuentos, producto, fidelidad, temporada, para que el sistema aplique primero los descuentos mas críticos 
-Para mi negocio antes de llegar al tope máximo.
+Como Super Admin,
+Quiero gestionar credenciales de acceso,
+Para cada ecommerce, para controlar su autorización en el sistema.
 
 HU 5:
 Como motor de descuentos,
