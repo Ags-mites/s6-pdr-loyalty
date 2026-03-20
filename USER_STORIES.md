@@ -161,6 +161,12 @@ When se registran los nuevos umbrales de clasificación
 Then el sistema guarda la configuración de rangos
 And la segmentación de clientes utiliza los nuevos umbrales
 
+Scenario: Rechazo por superposición de rangos
+Given existen reglas de clasificación que requieren exclusividad entre niveles
+When se define una configuración con rangos superpuestos
+Then el sistema rechaza la configuración
+And reporta inconsistencia en la definición de niveles
+
 HU 7. 
 Como usuario de LOYALTY,
 Quiero definir el tope maximo y la prioridad de descuentos,
