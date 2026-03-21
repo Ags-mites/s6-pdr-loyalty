@@ -5,6 +5,7 @@ Como usuario de LOYALTY,
 Quiero iniciar sesión y cerrar sesión, 
 Para acceder de forma segura al dashboard.
 
+### Criterios de aceptación 
 Scenario: Inicio de sesión exitoso
 Given: que existe un usuario registrado en el LOYALTY
 When: Intenta ingresar con credenciales válidas 
@@ -82,6 +83,8 @@ Como Super Admin,
 Quiero crear usuarios vinculados a un ecommerce,
 Para garantizar que cada uno gestione únicamente sus propias reglas de descuento sin afectar a otros ecommerce.
 
+### Criterios de aceptación 
+
 Scenario: Creación de perfil asociado a un ecommerce específico
 Given que existe un usuario con rol super admin
 And un ecommerce contrató los servicios de LOYALTY
@@ -137,6 +140,8 @@ And no puede acceder a datos de otros ecommerce
 Como Super Admin,
 quiero gestionar y validar las API Keys de cada ecommerce,
 para asegurar que solo sistemas autorizados puedan acceder a sus recursos en la plataforma.
+
+### Criterios de aceptación 
 
 Scenario: Crear una clave de acceso para un ecommerce válido
 Given que soy un Super Admin con acceso al sistema,
@@ -196,6 +201,8 @@ And oculta parte de la información de cada clave para proteger su seguridad
 Como usuario de LOYALTY, 
 Quiero crear, editar y eliminar reglas de temporada 
 Para automatizar las promociones por demanda de temporada
+
+### Criterios de aceptación 
 
 Scenario: Creación exitosa de una regla de temporada
 Given no hay una regla activa para esa temporada,
@@ -284,6 +291,8 @@ Como usuario de LOYALTY,
 Quiero crear, editar y eliminar reglas por tipo de producto,
 Para automatizar las promociones en base a inventario 
 
+### Criterios de aceptación 
+
 Scenario: Creación exitosa de una regla por tipo de producto
 Given no hay una regla activa para ese tipo de producto
 When se define una nueva regla de descuento con parámetros válidos.
@@ -371,6 +380,8 @@ Como usuario de LOYALTY,
 Quiero definir los rangos de clasificación de fidelidad,
 Para segmentar a los clientes y sus beneficios.
 
+### Criterios de aceptación 
+
 Scenario: Configuración exitosa de rangos de fidelidad
 Given los rangos propuestos son completos y no se superponen
 When se registran los nuevos umbrales de clasificación
@@ -447,6 +458,8 @@ Como usuario de LOYALTY,
 Quiero definir el tope maximo y la prioridad de descuentos,
 Para proteger la rentabilidad del negocio.
 
+### Criterios de aceptación 
+
 Scenario: Configuración válida de tope y prioridad
 Given existen tipos de descuento disponibles en el ecommerce
 And el tope máximo propuesto es un valor positivo
@@ -514,6 +527,8 @@ Then el descuento final aplicado se limita al tope máximo configurado
 Como motor de descuentos,
 Quiero clasificar al cliente segun el payload recibido 
 Para asignar su nivel de descuento.
+
+### Criterios de aceptación 
 
 Scenario: Clasificación exitosa con payload completo y válido
 Given existe una matriz de clasificación vigente
@@ -584,6 +599,8 @@ Then el nivel de fidelidad asignado es el mismo en ambas evaluaciones
 Como ecommerce, 
 Quiero enviar el carrito y recibir el precio final con descuentos aplicados, 
 Para mostrarle al usuario final en el checkout.
+
+### Criterios de aceptación 
 
 Scenario: Cálculo exitoso de precio final
 Given el ecommerce está autorizado para consumir el servicio
@@ -658,6 +675,8 @@ Como usuario de LOYALTY,
 Quiero consultar los descuentos aplicados en las transacciones de los últimos siete días, 
 Para verificar que el motor de cálculo esté operando bajo las reglas y topes máximos configurados.
 
+### Criterios de aceptación 
+
 Scenario: Verificación exitosa de transacciones recientes
 Given soy un usuario de LOYALTY con acceso al dashboard de mi ecommerce
 When accedo al módulo de "Historial de Descuentos" y filtro por los últimos 7 días
@@ -716,6 +735,8 @@ Como super admin,
 Quiero ver el registro de los cambios de las reglas de descuento de todos los ecommerce,
 Para identificar que usuarios realizaron modificaciones y en que momentos.
 
+### Criterios de aceptación 
+
 Scenario: Trazabilidad de modificaciones por el Super Admin
 Given que soy un Super Admin y accedo al panel global de auditoría
 When consulto el historial de cambios de un ecommerce específico
@@ -765,6 +786,8 @@ And debe permitir filtrar por tipo de regla Temporada, Producto o Fidelidad.
 Como usuario de LOYALTY,
 Quiero poder activar o desactivar reglas con un solo click
 Para reaccionar rápidamente a cambios en el mercado sin tener que borrar la configuración.
+
+### Criterios de aceptación 
 
 Scenario: Desactivación inmediata de una regla activa
 Given que existe una regla de descuento por Temporada en estado "activa"
