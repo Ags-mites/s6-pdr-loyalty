@@ -32,42 +32,11 @@ And: Muestra un mensaje de faltan campos obligatorios
 -  HU estimada por el equipo técnico
 
 ### Definition of Done (DoD)
-* Código implementado y revisado - code review aprobado.
-* Pruebas unitarias:
-
-> Generación, firmado y validación de expiración del token JWT.
-
-> Algoritmo de validación de contraseñas hasheadas.
-
-* Pruebas de integración:
-
-> Login exitoso y generación correcta del payload del token.
-
-> Redirección en el frontend/backend basada en los claims del rol.
-
-> Protección de rutas privadas retorno de HTTP 401/403.
-
-* Pruebas de seguridad:
-
-> Bloqueo de cuenta tras 5 intentos fallidos.
-
-> Protección contra inyección SQL en los campos de email y contraseña.
-
-* Manejo de sesiones:
-
-> Expiración de sesión validada forzando el timeout en pruebas.
-
-> Logout añade el token a una blacklist o invalida la cookie correctamente.
-
-* Validaciones y Edge Cases Casos Borde:
-
-> Intento de envío de payload con campos nulos o vacíos.
-
-> Intento de login de un usuario que ha sido desactivado lógicamente.
-
-* QA validado en ambiente de pruebas.
-* Sin bugs críticos o bloqueantes.
-
+-  Código en repo — PR aprobado por al menos 1 par
+-  Cobertura de pruebas unitarias > 80%
+-  Pruebas funcionales de QA pasadas
+-  Sin bugs críticos o bloqueantes abiertos
+-  Todos los Criterios de Aceptación cumplidos
 ---
 
 ## HU 2:
@@ -97,29 +66,11 @@ And no puede acceder a datos de otros ecommerce
 -  HU estimada por el equipo técnico
 
 ### Definition of Done (DoD)
-* Código implementado y revisado code review aprobado.
-* Pruebas unitarias:
-
-> Validar que la asignación del ID del ecommerce en la entidad usuario sea inmutable post-creación.
-
-* Pruebas de integración:
-
-> Creación exitosa del perfil vinculando correctamente el UUID del ecommerce.
-
-> Verificar que al consultar un recurso de otro ecommerce, el sistema responde con HTTP 403 Forbidden o 404 Not Found.
-
-* Pruebas de seguridad:
-
-> Prevención de vulnerabilidades IDOR Insecure Direct Object Reference manipulando IDs en la URL.
-
-* Validaciones y Edge Cases Casos Borde:
-
-> Super Admin intenta crear un usuario asociándolo a un ID de ecommerce que no existe.
-
-> Intento de inyectar un tenant_id distinto mediante manipulación del LocalStorage o Headers en el navegador.
-
-* QA validado en ambiente de pruebas.
-* Sin bugs críticos o bloqueantes.
+-  Código en repo — PR aprobado por al menos 1 par
+-  Cobertura de pruebas unitarias > 80%
+-  Pruebas funcionales de QA pasadas
+-  Sin bugs críticos o bloqueantes abiertos
+-  Todos los Criterios de Aceptación cumplidos
 
 ---
 
@@ -151,31 +102,11 @@ And oculta parte de la información de cada clave para proteger su seguridad
 -  HU estimada por el equipo técnico
 
 ### Definition of Done (DoD)
-* Código implementado y revisado code review aprobado.
-* Pruebas unitarias:
-
-> Generación de prefijos y aplicación del hashing unidireccional de la API Key.
-
-> Función de enmascaramiento visual para la interfaz.
-
-* Pruebas de integración:
-
-> Creación, listado y revocación de API Keys en base de datos.
-
-> Validación de middleware: Rechazo de peticiones S2S usando una clave revocada o inexistente.
-
-* Pruebas de seguridad:
-
-> Imposibilidad de recuperar la clave original desde la base de datos o cualquier endpoint post-creación.
-
-* Validaciones y Edge Cases Casos Borde:
-
-> Intento de generar una tercera API Key cuando el límite de negocio dos ya está alcanzado.
-
-> Envío de una petición S2S en el milisegundo exacto en que la clave es marcada como revocada.
-
-* QA validado en ambiente de pruebas.
-* Sin bugs críticos o bloqueantes.
+-  Código en repo — PR aprobado por al menos 1 par
+-  Cobertura de pruebas unitarias > 80%
+-  Pruebas funcionales de QA pasadas
+-  Sin bugs críticos o bloqueantes abiertos
+-  Todos los Criterios de Aceptación cumplidos
 
 ---
 
@@ -235,31 +166,11 @@ And informa que no existe una regla para el identificador solicitado
 -  HU estimada por el equipo técnico
 
 ### Definition of Done (DoD)
-* Código implementado y revisado code review aprobado.
-* Pruebas unitarias:
-
-> Algoritmo de detección de solapamiento de fechas.
-
-> Conversión y evaluación de timestamps UTC vs Locales.
-
-* Pruebas de integración:
-
-> CRUD completo de la regla en base de datos.
-
-> Aplicación activa de la regla en el motor solo dentro del rango [inicio, fin).
-
-* Manejo de Reglas de Negocio:
-
-> Rechazo automático de fechas de fin menores o iguales a las de inicio.
-
-* Validaciones y Edge Cases:
-
-> Edición de una regla que actualmente está en ejecución vigente en este segundo.
-
-> Solicitud de creación con fecha de inicio y fin idénticas.
-
-* QA validado en ambiente de pruebas.
-* Sin bugs lógicos de superposición o parseo de fechas.
+-  Código en repo — PR aprobado por al menos 1 par
+-  Cobertura de pruebas unitarias > 80%
+-  Pruebas funcionales de QA pasadas
+-  Sin bugs críticos o bloqueantes abiertos
+-  Todos los Criterios de Aceptación cumplidos
 
 ---
 
@@ -319,31 +230,11 @@ And informa que no existe una regla para el identificador solicitado
 -  HU estimada por el equipo técnico
 
 ### Definition of Done (DoD)
-* Código implementado y revisado code review aprobado.
-* Pruebas unitarias:
-
-> Función de normalización de texto validada contra variaciones de mayúsculas y espacios.
-
-> Rechazo de guardado ante violación del índice único.
-
-* Pruebas de integración:
-
-> CRUD completo verificando que la edición no permita sobreescribir otro tipo de producto existente.
-
-* Manejo de Reglas de Negocio:
-
-> Validación de campos obligatorios (producto, tipo de beneficio, valor).
-
-* Validaciones y Edge Cases:
-
-> Intento de creación con strings vacíos o compuestos solo por espacios ("   ").
-
-> Envío de caracteres especiales o emojis en el tipo de producto.
-
-> Actualización de una regla omitiendo el payload del valor de descuento.
-
-* QA validado en ambiente de pruebas.
-* Sin bugs lógicos de duplicidad.
+-  Código en repo — PR aprobado por al menos 1 par
+-  Cobertura de pruebas unitarias > 80%
+-  Pruebas funcionales de QA pasadas
+-  Sin bugs críticos o bloqueantes abiertos
+-  Todos los Criterios de Aceptación cumplidos
 
 ---
 
@@ -392,31 +283,11 @@ And los beneficios aplicables se determinan según ese nivel
 -  HU estimada por el equipo técnico
 
 ### Definition of Done (DoD)
-* Código implementado y revisado code review aprobado.
-* Pruebas unitarias:
-
-> Algoritmo de validación de continuidad y no-superposición.
-
-> Ordenamiento jerárquico de niveles asegurando progresión ascendente.
-
-* Pruebas de integración:
-
-> Inserción/Actualización en lote de toda la matriz de rangos para asegurar atomicidad si falla un rango, falla toda la configuración.
-
-* Manejo de Reglas de Negocio:
-
-> Rechazo si el Límite Superior es menor o igual al Límite Inferior.
-
-* Validaciones y Edge Cases:
-
-> Clasificación exacta en el límite del rango.
-
-> Configuración del nivel máximo con límite superior abierto.
-
-> Eliminación de un nivel intermedio que genere un vacío.
-
-* QA validado mediante pruebas de escritorio con tablas de valores.
-* Sin bugs matemáticos de clasificación.
+-  Código en repo — PR aprobado por al menos 1 par
+-  Cobertura de pruebas unitarias > 80%
+-  Pruebas funcionales de QA pasadas
+-  Sin bugs críticos o bloqueantes abiertos
+-  Todos los Criterios de Aceptación cumplidos
 
 ---
 
@@ -461,27 +332,11 @@ Then el descuento final aplicado se limita al tope máximo configurado
 -  HU estimada por el equipo técnico
 
 ### Definition of Done (DoD)
-* Código implementado y revisado code review aprobado.
-* Pruebas unitarias:
-
-> Ordenamiento estricto de arreglos de descuentos basados en el índice de prioridad.
-
-> Función de limitación que trunca el cálculo al porcentaje exacto del tope.
-
-* Pruebas de integración:
-
-> Simulaciones de evaluación de 3+ reglas simultáneas respetando el orden.
-
-* Validaciones y Edge Cases:
-
-> Múltiples descuentos que, sumados, dan exactamente el valor del tope límite matemático.
-
-> Configuración de 2 reglas intentando guardar la misma prioridad manejo del error de unicidad.
-
-> Tope configurado deliberadamente al 100%.
-
-* QA validado en ambiente de pruebas.
-* Sin bugs financieros de sobredescuento.
+-  Código en repo — PR aprobado por al menos 1 par
+-  Cobertura de pruebas unitarias > 80%
+-  Pruebas funcionales de QA pasadas
+-  Sin bugs críticos o bloqueantes abiertos
+-  Todos los Criterios de Aceptación cumplidos
 
 ---
 
@@ -524,31 +379,11 @@ Then el nivel de fidelidad asignado es el mismo en ambas evaluaciones
 -  HU estimada por el equipo técnico
 
 ### Definition of Done (DoD)
-* Código implementado y revisado code review enfocado en manejo de errores.
-* Pruebas unitarias:
-
-> Validación estricta contra el JSON Schema.
-
-> Algoritmo de búsqueda de rango eficiente.
-
-* Pruebas de integración:
-
-> Petición con payload válido y respuesta con el nivel correcto mapeado desde la BD de reglas.
-
-* Manejo de Reglas de Negocio:
-
-> Retorno de HTTP 400 Bad Request estructurado si faltan atributos obligatorios para la clasificación.
-
-* Validaciones y Edge Cases:
-
-> Payload con tipos incorrectos.
-
-> Payload con números negativos.
-
-> Payload sin el nodo customer.
-
-* QA validado inyectando JSONs malformados por S2S.
-* Sin bugs de excepciones no controladas.
+-  Código en repo — PR aprobado por al menos 1 par
+-  Cobertura de pruebas unitarias > 80%
+-  Pruebas funcionales de QA pasadas
+-  Sin bugs críticos o bloqueantes abiertos
+-  Todos los Criterios de Aceptación cumplidos
 
 ---
 
@@ -594,31 +429,11 @@ And no se retorna precio final hasta contar con un carrito válido
 -  HU estimada por el equipo técnico
 
 ### Definition of Done (DoD)
-* Código implementado y revisado code review aprobado.
-* Pruebas unitarias:
-
-> Cálculos matemáticos precisos forzando decimales periódicos conflictivos.
-
-> Validación estricta contra el JSON Schema rechazo de strings donde van floats.
-
-* Pruebas de integración:
-
-> Ciclo completo S2S: Entrada -> Auth -> Motor -> Topes -> Respuesta en JSON.
-
-* Pruebas de Rendimiento:
-
-> Pruebas de carga demostrando que el endpoint responde bajo el SLA establecido.
-
-* Validaciones y Edge Cases:
-
-> Payload con precios base de íte m en negativo o $0.00.
-
-> Inyección de caracteres no válidos en IDs de producto.
-
-> Cálculo dinámico verificando que nunca se retorne un total a pagar negativo.
-
-* QA validado mediante Postman/cURL u otra herramienta de testing de APIs.
-* Sin cuellos de botella bloqueantes ni discrepancias de redondeo.
+-  Código en repo — PR aprobado por al menos 1 par
+-  Cobertura de pruebas unitarias > 80%
+-  Pruebas funcionales de QA pasadas
+-  Sin bugs críticos o bloqueantes abiertos
+-  Todos los Criterios de Aceptación cumplidos
 
 ---
 
@@ -649,31 +464,11 @@ And solo se debe mostrar el payload técnico que justifica el descuento
 -  HU estimada por el equipo técnico
 
 ### Definition of Done (DoD)
-* Código implementado y revisado code review aprobado.
-* Pruebas unitarias:
-
-> Función de sanitización de payload verificada.
-
-> Formateo correcto de respuestas de log.
-
-* Pruebas de integración:
-
-> Endpoint de recuperación respetando el id.
-
-> Funcionamiento correcto del filtro "últimos 7 días".
-
-* Manejo de Reglas de Negocio:
-
-> Resaltado en UI de logs marcados con status: rejected_by_cap.
-
-* Validaciones y Edge Cases:
-
-> Inyección de 100,000 logs simulados para verificar tiempos de respuesta y paginación.
-
-> Intento de consultar datos del día 8.
-
-* QA validado verificando la base de datos directamente.
-* Sin bugs de rendimiento ni fugas de datos de clientes finales.
+-  Código en repo — PR aprobado por al menos 1 par
+-  Cobertura de pruebas unitarias > 80%
+-  Pruebas funcionales de QA pasadas
+-  Sin bugs críticos o bloqueantes abiertos
+-  Todos los Criterios de Aceptación cumplidos
 
 ---
 
@@ -698,29 +493,11 @@ And debe permitir filtrar por tipo de regla Temporada, Producto o Fidelidad.
 -  HU estimada por el equipo técnico
 
 ### Definition of Done (DoD)
-* Código implementado y revisado code review aprobado.
-* Pruebas unitarias:
-
-> Generación correcta del Diff comparando dos objetos de estado.
-
-* Pruebas de integración:
-
-> Todo endpoint de mutación (POST/PUT/PATCH/DELETE) de reglas de negocio inserta automáticamente en la tabla de auditoría.
-
-> Filtros del panel global por tipo de regla y por ecommerce operativos.
-
-* Manejo de Reglas de Negocio:
-
-> Manejo de borrados almacenar old_value completo y new_value: null.
-
-* Validaciones y Edge Cases:
-
-> Petición de actualización sin cambios reales el sistema no debe generar un log fantasma.
-
-> Super Admin es eliminado del sistema; sus registros históricos deben mantener su nombre referenciado.
-
-* QA validado cruzando acciones reales con la tabla de logs.
-* Sin bugs de inconsistencia de datos históricos.
+-  Código en repo — PR aprobado por al menos 1 par
+-  Cobertura de pruebas unitarias > 80%
+-  Pruebas funcionales de QA pasadas
+-  Sin bugs críticos o bloqueantes abiertos
+-  Todos los Criterios de Aceptación cumplidos
 
 ---
 
@@ -750,24 +527,8 @@ Then la regla debe volver a participar en el cálculo del motor con sus parámet
 -  HU estimada por el equipo técnico
 
 ### Definition of Done (DoD)
-* Código implementado y revisado code review aprobado.
-* Pruebas unitarias:
-
-> Mutación correcta del estado is_active preservando el resto del objeto.
-
-* Pruebas de integración:
-
-> Flujo completo: Cambio de Toggle -> Purga de Caché -> Lectura del Motor S2S reflejando el nuevo estado.
-
-* Manejo de Reglas de Negocio:
-
-> Reactivación restaura el estado operativo sin pedir configuración extra.
-
-* Validaciones y Edge Cases:
-
-> Prueba de "Debounce" en UI: Usuario haciendo click al toggle 10 veces en 1 segundo.
-
-> Concurrencia severa: Una petición S2S entrando en el exacto milisegundo en que la regla se está marcando como inactiva.
-
-* QA validado usando Postman lanzar S2S repetitivo mientras se apaga la regla en otro monitor.
-* Sin bugs de sincronización de estados ni reglas "zombies" cobrando descuentos.
+-  Código en repo — PR aprobado por al menos 1 par
+-  Cobertura de pruebas unitarias > 80%
+-  Pruebas funcionales de QA pasadas
+-  Sin bugs críticos o bloqueantes abiertos
+-  Todos los Criterios de Aceptación cumplidos
