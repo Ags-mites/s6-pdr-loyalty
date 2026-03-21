@@ -39,11 +39,11 @@ En este sentido, la rentabilidad y la retención son prioritarias, lo que impuls
 
 | Descripción                                              | Probabilidad | Impacto | Riesgo | Mitigación principal                                                                                                                       |
 | -------------------------------------------------------- | ------------ | ------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Retrasos en la entrega del MVP                           | 3            | 3       | 9      | Comunicar avances y antes de la fecha limite notificar a los clientes que se extenderá la fecha de entrega                                 |
-| Cambios frecuentes en el alcance del MVP                 | 3            | 3       | 9      | Evaluar impacto en tiempo/costo y aprobar solo cambios críticos                                                                            |
-| Definición ambigua de criterios de aceptación            | 2            | 3       | 6      | Definir criterios de aceptación claros y validar con QA antes de iniciar el sprint.                                                        |
-| Problemas de comunicación entre QA y DEV                 | 1            | 2       | 2      | Realizar reuniones cortas diarias para asignar responsables y fechas de solución.                                                          |
-| Bajo uso inicial del MVP por parte de comercios clientes | 2            | 3       | 6      | Acompañar a los comercios en el uso del sistema durante las primeras 2 semanas y revisar cada semana el nivel de uso para aplicar mejoras. |
+| Retrasos en la entrega del MVP                           | Alto            | Alto       | Alto      | Comunicar avances y antes de la fecha limite notificar a los clientes que se extenderá la fecha de entrega                                 |
+| Cambios frecuentes en el alcance del MVP                 | Alto            | Alto       | Alto      | Evaluar impacto en tiempo/costo y aprobar solo cambios críticos                                                                            |
+| Definición ambigua de criterios de aceptación            | Medio            | Alto        | Alto      | Definir criterios de aceptación claros y validar con QA antes de iniciar el sprint.                                                        |
+| Problemas de comunicación entre QA y DEV                 | Bajo            | Medio       | Bajo      | Realizar reuniones cortas diarias para asignar responsables y fechas de solución.                                                          |
+| Bajo uso inicial del MVP por parte de comercios clientes | Medio            | Alto       | Alto      | Acompañar a los comercios en el uso del sistema durante las primeras 2 semanas y revisar cada semana el nivel de uso para aplicar mejoras. |
 
 ### Riesgos técnicos
 
