@@ -15,9 +15,9 @@ En un contexto donde los costos de publicidad aumentan, las empresas han pasado 
 En este sentido, la rentabilidad y la retención son prioritarias, lo que impulsa la necesidad de una capa inteligente que permita personalizar y optimizar descuentos de forma dinámica. En función de ello, LOYALTY plantea una solución entre el catálogo y el checkout, que sea capaz de calcular e inyectar precios personalizados en tiempo real.
 
 ### Objetivos:
-1. Lograr que el 80% de los usuarios que adopten la calculadora de descuentos puedan crear y activar promociones completas en la plataforma en menos de 5 minutos, durante el primer mes posterior a la implementación del software.
-2. Mantener un margen de ganancia bruta promedio del 25% en productos con promociones, incrementando también en un 15% la tasa de conversión respecto al promedio previo a la implementación, durante los primeros 6 meses posteriores al lanzamiento.
-3. Aumentar en un 20% la frecuencia de recompra de clientes frecuentes en los e-commerce durante el primer trimestre, mediante ofertas personalizadas basadas en sus métricas de cantidad de compras y montos gastados. 
+1. Aplicar la configuración de reglas de descuento en la plataforma para que, durante el primer mes posterior a la implementación, al menos el 80% de los usuarios creen y activen promociones completas en menos de 5 minutos.
+2. Analizar y ajustar el desempeño de las reglas promocionales para mantener un margen de ganancia bruta promedio del 25% en productos con promoción y aumentar en un 15% la tasa de conversión respecto al promedio previo, durante los primeros 6 meses posteriores al lanzamiento.
+3. Diseñar e implementar ofertas personalizadas según métricas de fidelidad (cantidad de compras y monto gastado) para incrementar en un 20% la frecuencia de recompra de clientes frecuentes durante el primer trimestre.
 
 
 ## Alcance del MVP
