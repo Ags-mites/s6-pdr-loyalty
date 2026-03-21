@@ -25,19 +25,11 @@ Then: El sistema debe negar la solicitud
 And: Muestra un mensaje de faltan campos obligatorios
 
 ### Definition of Ready (DoR)
-* Historia claramente entendida por el equipo, flujo de login/logout y ciclo de vida del token definido.
-* Criterios de aceptación completos.
-* Reglas de negocio definidas:
-
-> Política de sesiones concurrentes.
-
-> Redirección estricta según el rol del usuario Super Admin vs. Admin de Ecommerce.
-
-> Tiempo de Vida TTL de la sesión establecido.
-
-* Diseño de base de datos de usuarios con campos para intentos fallidos y logs de acceso disponible.
-* Definición del mecanismo de autenticación ej. JWT, cookies HttpOnly acordada.
-* Mensajes de error unificados evitar revelar si el usuario existe o si la contraseña es la incorrecta; usar "Credenciales inválidas".
+-  HU redactada en formato Como / Quiero / Para
+-  Valor de negocio claro
+-  Criterios de Aceptación definidos (mín. 2–3)
+-  Dependencias externas resueltas
+-  HU estimada por el equipo técnico
 
 ### Definition of Done (DoD)
 * Código implementado y revisado - code review aprobado.
@@ -98,16 +90,11 @@ Then solo puede visualizar y gestionar información de su ecommerce
 And no puede acceder a datos de otros ecommerce
 
 ### Definition of Ready (DoR)
-* Historia claramente entendida flujo de creación de usuarios y aislamiento de datos.
-* Criterios de aceptación completos incluye el rechazo de operaciones si el id no coincide.
-* Reglas de negocio definidas:
-
-> Aislamiento estricto: Todo usuario excepto Super Admin, debe tener un id inmutable.
-
-> Un Super Admin no puede crear un usuario sin vincularlo a un ID de ecommerce válido y existente.
-
-* Diseño de base de datos actualizado: Entidad Ecommerce creada y relación obligatoria 1:N con la tabla Usuarios.
-* Estrategia de filtrado global de consultas a base de datos definida por el equipo backend.
+-  HU redactada en formato Como / Quiero / Para
+-  Valor de negocio claro
+-  Criterios de Aceptación definidos (mín. 2–3)
+-  Dependencias externas resueltas
+-  HU estimada por el equipo técnico
 
 ### Definition of Done (DoD)
 * Código implementado y revisado code review aprobado.
@@ -157,16 +144,11 @@ Then el sistema muestra la lista de claves de acceso asociadas
 And oculta parte de la información de cada clave para proteger su seguridad
 
 ### Definition of Ready (DoR)
-* Historia claramente entendida flujo de generación, almacenamiento seguro y visualización parcial.
-* Criterios de aceptación completos incluye soporte para rotación de claves sin caídas de servicio.
-* Reglas de negocio definidas:
-
-> Permitir un máximo de dos API Keys activas simultáneamente por ecommerce para permitir la rotación.
-
-> La API Key solo se muestra completa una única vez al momento de la creación.
-
-* Diseño de base de datos: Tabla de api_keys con campos de hash unidireccional, prefijo para visualización, y estado activa/revocada.
-* Definición de mecanismo criptográfico SHA-256 para el hash, generación de cadenas criptográficamente seguras.
+-  HU redactada en formato Como / Quiero / Para
+-  Valor de negocio claro
+-  Criterios de Aceptación definidos (mín. 2–3)
+-  Dependencias externas resueltas
+-  HU estimada por el equipo técnico
 
 ### Definition of Done (DoD)
 * Código implementado y revisado code review aprobado.
@@ -246,16 +228,11 @@ Then el sistema rechaza la operación
 And informa que no existe una regla para el identificador solicitado
 
 ### Definition of Ready (DoR)
-* Historia claramente entendida por el equipo flujo de evaluación temporal estandarizado.
-* Criterios de aceptación completos.
-* Reglas de negocio definidas:
-
-> Obligatoriedad de uso del estándar en formato UTC para todas las fechas.
-
-> Definición de precedencia si una regla inicia exactamente en el milisegundo que otra termina.
-
-* Diseño de base de datos actualizado para soportar índices de rangos de fechas sin superposición.
-* Tipos de descuento y sus límites documentados en la historia.
+-  HU redactada en formato Como / Quiero / Para
+-  Valor de negocio claro
+-  Criterios de Aceptación definidos (mín. 2–3)
+-  Dependencias externas resueltas
+-  HU estimada por el equipo técnico
 
 ### Definition of Done (DoD)
 * Código implementado y revisado code review aprobado.
@@ -335,16 +312,11 @@ Then el sistema rechaza la operación
 And informa que no existe una regla para el identificador solicitado
 
 ### Definition of Ready (DoR)
-* Historia claramente entendida flujo de CRUD y estandarización de strings.
-* Criterios de aceptación completos incluye manejo de rechazos por duplicidad exacta y normalizada.
-* Reglas de negocio definidas:
-
-> Algoritmo de normalización obligatorio antes de inserción/evaluación.
-
-> Definición del beneficio.
-
-* Diseño de base de datos actualizado: Índice único compuesto por id + tipo_producto normalizado para evitar duplicidad a nivel físico, no solo lógico.
-* Límite de caracteres para el campo tipo_producto definido para evitar inyección de payloads gigantes.
+-  HU redactada en formato Como / Quiero / Para
+-  Valor de negocio claro
+-  Criterios de Aceptación definidos (mín. 2–3)
+-  Dependencias externas resueltas
+-  HU estimada por el equipo técnico
 
 ### Definition of Done (DoD)
 * Código implementado y revisado code review aprobado.
@@ -413,16 +385,11 @@ Then el cliente queda asignado al nivel correspondiente a su rango
 And los beneficios aplicables se determinan según ese nivel
 
 ### Definition of Ready (DoR)
-* Historia claramente entendida flujo de validación de continuidad numérica.
-* Criterios de aceptación completos incluye validación matemática de umbrales.
-* Reglas de negocio definidas:
-
-> Estándar de intervalo algebraico a usar: Límite Inferior Inclusivo y Límite Superior Exclusivo [min, max).
-
-> Métrica exacta sobre la cual se clasifica.
-
-* Diseño de base de datos preparado para manejar valores numéricos de alta precisión.
-* Regla de progresión: El sistema debe forzar que el Límite Inferior del Nivel N+1 sea exactamente igual al Límite Superior del Nivel N.
+-  HU redactada en formato Como / Quiero / Para
+-  Valor de negocio claro
+-  Criterios de Aceptación definidos (mín. 2–3)
+-  Dependencias externas resueltas
+-  HU estimada por el equipo técnico
 
 ### Definition of Done (DoD)
 * Código implementado y revisado code review aprobado.
@@ -487,16 +454,11 @@ When el descuento total calculado supera el tope máximo
 Then el descuento final aplicado se limita al tope máximo configurado
 
 ### Definition of Ready (DoR)
-* Historia claramente entendida flujo matemático de sumatoria y descarte por prioridad.
-* Criterios de aceptación completos incluye el comportamiento matemático exacto al alcanzar el tope.
-* Reglas de negocio definidas:
-
-> Fórmula de acumulación explícita aditiva o multiplicativa.
-
-> Algoritmo de recorte truncamiento parcial del descuento de menor prioridad vs eliminación total del mismo.
-
-* Esquema de base de datos preparado para almacenar el campo priority y max_discount_cap.
-* Restricciones matemáticas acordadas.
+-  HU redactada en formato Como / Quiero / Para
+-  Valor de negocio claro
+-  Criterios de Aceptación definidos (mín. 2–3)
+-  Dependencias externas resueltas
+-  HU estimada por el equipo técnico
 
 ### Definition of Done (DoD)
 * Código implementado y revisado code review aprobado.
@@ -555,16 +517,11 @@ When el motor evalúa dos veces el mismo payload
 Then el nivel de fidelidad asignado es el mismo en ambas evaluaciones
 
 ### Definition of Ready (DoR)
-* Historia claramente entendida evaluación in-memory de atributos B2C.
-* Criterios de aceptación completos incluye el esquema estricto de rechazo.
-* Reglas de negocio definidas:
-
-> Asignación de nivel "Default" si el cliente es nuevo o sus métricas son cero.
-
-> Comportamiento ante métricas negativas.
-
-* Documentación de API: JSON Schema del objeto customer dentro del S2S definido, con tipado fuerte.
-* Política de evaluación idempotente: Mismo payload de entrada, mismo nivel asignado, independientemente del tiempo.
+-  HU redactada en formato Como / Quiero / Para
+-  Valor de negocio claro
+-  Criterios de Aceptación definidos (mín. 2–3)
+-  Dependencias externas resueltas
+-  HU estimada por el equipo técnico
 
 ### Definition of Done (DoD)
 * Código implementado y revisado code review enfocado en manejo de errores.
@@ -630,16 +587,11 @@ Then la solicitud es rechazada
 And no se retorna precio final hasta contar con un carrito válido
 
 ### Definition of Ready (DoR)
-* Historia claramente entendida flujo de entrada del JSON, evaluación en memoria y salida del JSON.
-* Criterios de aceptación completos.
-* Reglas de negocio y técnicas definidas:
-
-> Estándar de redondeo monetario exacto a utilizar.
-
-> Acuerdo de Nivel de Servicio de latencia máxima de respuesta < 150ms.
-
-* JSON Schema estricto documentado Payload de entrada y salida con tipos de datos y campos requeridos.
-* Manejo de errores HTTP definidos 400 Bad Request para payloads inválidos, 401 para API Keys inválidas, 200 OK para cálculos exitosos.
+-  HU redactada en formato Como / Quiero / Para
+-  Valor de negocio claro
+-  Criterios de Aceptación definidos (mín. 2–3)
+-  Dependencias externas resueltas
+-  HU estimada por el equipo técnico
 
 ### Definition of Done (DoD)
 * Código implementado y revisado code review aprobado.
@@ -690,16 +642,11 @@ Then el sistema no debe mostrar nombres, correos, ni datos de identidad del comp
 And solo se debe mostrar el payload técnico que justifica el descuento
 
 ### Definition of Ready (DoR)
-* Historia claramente entendida registro de auditoría operativa del motor.
-* Criterios de aceptación completos incluye políticas de retención y privacidad.
-* Reglas de negocio definidas:
-
-> Lista explícita de campos PII que deben ser eliminados/enmascarados antes de escribir en la base de datos (nombres, correos, IPs, direcciones).
-
-> Obligatoriedad de paginación Limit/Offset en la UI y API.
-
-* Diseño de base de datos: Tabla de logs particionada por fecha o con un Job/Cron configurado para borrar físicamente registros created_at < NOW() - 7 days.
-* Definición de carga máxima a mostrar por página en el Dashboard.
+-  HU redactada en formato Como / Quiero / Para
+-  Valor de negocio claro
+-  Criterios de Aceptación definidos (mín. 2–3)
+-  Dependencias externas resueltas
+-  HU estimada por el equipo técnico
 
 ### Definition of Done (DoD)
 * Código implementado y revisado code review aprobado.
@@ -744,16 +691,11 @@ Then el sistema debe mostrar una tabla cronológica con: usuario que realizó el
 And debe permitir filtrar por tipo de regla Temporada, Producto o Fidelidad.
 
 ### Definition of Ready (DoR)
-* Historia claramente entendida registro de mutaciones del sistema.
-* Criterios de aceptación completos incluye campos de estado previo y nuevo.
-* Reglas de negocio definidas:
-
-> Formato de almacenamiento del historial campos old_value y new_value en formato JSONB para soportar cualquier estructura de regla.
-
-> Registro inmutable: Nadie, ni un Super Admin, puede borrar un registro de auditoría.
-
-* Arquitectura definida: Implementación vía Interceptores/Middlewares o Triggers de Base de Datos para garantizar que ninguna mutación evada el log.
-* Relación de usuario autoría: Registrar el UUID de quién hizo el cambio.
+-  HU redactada en formato Como / Quiero / Para
+-  Valor de negocio claro
+-  Criterios de Aceptación definidos (mín. 2–3)
+-  Dependencias externas resueltas
+-  HU estimada por el equipo técnico
 
 ### Definition of Done (DoD)
 * Código implementado y revisado code review aprobado.
@@ -801,16 +743,11 @@ When el usuario activa nuevamente
 Then la regla debe volver a participar en el cálculo del motor con sus parámetros originales sin necesidad de reconfigurarla
 
 ### Definition of Ready (DoR)
-* Historia claramente entendida.
-* Criterios de aceptación completos incluye latencia de propagación.
-* Reglas de negocio definidas:
-
-> Definición del SLA para "inmediatamente" el cambio debe propagarse al motor en menos de 100ms.
-
-> Desactivar una regla no altera sus configuraciones internas; solo cambia un flag is_active.
-
-* Arquitectura definida: Estrategia de invalidación de caché o modelo Event-Driven documentado por el equipo de backend para este caso de uso.
-* Interfaz de usuario: El botón debe reflejar estado de carga y bloquearse durante la petición para evitar envíos múltiples.
+-  HU redactada en formato Como / Quiero / Para
+-  Valor de negocio claro
+-  Criterios de Aceptación definidos (mín. 2–3)
+-  Dependencias externas resueltas
+-  HU estimada por el equipo técnico
 
 ### Definition of Done (DoD)
 * Código implementado y revisado code review aprobado.
